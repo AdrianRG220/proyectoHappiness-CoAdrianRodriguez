@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mockup Sitio Web</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome CDN para Iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#b2367c', /* Magenta/Pink similar to the mockup */
+                        secondary: '#f9f9f9',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'ui-sans-serif', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-white text-gray-800 font-sans antialiased overflow-x-hidden">
+
+    <!-- Header / Navbar -->
+    <header class="flex items-center justify-between px-6 py-4 border-b border-gray-100">
+        <!-- Logo -->
+        <div class="text-4xl font-bold text-primary italic font-serif">
+            &
+        </div>
+        
+        <!-- Navigation Links -->
+        <nav class="hidden md:flex space-x-3 text-sm">
+            <a href="#" class="px-4 py-1.5 border border-primary text-primary rounded-full hover:bg-primary hover:text-white transition">Inicio</a>
+            <a href="#" class="px-4 py-1.5 border border-primary text-gray-600 rounded-full hover:bg-primary hover:text-white transition">Eventos</a>
+            <a href="#" class="px-4 py-1.5 border border-primary text-gray-600 rounded-full hover:bg-primary hover:text-white transition">Historial de Eventos</a>
+            <a href="#" class="px-4 py-1.5 border border-primary text-gray-600 rounded-full hover:bg-primary hover:text-white transition">Sobre Nosotros</a>
+            <a href="#" class="px-4 py-1.5 border border-primary text-gray-600 rounded-full hover:bg-primary hover:text-white transition">Fuentes</a>
+            <a href="#" class="px-4 py-1.5 border border-primary text-gray-600 rounded-full hover:bg-primary hover:text-white transition">Contacto</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section (Banner) -->
+    <section class="relative w-full h-[350px] bg-gray-200">
+        <!-- Placeholder for the Hero Image -->
+        <div class="absolute inset-0 bg-gray-300 flex items-center justify-center text-gray-500 overflow-hidden">
+            <div class="border-4 border-dashed border-gray-400 p-8 rounded-xl text-center">
+                <i class="fa-solid fa-image text-4xl mb-2"></i>
+                <p>[FOTO: Concierto Tsunami - Deja el hueco]</p>
+            </div>
+        </div>
+        
+        <!-- Hero Text -->
+        <div class="relative z-10 text-white p-8">
+            <h1 class="text-4xl font-bold drop-shadow-md">Concierto Tsunami</h1>
+            <p class="text-xl flex items-center gap-2 mt-2 drop-shadow-md">
+                <i class="fa-regular fa-clock"></i> 20:00
+            </p>
+        </div>
+    </section>
+
+    <!-- Middle Section: Calendar, Map & Search Filters -->
+    <section class="max-w-7xl mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-2 gap-10">
+        
+        <!-- Left Side: Calendar and Map -->
+        <div class="flex items-start gap-8 flex-col lg:flex-row">
+            
+            <!-- Calendar Widget -->
+            <div class="w-full max-w-[280px] shadow-[0_3px_15px_rgba(178,54,124,0.15)] rounded overflow-hidden bg-white">
+                <!-- Calendar Header -->
+                <div class="bg-primary text-white flex justify-between items-center px-4 py-2 text-sm font-semibold">
+                    <button><i class="fa-solid fa-chevron-left"></i></button>
+                    <span>MARZO 2026</span>
+                    <button><i class="fa-solid fa-chevron-right"></i></button>
+                </div>
+                <!-- Calendar Grid -->
+                <div class="grid grid-cols-7 text-center text-xs p-3 gap-1 font-semibold">
+                    <div>Lu</div><div>Ma</div><div>Mi</div><div>Ju</div><div>Vi</div><div>Sa</div><div>Do</div>
+                    <!-- Days -->
+                    <div class="text-gray-300">23</div><div class="text-gray-300">24</div><div class="text-gray-300">25</div><div class="text-gray-300">26</div><div class="text-gray-300">27</div><div class="text-gray-300">28</div><div class="bg-cyan-500 text-white rounded">1</div>
+                    <div>2</div><div>3</div><div>4</div><div class="bg-cyan-500 text-white rounded">5</div><div class="bg-cyan-500 text-white rounded">6</div><div class="bg-cyan-500 text-white rounded">7</div><div class="bg-cyan-500 text-white rounded">8</div>
+                    <div>9</div><div>10</div><div>11</div><div>12</div><div class="bg-cyan-500 text-white rounded">13</div><div class="bg-cyan-500 text-white rounded">14</div><div class="bg-cyan-500 text-white rounded">15</div>
+                    <div>16</div><div>17</div><div>18</div><div class="bg-cyan-500 text-white rounded">19</div><div class="bg-cyan-500 text-white rounded">20</div><div class="bg-cyan-500 text-white rounded">21</div><div class="bg-cyan-500 text-white rounded">22</div>
+                    <div class="bg-cyan-500 text-white rounded">23</div><div class="bg-orange-400 text-white rounded">24</div><div class="bg-cyan-500 text-white rounded">25</div><div class="bg-cyan-500 text-white rounded">26</div><div class="bg-cyan-500 text-white rounded">27</div><div class="bg-cyan-500 text-white rounded">28</div><div class="bg-cyan-500 text-white rounded">29</div>
+                    <div>30</div><div>31</div>
+                </div>
+            </div>
+
+            <!-- Map Placeholder -->
+            <div class="w-full max-w-[320px] h-40 bg-gray-100 flex items-center justify-center border-2 border-dashed border-gray-300 rounded-lg text-gray-500 text-center px-4 self-center mt-6 lg:mt-0">
+                <div>
+                    <i class="fa-solid fa-map-location-dot text-3xl mb-2"></i>
+                    <p class="text-sm">[Mapa de Asturias por colores - Deja el hueco]</p>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Right Side: Search Filters -->
+        <div class="flex flex-col justify-center max-w-sm mx-auto w-full gap-5">
+            <!-- Search Text -->
+            <div class="relative w-full">
+                <input type="text" placeholder="¿Qué Buscas?" class="w-full border-2 border-primary rounded-full px-5 py-2.5 focus:outline-none focus:ring-2 focus:ring-primary/50 text-gray-700 placeholder-primary/60">
+                <i class="fa-solid fa-magnifying-glass absolute right-5 top-3.5 text-primary text-lg"></i>
+            </div>
+            <!-- Search Dates -->
+            <div class="relative w-full">
+                <input type="text" placeholder="Fecha inicio-fin" class="w-full border-2 border-primary rounded-full px-5 py-2.5 focus:outline-none focus:ring-2 focus:ring-primary/50 text-gray-700 placeholder-primary/60">
+                <i class="fa-regular fa-calendar absolute right-5 top-3.5 text-primary text-lg"></i>
+            </div>
+            <!-- Search Category -->
+            <div class="relative w-full">
+                <input type="text" placeholder="Categoría" class="w-full border-2 border-primary rounded-full px-5 py-2.5 focus:outline-none focus:ring-2 focus:ring-primary/50 text-gray-700 placeholder-primary/60">
+                <i class="fa-solid fa-list absolute right-5 top-3.5 text-primary text-lg"></i>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Main Content Grid (Próximos Eventos & Recomendados) -->
+    <section class="max-w-7xl mx-auto px-6 py-6 pb-20">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-12">
+            
+            <!-- ====== LEFT COLUMN: Próximos Eventos ====== -->
+            <div>
+                <h2 class="text-2xl font-light text-primary mb-8 tracking-wide">Próximos Eventos</h2>
+                
+                <!-- Large Card 1 -->
+                <div class="bg-white border rounded-3xl shadow-lg relative pt-12 pb-5 px-5 flex flex-col mb-16 h-[400px]">
+                    <!-- Date Badge -->
+                    <div class="absolute -top-4 left-6 bg-black text-white text-sm px-5 py-1.5 rounded-full z-10 shadow-md shadow-gray-400/50">
+                        Domingo 10 de Mayo
+                    </div>
+                    
+                    <div class="flex-grow">
+                        <h3 class="font-bold text-xl mb-3">No estoy de frente</h3>
+                        <ul class="text-sm space-y-2 text-gray-600 mb-6">
+                            <li class="flex items-center gap-3"><i class="fa-regular fa-clock w-4"></i> 20:00</li>
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-location-dot w-4"></i> Teatro Alhambra</li>
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-list w-4"></i> Mari Paz Sayago</li>
+                        </ul>
+                    </div>
+
+                    <!-- Category Tag -->
+                    <span class="bg-cyan-500 text-white text-xs px-3 py-1 rounded-md absolute z-20 left-5 bottom-[42%]">Teatro</span>
+                    
+                    <!-- Image Placeholder -->
+                    <div class="w-full h-44 bg-gray-200 rounded-2xl overflow-hidden mt-auto relative">
+                         <div class="absolute inset-0 flex items-center justify-center text-gray-500 border-2 border-dashed border-gray-400 rounded-2xl p-4 text-center">
+                            [FOTO: Mujer de teatro (Mari Paz Sayago) - Deja el hueco]
+                         </div>
+                    </div>
+                </div>
+
+                <!-- Large Card 2 -->
+                <div class="bg-white border rounded-3xl shadow-lg relative pt-12 pb-5 px-5 flex flex-col mb-10 h-[400px]">
+                    <div class="absolute -top-4 left-6 bg-black text-white text-sm px-5 py-1.5 rounded-full z-10 shadow-md shadow-gray-400/50">
+                        Domingo 30 de Agosto
+                    </div>
+                    
+                    <div class="flex-grow">
+                        <h3 class="font-bold text-xl mb-3">No estoy de frente <!-- Transcrito del mockup --></h3>
+                        <ul class="text-sm space-y-2 text-gray-600 mb-6">
+                            <li class="flex items-center gap-3"><i class="fa-regular fa-clock w-4"></i> 15:00</li>
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-location-dot w-4"></i> Playa San Lorenzo</li>
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-list w-4"></i> Récord mundial de escanciado simultáneo de sidra</li>
+                        </ul>
+                    </div>
+
+                    <!-- Category Tag -->
+                    <span class="bg-gray-500 text-white text-xs px-3 py-1 rounded-md absolute z-20 left-5 bottom-[42%]">Otros</span>
+                    
+                    <!-- Image Placeholder -->
+                    <div class="w-full h-44 bg-gray-200 rounded-2xl overflow-hidden mt-auto relative">
+                        <div class="absolute inset-0 flex items-center justify-center text-gray-500 border-2 border-dashed border-gray-400 rounded-2xl p-4 text-center">
+                            [FOTO: Fiesta de la Sidra Natural - Deja el hueco]
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ====== RIGHT COLUMN: Recomendados ====== -->
+            <div>
+                <h2 class="text-2xl font-light text-primary mb-8 tracking-wide">Recomendados</h2>
+                
+                <!-- Smaller Card 1 -->
+                <div class="bg-white border rounded-3xl shadow-lg relative pt-10 pb-4 px-5 flex flex-col mb-14 h-[400px] w-full max-w-[320px] mx-auto xl:ml-12">
+                    <div class="absolute -top-4 left-5 bg-black text-white text-sm px-4 py-1.5 rounded-full z-10 shadow-md shadow-gray-400/50">
+                        Miércoles 13 de Mayo
+                    </div>
+                    
+                    <div class="flex-grow">
+                        <h3 class="font-bold text-lg mb-2">Concierto Tsunami</h3>
+                        <ul class="text-sm space-y-2 text-gray-600 mb-4">
+                            <li class="flex items-center gap-3"><i class="fa-regular fa-clock w-4"></i> 20:00</li>
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-location-dot w-4"></i> Ayuntamiento de Gijón</li>
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-list w-4"></i> Festival de rock y hardcore</li>
+                        </ul>
+                    </div>
+
+                    <!-- Category Tag -->
+                    <span class="bg-[#b2367c] text-white text-[11px] px-3 py-1 rounded-md absolute z-20 left-5 bottom-[42%] font-semibold tracking-wide">Música</span>
+                    
+                    <!-- Image Placeholder -->
+                    <div class="w-full h-44 bg-gray-200 rounded-2xl overflow-hidden mt-auto relative">
+                         <div class="absolute inset-0 flex items-center justify-center text-gray-500 border-2 border-dashed border-gray-400 rounded-2xl p-4 text-center">
+                            [FOTO: Concierto Rock - Deja el hueco]
+                         </div>
+                    </div>
+                </div>
+
+                <!-- Smaller Card 2 -->
+                <div class="bg-white border rounded-3xl shadow-lg relative pt-10 pb-4 px-5 flex flex-col mb-10 h-[400px] w-full max-w-[320px] mx-auto xl:ml-12">
+                    <div class="absolute -top-4 left-5 bg-black text-white text-sm px-4 py-1.5 rounded-full z-10 shadow-md shadow-gray-400/50">
+                        Martes 02 de Junio
+                    </div>
+                    
+                    <div class="flex-grow">
+                        <h3 class="font-bold text-lg mb-2">Viaje a la luna</h3>
+                        <ul class="text-sm space-y-2 text-gray-600 mb-4">
+                            <li class="flex items-center gap-3"><i class="fa-regular fa-clock w-4"></i> 10:00</li>
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-location-dot w-4"></i> Centro Federico García Lorca</li>
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-list w-4"></i> Exposición colectiva</li>
+                        </ul>
+                    </div>
+
+                    <!-- Category Tag -->
+                    <span class="bg-orange-500 text-white text-[11px] px-3 py-1 rounded-md absolute z-20 left-5 bottom-[42%] font-semibold tracking-wide">Exposición</span>
+                    
+                    <!-- Image Placeholder -->
+                    <div class="w-full h-44 bg-gray-200 rounded-2xl overflow-hidden mt-auto relative">
+                        <div class="absolute inset-0 flex items-center justify-center text-gray-500 border-2 border-dashed border-gray-400 rounded-2xl p-4 text-center">
+                            [FOTO: Cartel Viaje a la luna - Deja el hueco]
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-600 text-gray-300 flex items-center justify-between px-6 py-2 mt-auto text-sm w-full">
+        <!-- Footer Logo -->
+        <div class="text-2xl font-bold italic font-serif text-white">
+            &
+        </div>
+        <!-- Footer Text & Socials -->
+        <div class="flex items-center gap-4">
+            <p>Copyright | Redes Sociales:</p>
+            <div class="flex gap-3 text-lg text-white">
+                <a href="#" class="hover:text-primary transition"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="#" class="hover:text-primary transition"><i class="fa-brands fa-youtube"></i></a>
+                <a href="#" class="hover:text-primary transition"><i class="fa-brands fa-facebook"></i></a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
