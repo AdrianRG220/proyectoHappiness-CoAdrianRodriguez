@@ -1,20 +1,21 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mockup Sitio Web</title>
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- FontAwesome CDN para Iconos -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        primary: '#b2367c', /* Magenta/Pink similar to the mockup */
+                        primary: '#ba007c', 
                         secondary: '#f9f9f9',
                     },
                     fontFamily: {
@@ -25,216 +26,284 @@
         }
     </script>
 </head>
+
 <body class="bg-white text-gray-800 font-sans antialiased overflow-x-hidden">
 
-    <!-- Header / Navbar -->
     <header class="flex items-center justify-between px-6 py-4 border-b border-gray-100">
-        <!-- Logo -->
-        <div class="text-4xl font-bold text-primary italic font-serif">
-            &
-        </div>
         
-        <!-- Navigation Links -->
+        <!-- Logotipo (Pendiente de Imagen) -->
+        <a href="index.html" class="block flex-shrink-0 transition hover:opacity-80">
+            <!-- 
+                Cambia la URL de la propiedad src="" por la ruta del archivo de tu foto cuando la tengas.
+                Por ejemplo: src="logo.jpg" o src="img/logo.png"
+            -->
+            <img src="https://placehold.co/150x60/f3f4f6/b2367c?text=FOTO+LOGO" alt="Logo del Sitio" class="h-12 md:h-14 w-auto object-contain">
+        </a>
+
         <nav class="hidden md:flex space-x-3 text-sm">
-            <a href="#" class="px-4 py-1.5 border border-primary text-primary rounded-full hover:bg-primary hover:text-white transition">Inicio</a>
-            <a href="#" class="px-4 py-1.5 border border-primary text-gray-600 rounded-full hover:bg-primary hover:text-white transition">Eventos</a>
-            <a href="#" class="px-4 py-1.5 border border-primary text-gray-600 rounded-full hover:bg-primary hover:text-white transition">Historial de Eventos</a>
-            <a href="#" class="px-4 py-1.5 border border-primary text-gray-600 rounded-full hover:bg-primary hover:text-white transition">Sobre Nosotros</a>
-            <a href="#" class="px-4 py-1.5 border border-primary text-gray-600 rounded-full hover:bg-primary hover:text-white transition">Fuentes</a>
-            <a href="#" class="px-4 py-1.5 border border-primary text-gray-600 rounded-full hover:bg-primary hover:text-white transition">Contacto</a>
+            <a href="index.html"
+                class="px-4 py-1.5 border border-primary text-primary rounded-full hover:bg-primary hover:text-white transition">Inicio</a>
+            <a href="#"
+                class="px-4 py-1.5 border border-primary text-gray-600 rounded-full hover:bg-primary hover:text-white transition">Eventos</a>
+            <a href="#"
+                class="px-4 py-1.5 border border-primary text-gray-600 rounded-full hover:bg-primary hover:text-white transition">Historial
+                de Eventos</a>
+            <a href="#"
+                class="px-4 py-1.5 border border-primary text-gray-600 rounded-full hover:bg-primary hover:text-white transition">Sobre
+                Nosotros</a>
+            <a href="#"
+                class="px-4 py-1.5 border border-primary text-gray-600 rounded-full hover:bg-primary hover:text-white transition">Fuentes</a>
+            <a href="contacto.html"
+                class="px-4 py-1.5 border border-primary text-gray-600 rounded-full hover:bg-primary hover:text-white transition">Contacto</a>
         </nav>
     </header>
 
-    <!-- Hero Section (Banner) -->
-    <section class="relative w-full h-[350px] bg-gray-200">
-        <!-- Placeholder for the Hero Image -->
-        <div class="absolute inset-0 bg-gray-300 flex items-center justify-center text-gray-500 overflow-hidden">
-            <div class="border-4 border-dashed border-gray-400 p-8 rounded-xl text-center">
-                <i class="fa-solid fa-image text-4xl mb-2"></i>
-                <p>[FOTO: Concierto Tsunami - Deja el hueco]</p>
+    <section class="w-full">
+        <div class="flex w-full h-[350px] bg-gray-200">
+            
+            <div class="panel-evento w-[55%] relative bg-gray-300 bg-cover bg-center bg-no-repeat cursor-pointer overflow-hidden transition-all duration-500 ease-in-out">
+                
+                <div class="absolute inset-0 border-2 border-dashed border-gray-400/50 m-2 rounded-xl flex items-center justify-center text-gray-500 z-0 overflow-hidden break-words">
+                    <div class="text-center px-4">
+                        <i class="fa-solid fa-image text-3xl mb-2"></i>
+                        <p class="text-xs lg:text-sm font-semibold">[FOTO: Concierto Rock]</p>
+                    </div>
+                </div>
+                
+                <div class="capa-oscura absolute inset-0 bg-gradient-to-r from-black/70 to-transparent z-10 opacity-100 transition-opacity duration-500 pointer-events-none"></div>
+                
+                <div class="contenido-texto absolute bottom-8 left-8 text-white opacity-100 translate-x-0 transition-all duration-500 delay-200 whitespace-nowrap z-20 pointer-events-none">
+                    <h1 class="text-2xl md:text-4xl font-bold drop-shadow-md">Concierto Tsunami</h1>
+                    <p class="text-lg md:text-xl flex items-center gap-2 mt-2 drop-shadow-md">
+                        <i class="fa-regular fa-clock"></i> 20:00
+                    </p>
+                </div>
             </div>
-        </div>
-        
-        <!-- Hero Text -->
-        <div class="relative z-10 text-white p-8">
-            <h1 class="text-4xl font-bold drop-shadow-md">Concierto Tsunami</h1>
-            <p class="text-xl flex items-center gap-2 mt-2 drop-shadow-md">
-                <i class="fa-regular fa-clock"></i> 20:00
-            </p>
+
+            <div class="panel-evento w-[15%] relative bg-gray-400 bg-cover bg-center bg-no-repeat cursor-pointer overflow-hidden transition-all duration-500 ease-in-out border-l-2 border-white">
+                 
+                 <div class="absolute inset-0 border-2 border-dashed border-gray-500/50 m-2 rounded-xl flex items-center justify-center text-gray-600 z-0 overflow-hidden break-words">
+                    <div class="text-center px-4">
+                        <i class="fa-solid fa-masks-theater text-3xl mb-2"></i>
+                        <p class="text-xs lg:text-sm font-semibold">[FOTO: Mari Paz Sayago]</p>
+                    </div>
+                </div>
+                <div class="capa-oscura absolute inset-0 bg-gradient-to-r from-black/70 to-transparent z-10 opacity-0 transition-opacity duration-500 pointer-events-none"></div>
+                <div class="contenido-texto absolute bottom-8 left-8 text-white opacity-0 -translate-x-5 transition-all duration-500 whitespace-nowrap z-20 pointer-events-none">
+                    <h1 class="text-2xl md:text-4xl font-bold drop-shadow-md">No estoy de frente</h1>
+                    <p class="text-lg md:text-xl flex items-center gap-2 mt-2 drop-shadow-md">
+                        <i class="fa-regular fa-clock"></i> 20:00
+                    </p>
+                </div>
+            </div>
+
+            <div class="panel-evento w-[15%] relative bg-gray-300 bg-cover bg-center bg-no-repeat cursor-pointer overflow-hidden transition-all duration-500 ease-in-out border-l-2 border-white">
+                 
+                 <div class="absolute inset-0 border-2 border-dashed border-gray-400/50 m-2 rounded-xl flex items-center justify-center text-gray-500 z-0 overflow-hidden break-words">
+                    <div class="text-center px-4">
+                        <i class="fa-solid fa-glass-water text-3xl mb-2"></i>
+                        <p class="text-xs lg:text-sm font-semibold">[FOTO: Sidra Natural]</p>
+                    </div>
+                </div>
+                <div class="capa-oscura absolute inset-0 bg-gradient-to-r from-black/70 to-transparent z-10 opacity-0 transition-opacity duration-500 pointer-events-none"></div>
+                <div class="contenido-texto absolute bottom-8 left-8 text-white opacity-0 -translate-x-5 transition-all duration-500 whitespace-nowrap z-20 pointer-events-none">
+                    <h1 class="text-2xl md:text-4xl font-bold drop-shadow-md">Fiesta de la Sidra</h1>
+                    <p class="text-lg md:text-xl flex items-center gap-2 mt-2 drop-shadow-md">
+                        <i class="fa-regular fa-clock"></i> 15:00
+                    </p>
+                </div>
+            </div>
+
+            <div class="panel-evento w-[15%] relative bg-gray-400 bg-cover bg-center bg-no-repeat cursor-pointer overflow-hidden transition-all duration-500 ease-in-out border-l-2 border-white">
+                 
+                 <div class="absolute inset-0 border-2 border-dashed border-gray-500/50 m-2 rounded-xl flex items-center justify-center text-gray-600 z-0 overflow-hidden break-words">
+                    <div class="text-center px-4">
+                        <i class="fa-solid fa-palette text-3xl mb-2"></i>
+                        <p class="text-xs lg:text-sm font-semibold">[FOTO: Viaje a la luna]</p>
+                    </div>
+                </div>
+                <div class="capa-oscura absolute inset-0 bg-gradient-to-r from-black/70 to-transparent z-10 opacity-0 transition-opacity duration-500 pointer-events-none"></div>
+                <div class="contenido-texto absolute bottom-8 left-8 text-white opacity-0 -translate-x-5 transition-all duration-500 whitespace-nowrap z-20 pointer-events-none">
+                    <h1 class="text-2xl md:text-4xl font-bold drop-shadow-md">Viaje a la luna</h1>
+                    <p class="text-lg md:text-xl flex items-center gap-2 mt-2 drop-shadow-md">
+                        <i class="fa-regular fa-clock"></i> 10:00
+                    </p>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- Middle Section: Calendar, Map & Search Filters -->
     <section class="max-w-7xl mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-2 gap-10">
-        
-        <!-- Left Side: Calendar and Map -->
-        <div class="flex items-start gap-8 flex-col lg:flex-row">
-            
-            <!-- Calendar Widget -->
-            <div class="w-full max-w-[280px] shadow-[0_3px_15px_rgba(178,54,124,0.15)] rounded overflow-hidden bg-white">
-                <!-- Calendar Header -->
+
+        <div class="flex items-start gap-8 flex-col lg:flex-row md:justify-end">
+
+            <div
+                class="w-full max-w-[400px] shadow-[0_3px_15px_rgba(178,54,124,0.15)] rounded overflow-hidden bg-white mx-auto md:ml-auto md:mr-12">
+                
                 <div class="bg-primary text-white flex justify-between items-center px-4 py-2 text-sm font-semibold">
-                    <button><i class="fa-solid fa-chevron-left"></i></button>
-                    <span>MARZO 2026</span>
-                    <button><i class="fa-solid fa-chevron-right"></i></button>
+                    <button id="prev-month"><i class="fa-solid fa-chevron-left"></i></button>
+                    <span id="calendar-month-year">MARZO 2026</span>
+                    <button id="next-month"><i class="fa-solid fa-chevron-right"></i></button>
                 </div>
-                <!-- Calendar Grid -->
-                <div class="grid grid-cols-7 text-center text-xs p-3 gap-1 font-semibold">
-                    <div>Lu</div><div>Ma</div><div>Mi</div><div>Ju</div><div>Vi</div><div>Sa</div><div>Do</div>
-                    <!-- Days -->
-                    <div class="text-gray-300">23</div><div class="text-gray-300">24</div><div class="text-gray-300">25</div><div class="text-gray-300">26</div><div class="text-gray-300">27</div><div class="text-gray-300">28</div><div class="bg-cyan-500 text-white rounded">1</div>
-                    <div>2</div><div>3</div><div>4</div><div class="bg-cyan-500 text-white rounded">5</div><div class="bg-cyan-500 text-white rounded">6</div><div class="bg-cyan-500 text-white rounded">7</div><div class="bg-cyan-500 text-white rounded">8</div>
-                    <div>9</div><div>10</div><div>11</div><div>12</div><div class="bg-cyan-500 text-white rounded">13</div><div class="bg-cyan-500 text-white rounded">14</div><div class="bg-cyan-500 text-white rounded">15</div>
-                    <div>16</div><div>17</div><div>18</div><div class="bg-cyan-500 text-white rounded">19</div><div class="bg-cyan-500 text-white rounded">20</div><div class="bg-cyan-500 text-white rounded">21</div><div class="bg-cyan-500 text-white rounded">22</div>
-                    <div class="bg-cyan-500 text-white rounded">23</div><div class="bg-orange-400 text-white rounded">24</div><div class="bg-cyan-500 text-white rounded">25</div><div class="bg-cyan-500 text-white rounded">26</div><div class="bg-cyan-500 text-white rounded">27</div><div class="bg-cyan-500 text-white rounded">28</div><div class="bg-cyan-500 text-white rounded">29</div>
-                    <div>30</div><div>31</div>
+                
+                <div class="grid grid-cols-7 text-center text-xs p-3 gap-1 font-semibold" id="calendar-grid">
+                    
                 </div>
             </div>
 
-            <!-- Map Placeholder -->
-            <div class="w-full max-w-[320px] h-40 bg-gray-100 flex items-center justify-center border-2 border-dashed border-gray-300 rounded-lg text-gray-500 text-center px-4 self-center mt-6 lg:mt-0">
-                <div>
-                    <i class="fa-solid fa-map-location-dot text-3xl mb-2"></i>
-                    <p class="text-sm">[Mapa de Asturias por colores - Deja el hueco]</p>
-                </div>
-            </div>
+
 
         </div>
 
-        <!-- Right Side: Search Filters -->
-        <div class="flex flex-col justify-center max-w-sm mx-auto w-full gap-5">
-            <!-- Search Text -->
+        <div class="flex flex-col justify-center max-w-sm mx-auto md:mr-auto md:ml-12 w-full gap-5">
+            
             <div class="relative w-full">
-                <input type="text" placeholder="¿Qué Buscas?" class="w-full border-2 border-primary rounded-full px-5 py-2.5 focus:outline-none focus:ring-2 focus:ring-primary/50 text-gray-700 placeholder-primary/60">
+                <input type="text" id="search-input" placeholder="¿Qué Buscas?"
+                    class="w-full border-2 border-primary rounded-full px-5 py-2.5 focus:outline-none focus:ring-2 focus:ring-primary/50 text-gray-700 placeholder-primary/60">
                 <i class="fa-solid fa-magnifying-glass absolute right-5 top-3.5 text-primary text-lg"></i>
             </div>
-            <!-- Search Dates -->
+            
+
+            
             <div class="relative w-full">
-                <input type="text" placeholder="Fecha inicio-fin" class="w-full border-2 border-primary rounded-full px-5 py-2.5 focus:outline-none focus:ring-2 focus:ring-primary/50 text-gray-700 placeholder-primary/60">
-                <i class="fa-regular fa-calendar absolute right-5 top-3.5 text-primary text-lg"></i>
-            </div>
-            <!-- Search Category -->
-            <div class="relative w-full">
-                <input type="text" placeholder="Categoría" class="w-full border-2 border-primary rounded-full px-5 py-2.5 focus:outline-none focus:ring-2 focus:ring-primary/50 text-gray-700 placeholder-primary/60">
-                <i class="fa-solid fa-list absolute right-5 top-3.5 text-primary text-lg"></i>
+                <select id="category-filter"
+                    class="w-full border-2 border-primary rounded-full px-5 py-2.5 focus:outline-none focus:ring-2 focus:ring-primary/50 text-gray-700 appearance-none bg-transparent cursor-pointer">
+                    <option value="" disabled selected hidden>Categoría</option>
+                    <option value="todas">Todas las categorías</option>
+                    <option value="musica">Música</option>
+                    <option value="cine">Cine</option>
+                    <option value="teatro">Teatro</option>
+                    <option value="exposiciones">Exposiciones</option>
+                    <option value="otros">Otros</option>
+                </select>
+                <i class="fa-solid fa-list absolute right-5 top-3.5 text-primary text-lg pointer-events-none"></i>
             </div>
         </div>
 
     </section>
 
-    <!-- Main Content Grid (Próximos Eventos & Recomendados) -->
     <section class="max-w-7xl mx-auto px-6 py-6 pb-20">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-12">
-            
-            <!-- ====== LEFT COLUMN: Próximos Eventos ====== -->
+
             <div>
                 <h2 class="text-2xl font-light text-primary mb-8 tracking-wide">Próximos Eventos</h2>
-                
-                <!-- Large Card 1 -->
-                <div class="bg-white border rounded-3xl shadow-lg relative pt-12 pb-5 px-5 flex flex-col mb-16 h-[400px]">
-                    <!-- Date Badge -->
-                    <div class="absolute -top-4 left-6 bg-black text-white text-sm px-5 py-1.5 rounded-full z-10 shadow-md shadow-gray-400/50">
+
+                <div data-category="teatro"
+                    class="event-card bg-white border rounded-3xl shadow-lg relative pt-12 pb-5 px-5 flex flex-col mb-16 h-[400px]">
+                    
+                    <div
+                        class="absolute -top-4 left-6 bg-black text-white text-sm px-5 py-1.5 rounded-full z-10 shadow-md shadow-gray-400/50">
                         Domingo 10 de Mayo
                     </div>
-                    
+
                     <div class="flex-grow">
                         <h3 class="font-bold text-xl mb-3">No estoy de frente</h3>
                         <ul class="text-sm space-y-2 text-gray-600 mb-6">
                             <li class="flex items-center gap-3"><i class="fa-regular fa-clock w-4"></i> 20:00</li>
-                            <li class="flex items-center gap-3"><i class="fa-solid fa-location-dot w-4"></i> Teatro Alhambra</li>
-                            <li class="flex items-center gap-3"><i class="fa-solid fa-list w-4"></i> Mari Paz Sayago</li>
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-location-dot w-4"></i> Teatro
+                                Alhambra</li>
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-list w-4"></i> Mari Paz Sayago
+                            </li>
                         </ul>
                     </div>
 
-                    <!-- Category Tag -->
-                    <span class="bg-cyan-500 text-white text-xs px-3 py-1 rounded-md absolute z-20 left-5 bottom-[42%]">Teatro</span>
-                    
-                    <!-- Image Placeholder -->
+                    <span
+                        class="bg-[#009bdb] text-white text-xs px-3 py-1 rounded-md absolute z-20 left-5 bottom-[42%]">Teatro</span>
+
                     <div class="w-full h-44 bg-gray-200 rounded-2xl overflow-hidden mt-auto relative">
-                         <div class="absolute inset-0 flex items-center justify-center text-gray-500 border-2 border-dashed border-gray-400 rounded-2xl p-4 text-center">
+                        <div
+                            class="absolute inset-0 flex items-center justify-center text-gray-500 border-2 border-dashed border-gray-400 rounded-2xl p-4 text-center">
                             [FOTO: Mujer de teatro (Mari Paz Sayago) - Deja el hueco]
-                         </div>
+                        </div>
                     </div>
                 </div>
 
-                <!-- Large Card 2 -->
-                <div class="bg-white border rounded-3xl shadow-lg relative pt-12 pb-5 px-5 flex flex-col mb-10 h-[400px]">
-                    <div class="absolute -top-4 left-6 bg-black text-white text-sm px-5 py-1.5 rounded-full z-10 shadow-md shadow-gray-400/50">
+                <div data-category="otros"
+                    class="event-card bg-white border rounded-3xl shadow-lg relative pt-12 pb-5 px-5 flex flex-col mb-10 h-[400px]">
+                    <div
+                        class="absolute -top-4 left-6 bg-black text-white text-sm px-5 py-1.5 rounded-full z-10 shadow-md shadow-gray-400/50">
                         Domingo 30 de Agosto
                     </div>
-                    
+
                     <div class="flex-grow">
-                        <h3 class="font-bold text-xl mb-3">No estoy de frente <!-- Transcrito del mockup --></h3>
+                        <h3 class="font-bold text-xl mb-3">No estoy de frente </h3>
                         <ul class="text-sm space-y-2 text-gray-600 mb-6">
                             <li class="flex items-center gap-3"><i class="fa-regular fa-clock w-4"></i> 15:00</li>
-                            <li class="flex items-center gap-3"><i class="fa-solid fa-location-dot w-4"></i> Playa San Lorenzo</li>
-                            <li class="flex items-center gap-3"><i class="fa-solid fa-list w-4"></i> Récord mundial de escanciado simultáneo de sidra</li>
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-location-dot w-4"></i> Playa San
+                                Lorenzo</li>
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-list w-4"></i> Récord mundial de
+                                escanciado simultáneo de sidra</li>
                         </ul>
                     </div>
 
-                    <!-- Category Tag -->
-                    <span class="bg-gray-500 text-white text-xs px-3 py-1 rounded-md absolute z-20 left-5 bottom-[42%]">Otros</span>
-                    
-                    <!-- Image Placeholder -->
+                    <span
+                        class="bg-[#555555] text-white text-xs px-3 py-1 rounded-md absolute z-20 left-5 bottom-[42%]">Otros</span>
+
                     <div class="w-full h-44 bg-gray-200 rounded-2xl overflow-hidden mt-auto relative">
-                        <div class="absolute inset-0 flex items-center justify-center text-gray-500 border-2 border-dashed border-gray-400 rounded-2xl p-4 text-center">
+                        <div
+                            class="absolute inset-0 flex items-center justify-center text-gray-500 border-2 border-dashed border-gray-400 rounded-2xl p-4 text-center">
                             [FOTO: Fiesta de la Sidra Natural - Deja el hueco]
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- ====== RIGHT COLUMN: Recomendados ====== -->
-            <div>
+            <div class="md:pl-12 xl:pl-24">
                 <h2 class="text-2xl font-light text-primary mb-8 tracking-wide">Recomendados</h2>
-                
-                <!-- Smaller Card 1 -->
-                <div class="bg-white border rounded-3xl shadow-lg relative pt-10 pb-4 px-5 flex flex-col mb-14 h-[400px] w-full max-w-[320px] mx-auto xl:ml-12">
-                    <div class="absolute -top-4 left-5 bg-black text-white text-sm px-4 py-1.5 rounded-full z-10 shadow-md shadow-gray-400/50">
+
+                <div data-category="musica"
+                    class="event-card bg-white border rounded-3xl shadow-lg relative pt-10 pb-4 px-5 flex flex-col mb-14 h-[400px] w-full max-w-[320px]">
+                    <div
+                        class="absolute -top-4 left-5 bg-black text-white text-sm px-4 py-1.5 rounded-full z-10 shadow-md shadow-gray-400/50">
                         Miércoles 13 de Mayo
                     </div>
-                    
+
                     <div class="flex-grow">
                         <h3 class="font-bold text-lg mb-2">Concierto Tsunami</h3>
                         <ul class="text-sm space-y-2 text-gray-600 mb-4">
                             <li class="flex items-center gap-3"><i class="fa-regular fa-clock w-4"></i> 20:00</li>
-                            <li class="flex items-center gap-3"><i class="fa-solid fa-location-dot w-4"></i> Ayuntamiento de Gijón</li>
-                            <li class="flex items-center gap-3"><i class="fa-solid fa-list w-4"></i> Festival de rock y hardcore</li>
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-location-dot w-4"></i>
+                                Ayuntamiento de Gijón</li>
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-list w-4"></i> Festival de rock y
+                                hardcore</li>
                         </ul>
                     </div>
 
-                    <!-- Category Tag -->
-                    <span class="bg-[#b2367c] text-white text-[11px] px-3 py-1 rounded-md absolute z-20 left-5 bottom-[42%] font-semibold tracking-wide">Música</span>
-                    
-                    <!-- Image Placeholder -->
+                    <span
+                        class="bg-[#ba007c] text-white text-[11px] px-3 py-1 rounded-md absolute z-20 left-5 bottom-[42%] font-semibold tracking-wide">Música</span>
+
                     <div class="w-full h-44 bg-gray-200 rounded-2xl overflow-hidden mt-auto relative">
-                         <div class="absolute inset-0 flex items-center justify-center text-gray-500 border-2 border-dashed border-gray-400 rounded-2xl p-4 text-center">
+                        <div
+                            class="absolute inset-0 flex items-center justify-center text-gray-500 border-2 border-dashed border-gray-400 rounded-2xl p-4 text-center">
                             [FOTO: Concierto Rock - Deja el hueco]
-                         </div>
+                        </div>
                     </div>
                 </div>
 
-                <!-- Smaller Card 2 -->
-                <div class="bg-white border rounded-3xl shadow-lg relative pt-10 pb-4 px-5 flex flex-col mb-10 h-[400px] w-full max-w-[320px] mx-auto xl:ml-12">
-                    <div class="absolute -top-4 left-5 bg-black text-white text-sm px-4 py-1.5 rounded-full z-10 shadow-md shadow-gray-400/50">
+                <div data-category="exposiciones"
+                    class="event-card bg-white border rounded-3xl shadow-lg relative pt-10 pb-4 px-5 flex flex-col mb-10 h-[400px] w-full max-w-[320px]">
+                    <div
+                        class="absolute -top-4 left-5 bg-black text-white text-sm px-4 py-1.5 rounded-full z-10 shadow-md shadow-gray-400/50">
                         Martes 02 de Junio
                     </div>
-                    
+
                     <div class="flex-grow">
                         <h3 class="font-bold text-lg mb-2">Viaje a la luna</h3>
                         <ul class="text-sm space-y-2 text-gray-600 mb-4">
                             <li class="flex items-center gap-3"><i class="fa-regular fa-clock w-4"></i> 10:00</li>
-                            <li class="flex items-center gap-3"><i class="fa-solid fa-location-dot w-4"></i> Centro Federico García Lorca</li>
-                            <li class="flex items-center gap-3"><i class="fa-solid fa-list w-4"></i> Exposición colectiva</li>
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-location-dot w-4"></i> Centro
+                                Federico García Lorca</li>
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-list w-4"></i> Exposición
+                                colectiva</li>
                         </ul>
                     </div>
 
-                    <!-- Category Tag -->
-                    <span class="bg-orange-500 text-white text-[11px] px-3 py-1 rounded-md absolute z-20 left-5 bottom-[42%] font-semibold tracking-wide">Exposición</span>
-                    
-                    <!-- Image Placeholder -->
+                    <span
+                        class="bg-[#ff7b00] text-white text-[11px] px-3 py-1 rounded-md absolute z-20 left-5 bottom-[42%] font-semibold tracking-wide">Exposición</span>
+
                     <div class="w-full h-44 bg-gray-200 rounded-2xl overflow-hidden mt-auto relative">
-                        <div class="absolute inset-0 flex items-center justify-center text-gray-500 border-2 border-dashed border-gray-400 rounded-2xl p-4 text-center">
+                        <div
+                            class="absolute inset-0 flex items-center justify-center text-gray-500 border-2 border-dashed border-gray-400 rounded-2xl p-4 text-center">
                             [FOTO: Cartel Viaje a la luna - Deja el hueco]
                         </div>
                     </div>
@@ -244,13 +313,12 @@
         </div>
     </section>
 
-    <!-- Footer -->
     <footer class="bg-gray-600 text-gray-300 flex items-center justify-between px-6 py-2 mt-auto text-sm w-full">
-        <!-- Footer Logo -->
+        
         <div class="text-2xl font-bold italic font-serif text-white">
             &
         </div>
-        <!-- Footer Text & Socials -->
+        
         <div class="flex items-center gap-4">
             <p>Copyright | Redes Sociales:</p>
             <div class="flex gap-3 text-lg text-white">
@@ -261,5 +329,181 @@
         </div>
     </footer>
 
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const categorySelect = document.getElementById('category-filter');
+            const searchInput = document.getElementById('search-input');
+            const eventCards = document.querySelectorAll('.event-card');
+
+            const monthNames = ["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre"];
+            
+            let today = new Date();
+            let currentMonth = today.getMonth();
+            let currentYear = today.getFullYear();
+            let selectedDateFilter = null;
+
+            function parseEventDate(text) {
+                const parts = text.trim().toLowerCase().split(' ');
+                let day = null, monthIndex = null;
+                for (let part of parts) {
+                    const num = parseInt(part);
+                    if (!isNaN(num)) day = num;
+                    const mIdx = monthNames.indexOf(part);
+                    if (mIdx !== -1) monthIndex = mIdx;
+                }
+                if (day !== null && monthIndex !== null) {
+
+                    return new Date(today.getFullYear(), monthIndex, day);
+                }
+                return null;
+            }
+
+            const eventDates = [];
+            eventCards.forEach(card => {
+                const badge = card.querySelector('.bg-black');
+                if (badge) {
+                    const dateObj = parseEventDate(badge.textContent);
+                    if (dateObj) {
+                        const dateStr = `${dateObj.getFullYear()}-${dateObj.getMonth()}-${dateObj.getDate()}`;
+                        card.dataset.dateFilter = dateStr;
+                        eventDates.push({ dateStr });
+                    }
+                }
+            });
+
+            function hasEvent(year, month, day) {
+                const checkStr = `${year}-${month}-${day}`;
+                return eventDates.some(e => e.dateStr === checkStr);
+            }
+
+            function renderCalendar() {
+                const grid = document.getElementById('calendar-grid');
+                const monthYearText = document.getElementById('calendar-month-year');
+
+                const headers = ['Lu', 'Ma', 'Mi', 'Ju', 'Vi', 'Sa', 'Do'];
+                grid.innerHTML = headers.map(h => `<div>${h}</div>`).join('');
+                
+                monthYearText.textContent = `${monthNames[currentMonth].toUpperCase()} ${currentYear}`;
+                
+                const firstDay = new Date(currentYear, currentMonth, 1).getDay();
+                let startDayIdx = firstDay === 0 ? 6 : firstDay - 1;
+                const daysInMonth = new Date(currentYear, currentMonth + 1, 0).getDate();
+                const prevMonthDays = new Date(currentYear, currentMonth, 0).getDate();
+
+                for (let i = 0; i < startDayIdx; i++) {
+                    const div = document.createElement('div');
+                    div.className = 'text-gray-300 pointer-events-none py-1';
+                    div.textContent = prevMonthDays - startDayIdx + i + 1;
+                    grid.appendChild(div);
+                }
+
+                for (let i = 1; i <= daysInMonth; i++) {
+                    const div = document.createElement('div');
+                    div.textContent = i;
+                    div.className = 'py-1 transition-colors duration-200';
+                    
+                    const isToday = currentYear === today.getFullYear() && currentMonth === today.getMonth() && i === today.getDate();
+                    const eventOnDay = hasEvent(currentYear, currentMonth, i);
+                    const cellDateStr = `${currentYear}-${currentMonth}-${i}`;
+                    
+                    if (isToday) {
+                        div.className += ' bg-[#ff7b00] text-white rounded';
+                    } else if (eventOnDay) {
+                        div.className += ' bg-[#009bdb] text-white rounded cursor-pointer hover:bg-[#009bdb]/80';
+
+                        div.onclick = () => {
+                            if (selectedDateFilter === cellDateStr) {
+                                selectedDateFilter = null;
+                            } else {
+                                selectedDateFilter = cellDateStr;
+                            }
+                            renderCalendar();
+                            filterEvents();
+                        };
+                    } else {
+                        div.className += ' bg-white text-gray-800';
+                    }
+
+                    if (selectedDateFilter === cellDateStr) {
+                        div.className += ' ring-2 ring-offset-1 ring-primary font-bold';
+                    }
+                    
+                    grid.appendChild(div);
+                }
+            }
+
+            document.getElementById('prev-month').addEventListener('click', () => {
+                currentMonth--;
+                if (currentMonth < 0) { currentMonth = 11; currentYear--; }
+                renderCalendar();
+            });
+
+            document.getElementById('next-month').addEventListener('click', () => {
+                currentMonth++;
+                if (currentMonth > 11) { currentMonth = 0; currentYear++; }
+                renderCalendar();
+            });
+
+            renderCalendar();
+
+            function filterEvents() {
+                const selectedCategory = categorySelect.value;
+                const searchText = searchInput.value.trim().toLowerCase();
+
+                eventCards.forEach(card => {
+                    const cardCategory = card.dataset.category;
+                    const cardTitle = card.querySelector('h3').textContent.trim().toLowerCase();
+                    const cardDate = card.dataset.dateFilter;
+
+                    const matchesCategory = selectedCategory === '' || selectedCategory === 'todas' || cardCategory === selectedCategory;
+                    const matchesSearch = cardTitle.includes(searchText);
+                    const matchesDate = !selectedDateFilter || cardDate === selectedDateFilter;
+
+                    if (matchesCategory && matchesSearch && matchesDate) {
+                        card.style.display = 'flex';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            }
+
+            categorySelect.addEventListener('change', filterEvents);
+            searchInput.addEventListener('input', filterEvents);
+
+            const paneles = document.querySelectorAll('.panel-evento');
+            paneles.forEach(panel => {
+                panel.addEventListener('mouseenter', () => {
+                    paneles.forEach(p => {
+                        // Minimizar todos al tamaño pequeño
+                        p.classList.remove('w-[55%]');
+                        p.classList.add('w-[15%]');
+                        
+                        // Ocultar sombra
+                        p.querySelector('.capa-oscura').classList.remove('opacity-100');
+                        p.querySelector('.capa-oscura').classList.add('opacity-0');
+                        
+                        // Ocultar texto
+                        let texto = p.querySelector('.contenido-texto');
+                        texto.classList.remove('opacity-100', 'translate-x-0', 'delay-200');
+                        texto.classList.add('opacity-0', '-translate-x-5');
+                    });
+                    
+                    // Hacer muy grande solo el panel que tiene el ratón
+                    panel.classList.remove('w-[15%]');
+                    panel.classList.add('w-[55%]');
+                    
+                    // Mostrar su sombra
+                    panel.querySelector('.capa-oscura').classList.remove('opacity-0');
+                    panel.querySelector('.capa-oscura').classList.add('opacity-100');
+                    
+                    // Mostrar su texto
+                    let textoActivo = panel.querySelector('.contenido-texto');
+                    textoActivo.classList.remove('opacity-0', '-translate-x-5');
+                    textoActivo.classList.add('opacity-100', 'translate-x-0', 'delay-200');
+                });
+            });
+        });
+    </script>
 </body>
+
 </html>
