@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mockup Sitio Web</title>
-    
+
     <script src="https://cdn.tailwindcss.com"></script>
-    
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <script>
@@ -15,7 +15,7 @@
             theme: {
                 extend: {
                     colors: {
-                        primary: '#ba007c', 
+                        primary: '#ba007c',
                         secondary: '#f9f9f9',
                     },
                     fontFamily: {
@@ -30,14 +30,10 @@
 <body class="bg-white text-gray-800 font-sans antialiased overflow-x-hidden">
 
     <header class="flex items-center justify-between px-6 py-4 border-b border-gray-100">
-        
-        <!-- Logotipo (Pendiente de Imagen) -->
+
         <a href="index.html" class="block flex-shrink-0 transition hover:opacity-80">
-            <!-- 
-                Cambia la URL de la propiedad src="" por la ruta del archivo de tu foto cuando la tengas.
-                Por ejemplo: src="logo.jpg" o src="img/logo.png"
-            -->
-            <img src="https://placehold.co/150x60/f3f4f6/b2367c?text=FOTO+LOGO" alt="Logo del Sitio" class="h-12 md:h-14 w-auto object-contain">
+            <img src="https://placehold.co/150x60/f3f4f6/b2367c?text=FOTO+LOGO" alt="Logo del Sitio"
+                class="h-12 md:h-14 w-auto object-contain">
         </a>
 
         <nav class="hidden md:flex space-x-3 text-sm">
@@ -48,7 +44,7 @@
             <a href="#"
                 class="px-4 py-1.5 border border-primary text-gray-600 rounded-full hover:bg-primary hover:text-white transition">Historial
                 de Eventos</a>
-            <a href="#"
+            <a href="sobre_nosotros.html"
                 class="px-4 py-1.5 border border-primary text-gray-600 rounded-full hover:bg-primary hover:text-white transition">Sobre
                 Nosotros</a>
             <a href="#"
@@ -58,113 +54,94 @@
         </nav>
     </header>
 
+    <!-- Acordeón superior -->
     <section class="w-full">
         <div class="flex w-full h-[350px] bg-gray-200">
-            
-            <div class="panel-evento w-[55%] relative bg-gray-300 bg-cover bg-center bg-no-repeat cursor-pointer overflow-hidden transition-all duration-500 ease-in-out">
-                
-                <div class="absolute inset-0 border-2 border-dashed border-gray-400/50 m-2 rounded-xl flex items-center justify-center text-gray-500 z-0 overflow-hidden break-words">
-                    <div class="text-center px-4">
-                        <i class="fa-solid fa-image text-3xl mb-2"></i>
-                        <p class="text-xs lg:text-sm font-semibold">[FOTO: Concierto Rock]</p>
-                    </div>
-                </div>
-                
-                <div class="capa-oscura absolute inset-0 bg-gradient-to-r from-black/70 to-transparent z-10 opacity-100 transition-opacity duration-500 pointer-events-none"></div>
-                
-                <div class="contenido-texto absolute bottom-8 left-8 text-white opacity-100 translate-x-0 transition-all duration-500 delay-200 whitespace-nowrap z-20 pointer-events-none">
-                    <h1 class="text-2xl md:text-4xl font-bold drop-shadow-md">Concierto Tsunami</h1>
-                    <p class="text-lg md:text-xl flex items-center gap-2 mt-2 drop-shadow-md">
-                        <i class="fa-regular fa-clock"></i> 20:00
-                    </p>
-                </div>
-            </div>
 
-            <div class="panel-evento w-[15%] relative bg-gray-400 bg-cover bg-center bg-no-repeat cursor-pointer overflow-hidden transition-all duration-500 ease-in-out border-l-2 border-white">
-                 
-                 <div class="absolute inset-0 border-2 border-dashed border-gray-500/50 m-2 rounded-xl flex items-center justify-center text-gray-600 z-0 overflow-hidden break-words">
-                    <div class="text-center px-4">
-                        <i class="fa-solid fa-masks-theater text-3xl mb-2"></i>
-                        <p class="text-xs lg:text-sm font-semibold">[FOTO: Mari Paz Sayago]</p>
-                    </div>
+            <!-- 1. No estoy de frente -->
+            <div
+                class="panel-evento w-[55%] relative cursor-pointer overflow-hidden transition-all duration-500 ease-in-out">
+                <img src="./Imagenes Eventos/no-estoy-de-frente.jpg" alt="Cartel del evento No estoy de frente"
+                    class="absolute inset-0 w-full h-full object-fill">
+
+                <div
+                    class="capa-oscura absolute inset-0 bg-gradient-to-r from-black/70 to-transparent z-10 opacity-100 transition-opacity duration-500 pointer-events-none">
                 </div>
-                <div class="capa-oscura absolute inset-0 bg-gradient-to-r from-black/70 to-transparent z-10 opacity-0 transition-opacity duration-500 pointer-events-none"></div>
-                <div class="contenido-texto absolute bottom-8 left-8 text-white opacity-0 -translate-x-5 transition-all duration-500 whitespace-nowrap z-20 pointer-events-none">
+
+                <div
+                    class="contenido-texto absolute bottom-8 left-8 text-white opacity-100 translate-x-0 transition-all duration-500 delay-200 z-20 pointer-events-none">
                     <h1 class="text-2xl md:text-4xl font-bold drop-shadow-md">No estoy de frente</h1>
                     <p class="text-lg md:text-xl flex items-center gap-2 mt-2 drop-shadow-md">
-                        <i class="fa-regular fa-clock"></i> 20:00
+                        <i class="fa-regular fa-calendar"></i> Domingo 10 de Mayo
                     </p>
                 </div>
             </div>
 
-            <div class="panel-evento w-[15%] relative bg-gray-300 bg-cover bg-center bg-no-repeat cursor-pointer overflow-hidden transition-all duration-500 ease-in-out border-l-2 border-white">
-                 
-                 <div class="absolute inset-0 border-2 border-dashed border-gray-400/50 m-2 rounded-xl flex items-center justify-center text-gray-500 z-0 overflow-hidden break-words">
-                    <div class="text-center px-4">
-                        <i class="fa-solid fa-glass-water text-3xl mb-2"></i>
-                        <p class="text-xs lg:text-sm font-semibold">[FOTO: Sidra Natural]</p>
-                    </div>
+            <!-- 2. Fiesta de la Sidra -->
+            <div
+                class="panel-evento w-[22.5%] relative cursor-pointer overflow-hidden transition-all duration-500 ease-in-out border-l-2 border-white">
+                <img src="./Imagenes Eventos/sidra.png" alt="Cartel del evento Fiesta de la Sidra"
+                    class="absolute inset-0 w-full h-full object-fill">
+
+                <div
+                    class="capa-oscura absolute inset-0 bg-gradient-to-r from-black/70 to-transparent z-10 opacity-0 transition-opacity duration-500 pointer-events-none">
                 </div>
-                <div class="capa-oscura absolute inset-0 bg-gradient-to-r from-black/70 to-transparent z-10 opacity-0 transition-opacity duration-500 pointer-events-none"></div>
-                <div class="contenido-texto absolute bottom-8 left-8 text-white opacity-0 -translate-x-5 transition-all duration-500 whitespace-nowrap z-20 pointer-events-none">
+
+                <div
+                    class="contenido-texto absolute bottom-8 left-8 text-white opacity-0 -translate-x-5 transition-all duration-500 z-20 pointer-events-none">
                     <h1 class="text-2xl md:text-4xl font-bold drop-shadow-md">Fiesta de la Sidra</h1>
                     <p class="text-lg md:text-xl flex items-center gap-2 mt-2 drop-shadow-md">
-                        <i class="fa-regular fa-clock"></i> 15:00
+                        <i class="fa-regular fa-calendar"></i> Domingo 30 de Agosto
                     </p>
                 </div>
             </div>
 
-            <div class="panel-evento w-[15%] relative bg-gray-400 bg-cover bg-center bg-no-repeat cursor-pointer overflow-hidden transition-all duration-500 ease-in-out border-l-2 border-white">
-                 
-                 <div class="absolute inset-0 border-2 border-dashed border-gray-500/50 m-2 rounded-xl flex items-center justify-center text-gray-600 z-0 overflow-hidden break-words">
-                    <div class="text-center px-4">
-                        <i class="fa-solid fa-palette text-3xl mb-2"></i>
-                        <p class="text-xs lg:text-sm font-semibold">[FOTO: Viaje a la luna]</p>
-                    </div>
+            <!-- 3. XXVI Feria del Salmón -->
+            <div
+                class="panel-evento w-[22.5%] relative cursor-pointer overflow-hidden transition-all duration-500 ease-in-out border-l-2 border-white">
+                <img src="./Imagenes Eventos/feria-salmon.jpg" alt="Cartel del evento XXVI Feria del Salmón"
+                    class="absolute inset-0 w-full h-full object-fill">
+
+                <div
+                    class="capa-oscura absolute inset-0 bg-gradient-to-r from-black/70 to-transparent z-10 opacity-0 transition-opacity duration-500 pointer-events-none">
                 </div>
-                <div class="capa-oscura absolute inset-0 bg-gradient-to-r from-black/70 to-transparent z-10 opacity-0 transition-opacity duration-500 pointer-events-none"></div>
-                <div class="contenido-texto absolute bottom-8 left-8 text-white opacity-0 -translate-x-5 transition-all duration-500 whitespace-nowrap z-20 pointer-events-none">
-                    <h1 class="text-2xl md:text-4xl font-bold drop-shadow-md">Viaje a la luna</h1>
+
+                <div
+                    class="contenido-texto absolute bottom-8 left-8 text-white opacity-0 -translate-x-5 transition-all duration-500 z-20 pointer-events-none">
+                    <h1 class="text-2xl md:text-4xl font-bold drop-shadow-md">XXVI Feria del Salmón</h1>
                     <p class="text-lg md:text-xl flex items-center gap-2 mt-2 drop-shadow-md">
-                        <i class="fa-regular fa-clock"></i> 10:00
+                        <i class="fa-regular fa-calendar"></i> Sábado 18 Mayo
                     </p>
                 </div>
             </div>
+
         </div>
     </section>
 
+    <!-- Buscador + calendario -->
     <section class="max-w-7xl mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-2 gap-10">
 
         <div class="flex items-start gap-8 flex-col lg:flex-row md:justify-end">
-
             <div
                 class="w-full max-w-[400px] shadow-[0_3px_15px_rgba(178,54,124,0.15)] rounded overflow-hidden bg-white mx-auto md:ml-auto md:mr-12">
-                
+
                 <div class="bg-primary text-white flex justify-between items-center px-4 py-2 text-sm font-semibold">
                     <button id="prev-month"><i class="fa-solid fa-chevron-left"></i></button>
                     <span id="calendar-month-year">MARZO 2026</span>
                     <button id="next-month"><i class="fa-solid fa-chevron-right"></i></button>
                 </div>
-                
-                <div class="grid grid-cols-7 text-center text-xs p-3 gap-1 font-semibold" id="calendar-grid">
-                    
-                </div>
+
+                <div class="grid grid-cols-7 text-center text-xs p-3 gap-1 font-semibold" id="calendar-grid"></div>
             </div>
-
-
-
         </div>
 
         <div class="flex flex-col justify-center max-w-sm mx-auto md:mr-auto md:ml-12 w-full gap-5">
-            
             <div class="relative w-full">
                 <input type="text" id="search-input" placeholder="¿Qué Buscas?"
                     class="w-full border-2 border-primary rounded-full px-5 py-2.5 focus:outline-none focus:ring-2 focus:ring-primary/50 text-gray-700 placeholder-primary/60">
                 <i class="fa-solid fa-magnifying-glass absolute right-5 top-3.5 text-primary text-lg"></i>
             </div>
-            
 
-            
             <div class="relative w-full">
                 <select id="category-filter"
                     class="w-full border-2 border-primary rounded-full px-5 py-2.5 focus:outline-none focus:ring-2 focus:ring-primary/50 text-gray-700 appearance-none bg-transparent cursor-pointer">
@@ -182,15 +159,17 @@
 
     </section>
 
+    <!-- Próximos + Recomendados -->
     <section class="max-w-7xl mx-auto px-6 py-6 pb-20">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-12">
 
             <div>
                 <h2 class="text-2xl font-light text-primary mb-8 tracking-wide">Próximos Eventos</h2>
 
+                <!-- Próximo 1 -->
                 <div data-category="teatro"
                     class="event-card bg-white border rounded-3xl shadow-lg relative pt-12 pb-5 px-5 flex flex-col mb-16 h-[400px]">
-                    
+
                     <div
                         class="absolute -top-4 left-6 bg-black text-white text-sm px-5 py-1.5 rounded-full z-10 shadow-md shadow-gray-400/50">
                         Domingo 10 de Mayo
@@ -211,13 +190,12 @@
                         class="bg-[#009bdb] text-white text-xs px-3 py-1 rounded-md absolute z-20 left-5 bottom-[42%]">Teatro</span>
 
                     <div class="w-full h-44 bg-gray-200 rounded-2xl overflow-hidden mt-auto relative">
-                        <div
-                            class="absolute inset-0 flex items-center justify-center text-gray-500 border-2 border-dashed border-gray-400 rounded-2xl p-4 text-center">
-                            [FOTO: Mujer de teatro (Mari Paz Sayago) - Deja el hueco]
-                        </div>
+                        <img src="./Imagenes Eventos/no-estoy-de-frente.jpg" alt="Cartel del evento No estoy de frente"
+                            class="w-full h-full object-fill">
                     </div>
                 </div>
 
+                <!-- Próximo 2 -->
                 <div data-category="otros"
                     class="event-card bg-white border rounded-3xl shadow-lg relative pt-12 pb-5 px-5 flex flex-col mb-10 h-[400px]">
                     <div
@@ -226,7 +204,7 @@
                     </div>
 
                     <div class="flex-grow">
-                        <h3 class="font-bold text-xl mb-3">No estoy de frente </h3>
+                        <h3 class="font-bold text-xl mb-3">Fiesta de la Sidra</h3>
                         <ul class="text-sm space-y-2 text-gray-600 mb-6">
                             <li class="flex items-center gap-3"><i class="fa-regular fa-clock w-4"></i> 15:00</li>
                             <li class="flex items-center gap-3"><i class="fa-solid fa-location-dot w-4"></i> Playa San
@@ -240,14 +218,42 @@
                         class="bg-[#555555] text-white text-xs px-3 py-1 rounded-md absolute z-20 left-5 bottom-[42%]">Otros</span>
 
                     <div class="w-full h-44 bg-gray-200 rounded-2xl overflow-hidden mt-auto relative">
-                        <div
-                            class="absolute inset-0 flex items-center justify-center text-gray-500 border-2 border-dashed border-gray-400 rounded-2xl p-4 text-center">
-                            [FOTO: Fiesta de la Sidra Natural - Deja el hueco]
-                        </div>
+                        <img src="./Imagenes Eventos/sidra.png" alt="Cartel del evento Fiesta de la Sidra"
+                            class="w-full h-full object-fill">
+                    </div>
+                </div>
+
+                <!-- Próximo 3 -->
+                <div data-category="otros"
+                    class="event-card bg-white border rounded-3xl shadow-lg relative pt-12 pb-5 px-5 flex flex-col mb-10 h-[400px]">
+                    <div
+                        class="absolute -top-4 left-6 bg-black text-white text-sm px-5 py-1.5 rounded-full z-10 shadow-md shadow-gray-400/50">
+                        Sábado 18 Mayo
+                    </div>
+
+                    <div class="flex-grow">
+                        <h3 class="font-bold text-xl mb-3">XXVI Feria del Salmón</h3>
+                        <ul class="text-sm space-y-2 text-gray-600 mb-6">
+                            <li class="flex items-center gap-3"><i class="fa-regular fa-clock w-4"></i> Todo el día</li>
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-location-dot w-4"></i> Cornellana
+                            </li>
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-list w-4"></i>La gran feria
+                                cinegética, de pesca y naturaleza que cada año reúne a aficionados, profesionales y
+                                visitantes de toda España.</li>
+                        </ul>
+                    </div>
+
+                    <span
+                        class="bg-[#555555] text-white text-xs px-3 py-1 rounded-md absolute z-20 left-5 bottom-[42%]">Otros</span>
+
+                    <div class="w-full h-44 bg-gray-200 rounded-2xl overflow-hidden mt-auto relative">
+                        <img src="./Imagenes Eventos/feria-salmon.jpg" alt="Cartel del evento XXVI Feria del Salmón"
+                            class="w-full h-full object-fill">
                     </div>
                 </div>
             </div>
 
+            <!-- Recomendados -->
             <div class="md:pl-12 xl:pl-24">
                 <h2 class="text-2xl font-light text-primary mb-8 tracking-wide">Recomendados</h2>
 
@@ -255,7 +261,7 @@
                     class="event-card bg-white border rounded-3xl shadow-lg relative pt-10 pb-4 px-5 flex flex-col mb-14 h-[400px] w-full max-w-[320px]">
                     <div
                         class="absolute -top-4 left-5 bg-black text-white text-sm px-4 py-1.5 rounded-full z-10 shadow-md shadow-gray-400/50">
-                        Miércoles 13 de Mayo
+                        Miércoles 22 de Abril
                     </div>
 
                     <div class="flex-grow">
@@ -273,10 +279,8 @@
                         class="bg-[#ba007c] text-white text-[11px] px-3 py-1 rounded-md absolute z-20 left-5 bottom-[42%] font-semibold tracking-wide">Música</span>
 
                     <div class="w-full h-44 bg-gray-200 rounded-2xl overflow-hidden mt-auto relative">
-                        <div
-                            class="absolute inset-0 flex items-center justify-center text-gray-500 border-2 border-dashed border-gray-400 rounded-2xl p-4 text-center">
-                            [FOTO: Concierto Rock - Deja el hueco]
-                        </div>
+                        <img src="./Imagenes Eventos/tsunami.png" alt="Cartel del evento Concierto Tsunami"
+                            class="w-full h-full object-fill">
                     </div>
                 </div>
 
@@ -284,7 +288,7 @@
                     class="event-card bg-white border rounded-3xl shadow-lg relative pt-10 pb-4 px-5 flex flex-col mb-10 h-[400px] w-full max-w-[320px]">
                     <div
                         class="absolute -top-4 left-5 bg-black text-white text-sm px-4 py-1.5 rounded-full z-10 shadow-md shadow-gray-400/50">
-                        Martes 02 de Junio
+                        Viernes 27 de Marzo
                     </div>
 
                     <div class="flex-grow">
@@ -302,10 +306,37 @@
                         class="bg-[#ff7b00] text-white text-[11px] px-3 py-1 rounded-md absolute z-20 left-5 bottom-[42%] font-semibold tracking-wide">Exposición</span>
 
                     <div class="w-full h-44 bg-gray-200 rounded-2xl overflow-hidden mt-auto relative">
-                        <div
-                            class="absolute inset-0 flex items-center justify-center text-gray-500 border-2 border-dashed border-gray-400 rounded-2xl p-4 text-center">
-                            [FOTO: Cartel Viaje a la luna - Deja el hueco]
-                        </div>
+                        <img src="./Imagenes Eventos/viaje-luna-lorca.jpg" alt="Cartel del evento Viaje a la luna"
+                            class="w-full h-full object-fill">
+                    </div>
+                </div>
+
+                <div data-category="otros"
+                    class="event-card bg-white border rounded-3xl shadow-lg relative pt-10 pb-4 px-5 flex flex-col mb-10 h-[400px] w-full max-w-[320px]">
+                    <div
+                        class="absolute -top-4 left-5 bg-black text-white text-sm px-4 py-1.5 rounded-full z-10 shadow-md shadow-gray-400/50">
+                        Del 9 hasta el 19 de Abril
+                    </div>
+
+                    <div class="flex-grow">
+                        <h3 class="font-bold text-lg mb-2">XI Festival de Cine LGTBI</h3>
+                        <ul class="text-sm space-y-2 text-gray-600 mb-4">
+                            <li class="flex items-center gap-3"><i class="fa-regular fa-clock w-4"></i> Diferentes
+                                horarios</li>
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-location-dot w-4"></i> Avilés,
+                                Centro Niemeyer</li>
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-list w-4"></i> Ttítulos nacionales
+                                e internacionales y un programa de actividades complementarias.
+                            </li>
+                        </ul>
+                    </div>
+
+                    <span
+                        class="bg-[#009bdb] text-white text-[11px] px-3 py-1 rounded-md absolute z-20 left-5 bottom-[42%] font-semibold tracking-wide">Cine</span>
+
+                    <div class="w-full h-44 bg-gray-200 rounded-2xl overflow-hidden mt-auto relative">
+                        <img src="./Imagenes Eventos/XI_FESTIVAL_LGTBI_NIEMEYER_2026.jpg"
+                            alt="Cartel del evento XI Festival de Cine LGTBI" class="w-full h-full object-fill">
                     </div>
                 </div>
             </div>
@@ -314,11 +345,11 @@
     </section>
 
     <footer class="bg-gray-600 text-gray-300 flex items-center justify-between px-6 py-2 mt-auto text-sm w-full">
-        
+
         <div class="text-2xl font-bold italic font-serif text-white">
             &
         </div>
-        
+
         <div class="flex items-center gap-4">
             <p>Copyright | Redes Sociales:</p>
             <div class="flex gap-3 text-lg text-white">
@@ -336,37 +367,49 @@
             const eventCards = document.querySelectorAll('.event-card');
 
             const monthNames = ["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre"];
-            
+
             let today = new Date();
             let currentMonth = today.getMonth();
             let currentYear = today.getFullYear();
             let selectedDateFilter = null;
 
-            function parseEventDate(text) {
+            function parseEventDates(text) {
                 const parts = text.trim().toLowerCase().split(' ');
-                let day = null, monthIndex = null;
+                let days = [];
+                let monthIndex = null;
                 for (let part of parts) {
                     const num = parseInt(part);
-                    if (!isNaN(num)) day = num;
+                    if (!isNaN(num) && !days.includes(num)) {
+                        days.push(num);
+                    }
                     const mIdx = monthNames.indexOf(part);
                     if (mIdx !== -1) monthIndex = mIdx;
                 }
-                if (day !== null && monthIndex !== null) {
 
-                    return new Date(today.getFullYear(), monthIndex, day);
+                let dates = [];
+                if (days.length > 0 && monthIndex !== null) {
+                    const firstDay = days[0];
+                    const lastDay = days.length > 1 ? days[days.length - 1] : firstDay;
+
+                    let start = Math.min(firstDay, lastDay);
+                    let end = Math.max(firstDay, lastDay);
+
+                    for (let d = start; d <= end; d++) {
+                        dates.push(new Date(today.getFullYear(), monthIndex, d));
+                    }
                 }
-                return null;
+                return dates;
             }
 
             const eventDates = [];
             eventCards.forEach(card => {
                 const badge = card.querySelector('.bg-black');
                 if (badge) {
-                    const dateObj = parseEventDate(badge.textContent);
-                    if (dateObj) {
-                        const dateStr = `${dateObj.getFullYear()}-${dateObj.getMonth()}-${dateObj.getDate()}`;
-                        card.dataset.dateFilter = dateStr;
-                        eventDates.push({ dateStr });
+                    const dateObjs = parseEventDates(badge.textContent);
+                    if (dateObjs.length > 0) {
+                        const dateStrings = dateObjs.map(d => `${d.getFullYear()}-${d.getMonth()}-${d.getDate()}`);
+                        card.dataset.dateFilter = dateStrings.join(',');
+                        dateStrings.forEach(dateStr => eventDates.push({ dateStr }));
                     }
                 }
             });
@@ -382,9 +425,9 @@
 
                 const headers = ['Lu', 'Ma', 'Mi', 'Ju', 'Vi', 'Sa', 'Do'];
                 grid.innerHTML = headers.map(h => `<div>${h}</div>`).join('');
-                
+
                 monthYearText.textContent = `${monthNames[currentMonth].toUpperCase()} ${currentYear}`;
-                
+
                 const firstDay = new Date(currentYear, currentMonth, 1).getDay();
                 let startDayIdx = firstDay === 0 ? 6 : firstDay - 1;
                 const daysInMonth = new Date(currentYear, currentMonth + 1, 0).getDate();
@@ -401,11 +444,11 @@
                     const div = document.createElement('div');
                     div.textContent = i;
                     div.className = 'py-1 transition-colors duration-200';
-                    
+
                     const isToday = currentYear === today.getFullYear() && currentMonth === today.getMonth() && i === today.getDate();
                     const eventOnDay = hasEvent(currentYear, currentMonth, i);
                     const cellDateStr = `${currentYear}-${currentMonth}-${i}`;
-                    
+
                     if (isToday) {
                         div.className += ' bg-[#ff7b00] text-white rounded';
                     } else if (eventOnDay) {
@@ -427,7 +470,7 @@
                     if (selectedDateFilter === cellDateStr) {
                         div.className += ' ring-2 ring-offset-1 ring-primary font-bold';
                     }
-                    
+
                     grid.appendChild(div);
                 }
             }
@@ -457,7 +500,7 @@
 
                     const matchesCategory = selectedCategory === '' || selectedCategory === 'todas' || cardCategory === selectedCategory;
                     const matchesSearch = cardTitle.includes(searchText);
-                    const matchesDate = !selectedDateFilter || cardDate === selectedDateFilter;
+                    const matchesDate = !selectedDateFilter || (cardDate && cardDate.split(',').includes(selectedDateFilter));
 
                     if (matchesCategory && matchesSearch && matchesDate) {
                         card.style.display = 'flex';
@@ -474,29 +517,23 @@
             paneles.forEach(panel => {
                 panel.addEventListener('mouseenter', () => {
                     paneles.forEach(p => {
-                        // Minimizar todos al tamaño pequeño
                         p.classList.remove('w-[55%]');
-                        p.classList.add('w-[15%]');
-                        
-                        // Ocultar sombra
+                        p.classList.add('w-[22.5%]');
+
                         p.querySelector('.capa-oscura').classList.remove('opacity-100');
                         p.querySelector('.capa-oscura').classList.add('opacity-0');
-                        
-                        // Ocultar texto
+
                         let texto = p.querySelector('.contenido-texto');
                         texto.classList.remove('opacity-100', 'translate-x-0', 'delay-200');
                         texto.classList.add('opacity-0', '-translate-x-5');
                     });
-                    
-                    // Hacer muy grande solo el panel que tiene el ratón
-                    panel.classList.remove('w-[15%]');
+
+                    panel.classList.remove('w-[22.5%]');
                     panel.classList.add('w-[55%]');
-                    
-                    // Mostrar su sombra
+
                     panel.querySelector('.capa-oscura').classList.remove('opacity-0');
                     panel.querySelector('.capa-oscura').classList.add('opacity-100');
-                    
-                    // Mostrar su texto
+
                     let textoActivo = panel.querySelector('.contenido-texto');
                     textoActivo.classList.remove('opacity-0', '-translate-x-5');
                     textoActivo.classList.add('opacity-100', 'translate-x-0', 'delay-200');
