@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Próximos Eventos | Happiness & Co</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#ba007c',
+                        secondary: '#f9f9f9',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'ui-sans-serif', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'sans-serif'],
+                    }
+                }
+            }
+        };
+    </script>
+
+    <style>
+        body {
+            background-image: url("file:///C:/Users/ALUMNOS-FP/.cursor/projects/C-Users-ALUMNO-1-AppData-Local-Temp-ef0e6281-79de-45e1-9caf-ce00b3f134c0/assets/c__Users_ALUMNOS-FP_AppData_Roaming_Cursor_User_workspaceStorage_1775722721648_images_Gemini_Generated_Image_tvlqcitvlqcitvlq-0a54af09-d55e-4d65-a5bc-92b343084c23.png");
+            background-repeat: repeat;
+            background-size: 520px auto;
+            background-color: #f3f4f6;
+        }
+
+        .event-shadow {
+            box-shadow: 0 10px 28px rgba(16, 24, 40, 0.08);
+        }
+
+        .event-card:hover {
+            box-shadow: 0 20px 38px rgba(186, 0, 124, 0.16);
+        }
+
+        .hero-glow {
+            background: radial-gradient(circle at top left, rgba(186, 0, 124, 0.18), transparent 38%),
+                radial-gradient(circle at bottom right, rgba(0, 155, 219, 0.16), transparent 42%),
+                linear-gradient(135deg, #ffffff 0%, #f9f9f9 100%);
+        }
+    </style>
+</head>
+
+<body class="bg-white text-gray-800 font-sans antialiased overflow-x-hidden min-h-screen flex flex-col">
+    <!-- Header -->
+    <header class="flex items-center justify-between px-6 py-4 border-b border-gray-100 bg-white">
+        <a href="index.html" class="block flex-shrink-0 transition hover:opacity-80">
+            <img src="./happines-and-co-upper-02.png" alt="Logo del Sitio" class="h-12 md:h-14 w-auto object-contain">
+        </a>
+
+        <nav class="hidden md:flex space-x-3 text-sm">
+            <a href="index.html"
+                class="px-4 py-1.5 border border-primary text-gray-600 rounded-full hover:bg-primary hover:text-white transition">Inicio</a>
+            <a href="eventos.html"
+                class="px-4 py-1.5 border border-primary text-primary rounded-full hover:bg-primary hover:text-white transition">Eventos</a>
+            <a href="#"
+                class="px-4 py-1.5 border border-primary text-gray-600 rounded-full hover:bg-primary hover:text-white transition">Historial
+                de Eventos</a>
+            <a href="sobre_nosotros.html"
+                class="px-4 py-1.5 border border-primary text-gray-600 rounded-full hover:bg-primary hover:text-white transition">Sobre
+                Nosotros</a>
+            <a href="#"
+                class="px-4 py-1.5 border border-primary text-gray-600 rounded-full hover:bg-primary hover:text-white transition">Fuentes</a>
+            <a href="contacto.html"
+                class="px-4 py-1.5 border border-primary text-gray-600 rounded-full hover:bg-primary hover:text-white transition">Contacto</a>
+        </nav>
+    </header>
+
+    <main class="flex-grow">
+        <!-- Hero de sección -->
+        <section class="max-w-7xl mx-auto px-6 pt-10 pb-8">
+            <div class="hero-glow rounded-3xl border border-gray-100 overflow-hidden relative">
+                <div class="grid md:grid-cols-2 gap-6 items-center p-8 md:p-12">
+                    <div class="space-y-4">
+                        <span
+                            class="inline-flex items-center gap-2 bg-primary/10 text-primary text-xs font-semibold px-3 py-1 rounded-full tracking-wide">
+                            <i class="fa-solid fa-calendar-days"></i> Agenda cultural 2026
+                        </span>
+                        <h1 class="text-3xl md:text-5xl font-bold leading-tight text-gray-900">Próximos eventos</h1>
+                        <p class="text-gray-600 text-base md:text-lg max-w-xl">
+                            Descubre conciertos, teatro, cine, exposiciones y experiencias culturales seleccionadas para
+                            disfrutar durante los próximos meses.
+                        </p>
+                    </div>
+
+                    <div class="rounded-2xl overflow-hidden shadow-lg">
+                        <img src="./Imagenes Eventos/no-estoy-de-frente.jpg"
+                            alt="Escena cultural destacada para próximos eventos" class="w-full h-[260px] md:h-[300px] object-cover">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Buscador y filtros -->
+        <section class="max-w-7xl mx-auto px-6 pb-10">
+            <div class="bg-white border border-gray-100 rounded-2xl p-5 md:p-6 event-shadow">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <div class="relative">
+                        <label for="search-input" class="block text-sm font-semibold text-gray-600 mb-2">Buscar</label>
+                        <input id="search-input" type="text" placeholder="Título o lugar..."
+                            class="w-full border-2 border-primary rounded-full px-5 py-2.5 focus:outline-none focus:ring-2 focus:ring-primary/40 text-gray-700 placeholder-primary/60">
+                        <i class="fa-solid fa-magnifying-glass absolute right-5 top-[42px] text-primary text-base"></i>
+                    </div>
+
+                    <div class="relative">
+                        <label for="category-filter"
+                            class="block text-sm font-semibold text-gray-600 mb-2">Categoría</label>
+                        <select id="category-filter"
+                            class="w-full border-2 border-primary rounded-full px-5 py-2.5 focus:outline-none focus:ring-2 focus:ring-primary/40 text-gray-700 appearance-none bg-transparent cursor-pointer">
+                            <option value="todas">Todas las categorías</option>
+                            <option value="musica">Música</option>
+                            <option value="teatro">Teatro</option>
+                            <option value="cine">Cine</option>
+                            <option value="exposiciones">Exposiciones</option>
+                            <option value="literatura">Literatura</option>
+                            <option value="otros">Otros</option>
+                        </select>
+                        <i class="fa-solid fa-list absolute right-5 top-[42px] text-primary text-base pointer-events-none"></i>
+                    </div>
+
+                    <div class="relative">
+                        <label for="month-filter" class="block text-sm font-semibold text-gray-600 mb-2">Mes</label>
+                        <select id="month-filter"
+                            class="w-full border-2 border-primary rounded-full px-5 py-2.5 focus:outline-none focus:ring-2 focus:ring-primary/40 text-gray-700 appearance-none bg-transparent cursor-pointer">
+                            <option value="todos">Todos los meses</option>
+                            <option value="mayo">Mayo</option>
+                            <option value="junio">Junio</option>
+                            <option value="julio">Julio</option>
+                            <option value="agosto">Agosto</option>
+                            <option value="septiembre">Septiembre</option>
+                        </select>
+                        <i
+                            class="fa-solid fa-calendar absolute right-5 top-[42px] text-primary text-base pointer-events-none"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Grid de eventos -->
+        <section class="max-w-7xl mx-auto px-6 pb-16">
+            <div id="event-grid" class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-7">
+                <!-- Evento 1 -->
+                <article data-category="teatro" data-month="mayo"
+                    data-title="No estoy de frente" data-location="Teatro Alhambra"
+                    class="event-card bg-white border border-gray-100 rounded-3xl overflow-hidden event-shadow transition-all duration-300 hover:-translate-y-1">
+                    <div class="relative h-52 overflow-hidden">
+                        <img src="./Imagenes Eventos/no-estoy-de-frente.jpg" alt="Cartel del evento No estoy de frente"
+                            class="w-full h-full object-cover">
+                        <span class="absolute top-4 left-4 bg-[#009bdb] text-white text-xs px-3 py-1 rounded-md">Teatro</span>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-xs text-gray-500 mb-2 font-semibold uppercase tracking-wide">10 mayo 2026</p>
+                        <h3 class="text-xl font-bold text-gray-900 mb-4">No estoy de frente</h3>
+                        <ul class="text-sm space-y-2 text-gray-600 mb-4">
+                            <li class="flex items-center gap-3"><i class="fa-regular fa-clock w-4"></i>20:00 h</li>
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-location-dot w-4"></i>Teatro Alhambra
+                            </li>
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-list w-4"></i>Teatro</li>
+                        </ul>
+                        <p class="text-sm text-gray-600 mb-5">Una propuesta escénica íntima sobre la identidad y la memoria
+                            desde una mirada contemporánea.</p>
+                        <button
+                            class="open-event w-full md:w-auto px-5 py-2.5 bg-primary hover:bg-primary/85 text-white font-semibold rounded-lg transition-all"
+                            data-event-id="evento-1">Ver evento</button>
+                    </div>
+                </article>
+
+                <!-- Evento 2 -->
+                <article data-category="musica" data-month="junio"
+                    data-title="Concierto Tsunami" data-location="Ayuntamiento de Gijón"
+                    class="event-card bg-white border border-gray-100 rounded-3xl overflow-hidden event-shadow transition-all duration-300 hover:-translate-y-1">
+                    <div class="relative h-52 overflow-hidden">
+                        <img src="./Imagenes Eventos/tsunami.png" alt="Cartel del evento Concierto Tsunami"
+                            class="w-full h-full object-cover">
+                        <span class="absolute top-4 left-4 bg-[#ba007c] text-white text-xs px-3 py-1 rounded-md">Música</span>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-xs text-gray-500 mb-2 font-semibold uppercase tracking-wide">18 junio 2026</p>
+                        <h3 class="text-xl font-bold text-gray-900 mb-4">Concierto Tsunami</h3>
+                        <ul class="text-sm space-y-2 text-gray-600 mb-4">
+                            <li class="flex items-center gap-3"><i class="fa-regular fa-clock w-4"></i>21:30 h</li>
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-location-dot w-4"></i>Ayuntamiento de
+                                Gijón</li>
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-list w-4"></i>Música</li>
+                        </ul>
+                        <p class="text-sm text-gray-600 mb-5">Noche de rock alternativo con bandas emergentes y artistas
+                            invitados del panorama nacional.</p>
+                        <button
+                            class="open-event w-full md:w-auto px-5 py-2.5 bg-primary hover:bg-primary/85 text-white font-semibold rounded-lg transition-all"
+                            data-event-id="evento-2">Ver evento</button>
+                    </div>
+                </article>
+
+                <!-- Evento 3 -->
+                <article data-category="cine" data-month="julio"
+                    data-title="XI Festival de Cine LGTBI" data-location="Centro Niemeyer, Avilés"
+                    class="event-card bg-white border border-gray-100 rounded-3xl overflow-hidden event-shadow transition-all duration-300 hover:-translate-y-1">
+                    <div class="relative h-52 overflow-hidden">
+                        <img src="./Imagenes Eventos/XI_FESTIVAL_LGTBI_NIEMEYER_2026.jpg"
+                            alt="Cartel del XI Festival de Cine LGTBI" class="w-full h-full object-cover">
+                        <span class="absolute top-4 left-4 bg-[#009bdb] text-white text-xs px-3 py-1 rounded-md">Cine</span>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-xs text-gray-500 mb-2 font-semibold uppercase tracking-wide">9 julio 2026</p>
+                        <h3 class="text-xl font-bold text-gray-900 mb-4">XI Festival de Cine LGTBI</h3>
+                        <ul class="text-sm space-y-2 text-gray-600 mb-4">
+                            <li class="flex items-center gap-3"><i class="fa-regular fa-clock w-4"></i>18:30 h</li>
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-location-dot w-4"></i>Centro Niemeyer,
+                                Avilés</li>
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-list w-4"></i>Cine</li>
+                        </ul>
+                        <p class="text-sm text-gray-600 mb-5">Selección internacional de largometrajes, cortos y coloquios
+                            con cineastas invitados.</p>
+                        <button
+                            class="open-event w-full md:w-auto px-5 py-2.5 bg-primary hover:bg-primary/85 text-white font-semibold rounded-lg transition-all"
+                            data-event-id="evento-3">Ver evento</button>
+                    </div>
+                </article>
+
+                <!-- Evento 4 -->
+                <article data-category="exposiciones" data-month="agosto"
+                    data-title="Viaje a la luna" data-location="Centro Federico García Lorca"
+                    class="event-card bg-white border border-gray-100 rounded-3xl overflow-hidden event-shadow transition-all duration-300 hover:-translate-y-1">
+                    <div class="relative h-52 overflow-hidden">
+                        <img src="./Imagenes Eventos/viaje-luna-lorca.jpg" alt="Cartel del evento Viaje a la luna"
+                            class="w-full h-full object-cover">
+                        <span class="absolute top-4 left-4 bg-[#ff7b00] text-white text-xs px-3 py-1 rounded-md">Exposición</span>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-xs text-gray-500 mb-2 font-semibold uppercase tracking-wide">3 agosto 2026</p>
+                        <h3 class="text-xl font-bold text-gray-900 mb-4">Viaje a la luna</h3>
+                        <ul class="text-sm space-y-2 text-gray-600 mb-4">
+                            <li class="flex items-center gap-3"><i class="fa-regular fa-clock w-4"></i>10:00 h</li>
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-location-dot w-4"></i>Centro Federico
+                                García Lorca</li>
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-list w-4"></i>Exposiciones</li>
+                        </ul>
+                        <p class="text-sm text-gray-600 mb-5">Muestra colectiva sobre surrealismo, poesía visual y diálogo
+                            entre artes escénicas y plásticas.</p>
+                        <button
+                            class="open-event w-full md:w-auto px-5 py-2.5 bg-primary hover:bg-primary/85 text-white font-semibold rounded-lg transition-all"
+                            data-event-id="evento-4">Ver evento</button>
+                    </div>
+                </article>
+
+                <!-- Evento 5 -->
+                <article data-category="literatura" data-month="septiembre"
+                    data-title="Encuentro de Poesía Atlántica" data-location="Biblioteca Jovellanos"
+                    class="event-card bg-white border border-gray-100 rounded-3xl overflow-hidden event-shadow transition-all duration-300 hover:-translate-y-1">
+                    <div class="relative h-52 overflow-hidden">
+                        <img src="./Imagenes Eventos/sidra.png" alt="Imagen del Encuentro de Poesía Atlántica"
+                            class="w-full h-full object-cover">
+                        <span class="absolute top-4 left-4 bg-[#ba007c] text-white text-xs px-3 py-1 rounded-md">Literatura</span>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-xs text-gray-500 mb-2 font-semibold uppercase tracking-wide">12 septiembre 2026</p>
+                        <h3 class="text-xl font-bold text-gray-900 mb-4">Encuentro de Poesía Atlántica</h3>
+                        <ul class="text-sm space-y-2 text-gray-600 mb-4">
+                            <li class="flex items-center gap-3"><i class="fa-regular fa-clock w-4"></i>19:00 h</li>
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-location-dot w-4"></i>Biblioteca
+                                Jovellanos</li>
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-list w-4"></i>Literatura</li>
+                        </ul>
+                        <p class="text-sm text-gray-600 mb-5">Recitales en vivo, diálogo con autores y música acústica en
+                            una velada de creación contemporánea.</p>
+                        <button
+                            class="open-event w-full md:w-auto px-5 py-2.5 bg-primary hover:bg-primary/85 text-white font-semibold rounded-lg transition-all"
+                            data-event-id="evento-5">Ver evento</button>
+                    </div>
+                </article>
+
+                <!-- Evento 6 -->
+                <article data-category="otros" data-month="mayo"
+                    data-title="XXVI Feria del Salmón" data-location="Cornellana"
+                    class="event-card bg-white border border-gray-100 rounded-3xl overflow-hidden event-shadow transition-all duration-300 hover:-translate-y-1">
+                    <div class="relative h-52 overflow-hidden">
+                        <img src="./Imagenes Eventos/feria-salmon.jpg" alt="Cartel del evento XXVI Feria del Salmón"
+                            class="w-full h-full object-cover">
+                        <span class="absolute top-4 left-4 bg-[#555555] text-white text-xs px-3 py-1 rounded-md">Otros</span>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-xs text-gray-500 mb-2 font-semibold uppercase tracking-wide">25 mayo 2026</p>
+                        <h3 class="text-xl font-bold text-gray-900 mb-4">XXVI Feria del Salmón</h3>
+                        <ul class="text-sm space-y-2 text-gray-600 mb-4">
+                            <li class="flex items-center gap-3"><i class="fa-regular fa-clock w-4"></i>Todo el día</li>
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-location-dot w-4"></i>Cornellana</li>
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-list w-4"></i>Otros</li>
+                        </ul>
+                        <p class="text-sm text-gray-600 mb-5">Tradición, gastronomía y cultura local en una feria abierta a
+                            familias, visitantes y amantes de la naturaleza.</p>
+                        <button
+                            class="open-event w-full md:w-auto px-5 py-2.5 bg-primary hover:bg-primary/85 text-white font-semibold rounded-lg transition-all"
+                            data-event-id="evento-6">Ver evento</button>
+                    </div>
+                </article>
+            </div>
+
+            <p id="empty-state" class="hidden text-center text-gray-500 mt-10">No hay eventos con los filtros seleccionados.</p>
+        </section>
+    </main>
+
+    <!-- Modal detalle de evento -->
+    <div id="event-modal"
+        class="fixed inset-0 bg-black/60 backdrop-blur-[2px] z-50 hidden items-center justify-center p-4 md:p-8">
+        <div class="bg-white rounded-3xl w-full max-w-4xl overflow-hidden relative">
+            <button id="close-modal"
+                class="absolute top-4 right-4 w-10 h-10 rounded-full bg-white border border-gray-200 text-gray-600 hover:text-primary hover:border-primary transition">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <div class="grid md:grid-cols-2">
+                <div class="h-64 md:h-full">
+                    <img id="modal-image" src="" alt="Imagen principal del evento" class="w-full h-full object-cover">
+                </div>
+
+                <div class="p-7 md:p-8">
+                    <span id="modal-category" class="inline-flex text-xs text-white px-3 py-1 rounded-md mb-3 bg-primary"></span>
+                    <h2 id="modal-title" class="text-2xl font-bold text-gray-900 mb-5"></h2>
+
+                    <ul class="text-sm space-y-2 text-gray-600 mb-6">
+                        <li class="flex items-center gap-3"><i class="fa-regular fa-calendar w-4"></i><span
+                                id="modal-date"></span></li>
+                        <li class="flex items-center gap-3"><i class="fa-regular fa-clock w-4"></i><span
+                                id="modal-time"></span></li>
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-location-dot w-4"></i><span
+                                id="modal-location"></span></li>
+                    </ul>
+
+                    <p id="modal-description" class="text-gray-700 text-sm leading-relaxed mb-5"></p>
+
+                    <div class="rounded-xl bg-gray-50 border border-gray-100 p-4 text-sm text-gray-600 space-y-1">
+                        <p><span class="font-semibold text-gray-800">Organiza:</span> <span id="modal-organizer"></span></p>
+                        <p><span class="font-semibold text-gray-800">Duración:</span> <span id="modal-duration"></span></p>
+                        <p><span class="font-semibold text-gray-800">Precio / acceso:</span> <span id="modal-price"></span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-600 text-gray-300 flex items-center justify-between px-6 py-2 mt-auto text-sm w-full">
+        <div class="text-2xl font-bold italic font-serif text-white">
+            &
+        </div>
+
+        <div class="flex items-center gap-4">
+            <p>Copyright | Redes Sociales:</p>
+            <div class="flex gap-3 text-lg text-white">
+                <a href="#" class="hover:text-primary transition"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="#" class="hover:text-primary transition"><i class="fa-brands fa-youtube"></i></a>
+                <a href="#" class="hover:text-primary transition"><i class="fa-brands fa-facebook"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Datos para el detalle completo de cada evento
+        const eventDetails = {
+            'evento-1': {
+                image: './Imagenes Eventos/no-estoy-de-frente.jpg',
+                category: 'Teatro',
+                categoryColor: '#009bdb',
+                title: 'No estoy de frente',
+                date: 'Domingo, 10 de mayo de 2026',
+                time: '20:00 h',
+                location: 'Teatro Alhambra',
+                description: 'Una pieza teatral contemporánea que explora las identidades fragmentadas de la vida urbana. La propuesta combina interpretación, sonido inmersivo y recursos audiovisuales para construir una experiencia escénica cercana y emocional.',
+                organizer: 'Compañía Escena Norte',
+                duration: '90 minutos',
+                price: 'Entrada general 14 EUR'
+            },
+            'evento-2': {
+                image: './Imagenes Eventos/tsunami.png',
+                category: 'Música',
+                categoryColor: '#ba007c',
+                title: 'Concierto Tsunami',
+                date: 'Jueves, 18 de junio de 2026',
+                time: '21:30 h',
+                location: 'Ayuntamiento de Gijón',
+                description: 'Festival de música en directo con sonido potente y programación alternativa. El evento reúne a artistas locales y nacionales en un formato al aire libre pensado para público joven y amantes del directo.',
+                organizer: 'Tsunami Cultural Fest',
+                duration: '3 horas',
+                price: 'Desde 18 EUR'
+            },
+            'evento-3': {
+                image: './Imagenes Eventos/XI_FESTIVAL_LGTBI_NIEMEYER_2026.jpg',
+                category: 'Cine',
+                categoryColor: '#009bdb',
+                title: 'XI Festival de Cine LGTBI',
+                date: 'Jueves, 9 de julio de 2026',
+                time: '18:30 h',
+                location: 'Centro Niemeyer, Avilés',
+                description: 'Encuentro cinematográfico con proyecciones, coloquios y actividades paralelas sobre diversidad. Incluye cortometrajes internacionales, estrenos y debates con profesionales del sector audiovisual.',
+                organizer: 'Fundación Niemeyer',
+                duration: 'Jornada de tarde',
+                price: 'Acceso libre hasta completar aforo'
+            },
+            'evento-4': {
+                image: './Imagenes Eventos/viaje-luna-lorca.jpg',
+                category: 'Exposición',
+                categoryColor: '#ff7b00',
+                title: 'Viaje a la luna',
+                date: 'Lunes, 3 de agosto de 2026',
+                time: '10:00 h a 20:00 h',
+                location: 'Centro Federico García Lorca',
+                description: 'Exposición inspirada en el universo poético de García Lorca. El recorrido integra obra gráfica, instalaciones sonoras y piezas de artistas contemporáneos en torno a la imaginación, el viaje y la noche.',
+                organizer: 'Centro Federico García Lorca',
+                duration: 'Visita libre',
+                price: 'Entrada 6 EUR'
+            },
+            'evento-5': {
+                image: './Imagenes Eventos/sidra.png',
+                category: 'Literatura',
+                categoryColor: '#ba007c',
+                title: 'Encuentro de Poesía Atlántica',
+                date: 'Sábado, 12 de septiembre de 2026',
+                time: '19:00 h',
+                location: 'Biblioteca Jovellanos',
+                description: 'Una velada cultural en la que poetas invitados, músicos y mediadores literarios comparten textos inéditos y conversaciones con el público. Un espacio ideal para descubrir nuevas voces de la literatura actual.',
+                organizer: 'Red de Bibliotecas de Asturias',
+                duration: '2 horas',
+                price: 'Gratuito con inscripción previa'
+            },
+            'evento-6': {
+                image: './Imagenes Eventos/feria-salmon.jpg',
+                category: 'Otros',
+                categoryColor: '#555555',
+                title: 'XXVI Feria del Salmón',
+                date: 'Lunes, 25 de mayo de 2026',
+                time: '10:00 h a 22:00 h',
+                location: 'Cornellana',
+                description: 'Feria tradicional con mercado gastronómico, actividades familiares, música popular y talleres sobre patrimonio natural. Una cita cultural y turística consolidada en la agenda regional.',
+                organizer: 'Ayuntamiento de Cornellana',
+                duration: 'Jornada completa',
+                price: 'Acceso gratuito'
+            }
+        };
+
+        // Lógica de filtros y modal
+        document.addEventListener('DOMContentLoaded', () => {
+            const searchInput = document.getElementById('search-input');
+            const categoryFilter = document.getElementById('category-filter');
+            const monthFilter = document.getElementById('month-filter');
+            const cards = [...document.querySelectorAll('.event-card')];
+            const emptyState = document.getElementById('empty-state');
+
+            const modal = document.getElementById('event-modal');
+            const closeModal = document.getElementById('close-modal');
+
+            function filterEvents() {
+                const search = searchInput.value.trim().toLowerCase();
+                const category = categoryFilter.value;
+                const month = monthFilter.value;
+
+                let visibleCount = 0;
+
+                cards.forEach((card) => {
+                    const title = card.dataset.title.toLowerCase();
+                    const location = card.dataset.location.toLowerCase();
+                    const cardCategory = card.dataset.category;
+                    const cardMonth = card.dataset.month;
+
+                    const matchesSearch = title.includes(search) || location.includes(search);
+                    const matchesCategory = category === 'todas' || cardCategory === category;
+                    const matchesMonth = month === 'todos' || cardMonth === month;
+
+                    if (matchesSearch && matchesCategory && matchesMonth) {
+                        card.classList.remove('hidden');
+                        visibleCount++;
+                    } else {
+                        card.classList.add('hidden');
+                    }
+                });
+
+                emptyState.classList.toggle('hidden', visibleCount > 0);
+            }
+
+            function openEventModal(eventId) {
+                const eventData = eventDetails[eventId];
+                if (!eventData) return;
+
+                document.getElementById('modal-image').src = eventData.image;
+                document.getElementById('modal-title').textContent = eventData.title;
+                document.getElementById('modal-date').textContent = eventData.date;
+                document.getElementById('modal-time').textContent = eventData.time;
+                document.getElementById('modal-location').textContent = eventData.location;
+                document.getElementById('modal-description').textContent = eventData.description;
+                document.getElementById('modal-organizer').textContent = eventData.organizer;
+                document.getElementById('modal-duration').textContent = eventData.duration;
+                document.getElementById('modal-price').textContent = eventData.price;
+
+                const categoryEl = document.getElementById('modal-category');
+                categoryEl.textContent = eventData.category;
+                categoryEl.style.backgroundColor = eventData.categoryColor;
+
+                modal.classList.remove('hidden');
+                modal.classList.add('flex');
+                document.body.classList.add('overflow-hidden');
+            }
+
+            function closeEventModal() {
+                modal.classList.add('hidden');
+                modal.classList.remove('flex');
+                document.body.classList.remove('overflow-hidden');
+            }
+
+            searchInput.addEventListener('input', filterEvents);
+            categoryFilter.addEventListener('change', filterEvents);
+            monthFilter.addEventListener('change', filterEvents);
+
+            document.querySelectorAll('.open-event').forEach((button) => {
+                button.addEventListener('click', () => openEventModal(button.dataset.eventId));
+            });
+
+            cards.forEach((card) => {
+                card.addEventListener('click', (e) => {
+                    if (e.target.closest('.open-event')) return;
+                    const button = card.querySelector('.open-event');
+                    if (button) openEventModal(button.dataset.eventId);
+                });
+            });
+
+            closeModal.addEventListener('click', closeEventModal);
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) closeEventModal();
+            });
+
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && modal.classList.contains('flex')) {
+                    closeEventModal();
+                }
+            });
+
+            filterEvents();
+        });
+    </script>
+</body>
+
+</html>

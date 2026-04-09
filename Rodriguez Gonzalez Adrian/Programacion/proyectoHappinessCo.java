@@ -41,7 +41,7 @@ public class proyectoHappinessCo {
         System.out.println("4. Eliminar evento");
         System.out.println("5. Añadir galería");
         System.out.println("6. Eliminar galería");
-        System.out.println("7. Añadir favorito");
+        System.out.println("7. A�adir favorito");
         System.out.println("8. Eliminar favorito");
         System.out.println("9. Salir");
     }
