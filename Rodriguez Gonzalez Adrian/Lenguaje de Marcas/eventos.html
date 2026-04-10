@@ -4,345 +4,279 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Próximos Eventos | Happiness & Co</title>
+    <title>Próximos eventos | HAPPINESS&Co</title>
 
-    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Tailwind CSS (sin JavaScript) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        primary: '#ba007c',
-                        secondary: '#f9f9f9',
-                    },
-                    fontFamily: {
-                        sans: ['Inter', 'ui-sans-serif', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'sans-serif'],
-                    }
-                }
-            }
-        };
-    </script>
-
-    <style>
-        body {
-            background-image: url("file:///C:/Users/ALUMNOS-FP/.cursor/projects/C-Users-ALUMNO-1-AppData-Local-Temp-ef0e6281-79de-45e1-9caf-ce00b3f134c0/assets/c__Users_ALUMNOS-FP_AppData_Roaming_Cursor_User_workspaceStorage_1775722721648_images_Gemini_Generated_Image_tvlqcitvlqcitvlq-0a54af09-d55e-4d65-a5bc-92b343084c23.png");
-            background-repeat: repeat;
-            background-size: 520px auto;
-            background-color: #f3f4f6;
-        }
-
-        .event-shadow {
-            box-shadow: 0 10px 28px rgba(16, 24, 40, 0.08);
-        }
-
-        .event-card:hover {
-            box-shadow: 0 20px 38px rgba(186, 0, 124, 0.16);
-        }
-
-        .hero-glow {
-            background: radial-gradient(circle at top left, rgba(186, 0, 124, 0.18), transparent 38%),
-                radial-gradient(circle at bottom right, rgba(0, 155, 219, 0.16), transparent 42%),
-                linear-gradient(135deg, #ffffff 0%, #f9f9f9 100%);
-        }
-    </style>
+    <link rel="stylesheet" href="./eventos.css">
 </head>
 
 <body class="bg-white text-gray-800 font-sans antialiased overflow-x-hidden min-h-screen flex flex-col">
     <!-- Header -->
-    <header class="flex items-center justify-between px-6 py-4 border-b border-gray-100 bg-white">
-        <a href="index.html" class="block flex-shrink-0 transition hover:opacity-80">
-            <img src="./happines-and-co-upper-02.png" alt="Logo del Sitio" class="h-12 md:h-14 w-auto object-contain">
-        </a>
+    <header class="bg-white border-b border-gray-100">
+        <div class="flex items-center justify-between px-6 py-4 max-w-7xl mx-auto">
+            <a href="index.html" class="flex items-center gap-3 flex-shrink-0 transition hover:opacity-80">
+                <img src="./happines-and-co-upper-02.png" alt="Logo de HAPPINESS&Co"
+                    class="h-12 md:h-14 w-auto object-contain">
+                <span class="hidden sm:block text-lg md:text-xl font-semibold tracking-wide text-gray-900">HAPPINESS&Co</span>
+            </a>
 
-        <nav class="hidden md:flex space-x-3 text-sm">
-            <a href="index.html"
-                class="px-4 py-1.5 border border-primary text-gray-600 rounded-full hover:bg-primary hover:text-white transition">Inicio</a>
-            <a href="eventos.html"
-                class="px-4 py-1.5 border border-primary text-primary rounded-full hover:bg-primary hover:text-white transition">Eventos</a>
-            <a href="#"
-                class="px-4 py-1.5 border border-primary text-gray-600 rounded-full hover:bg-primary hover:text-white transition">Historial
-                de Eventos</a>
-            <a href="sobre_nosotros.html"
-                class="px-4 py-1.5 border border-primary text-gray-600 rounded-full hover:bg-primary hover:text-white transition">Sobre
-                Nosotros</a>
-            <a href="#"
-                class="px-4 py-1.5 border border-primary text-gray-600 rounded-full hover:bg-primary hover:text-white transition">Fuentes</a>
-            <a href="contacto.html"
-                class="px-4 py-1.5 border border-primary text-gray-600 rounded-full hover:bg-primary hover:text-white transition">Contacto</a>
-        </nav>
+            <nav class="hidden md:flex space-x-3 text-sm" aria-label="Menú principal">
+                <a href="index.html"
+                    class="px-4 py-1.5 border border-primary text-gray-600 rounded-full hover:bg-primary hover:text-white transition">Inicio</a>
+                <a href="eventos.html"
+                    class="px-4 py-1.5 border border-primary text-primary rounded-full hover:bg-primary hover:text-white transition"
+                    aria-current="page">Eventos</a>
+                <a href="#"
+                    class="px-4 py-1.5 border border-primary text-gray-600 rounded-full hover:bg-primary hover:text-white transition">Historial
+                    de eventos</a>
+                <a href="sobre_nosotros.html"
+                    class="px-4 py-1.5 border border-primary text-gray-600 rounded-full hover:bg-primary hover:text-white transition">Sobre
+                    nosotros</a>
+                <a href="#"
+                    class="px-4 py-1.5 border border-primary text-gray-600 rounded-full hover:bg-primary hover:text-white transition">Fuentes</a>
+                <a href="contacto.html"
+                    class="px-4 py-1.5 border border-primary text-gray-600 rounded-full hover:bg-primary hover:text-white transition">Contacto</a>
+            </nav>
+        </div>
     </header>
 
     <main class="flex-grow">
-        <!-- Hero de sección -->
-        <section class="max-w-7xl mx-auto px-6 pt-10 pb-8">
-            <div class="hero-glow rounded-3xl border border-gray-100 overflow-hidden relative">
-                <div class="grid md:grid-cols-2 gap-6 items-center p-8 md:p-12">
-                    <div class="space-y-4">
-                        <span
-                            class="inline-flex items-center gap-2 bg-primary/10 text-primary text-xs font-semibold px-3 py-1 rounded-full tracking-wide">
-                            <i class="fa-solid fa-calendar-days"></i> Agenda cultural 2026
-                        </span>
-                        <h1 class="text-3xl md:text-5xl font-bold leading-tight text-gray-900">Próximos eventos</h1>
-                        <p class="text-gray-600 text-base md:text-lg max-w-xl">
-                            Descubre conciertos, teatro, cine, exposiciones y experiencias culturales seleccionadas para
-                            disfrutar durante los próximos meses.
-                        </p>
-                    </div>
-
-                    <div class="rounded-2xl overflow-hidden shadow-lg">
-                        <img src="./Imagenes Eventos/no-estoy-de-frente.jpg"
-                            alt="Escena cultural destacada para próximos eventos" class="w-full h-[260px] md:h-[300px] object-cover">
-                    </div>
+        <!-- Título de sección -->
+        <section class="max-w-7xl mx-auto px-6 pt-10 pb-6">
+            <div class="hero-portada rounded-3xl border border-gray-100 p-10 md:p-16 shadow-sm overflow-hidden">
+                <div class="relative z-10 flex items-center justify-center min-h-[220px]">
+                    <h1 class="text-4xl md:text-6xl font-extrabold text-white text-center tracking-wide drop-shadow-lg">
+                        Próximos Eventos
+                    </h1>
                 </div>
             </div>
         </section>
 
-        <!-- Buscador y filtros -->
-        <section class="max-w-7xl mx-auto px-6 pb-10">
-            <div class="bg-white border border-gray-100 rounded-2xl p-5 md:p-6 event-shadow">
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-                    <div class="relative">
-                        <label for="search-input" class="block text-sm font-semibold text-gray-600 mb-2">Buscar</label>
-                        <input id="search-input" type="text" placeholder="Título o lugar..."
-                            class="w-full border-2 border-primary rounded-full px-5 py-2.5 focus:outline-none focus:ring-2 focus:ring-primary/40 text-gray-700 placeholder-primary/60">
-                        <i class="fa-solid fa-magnifying-glass absolute right-5 top-[42px] text-primary text-base"></i>
-                    </div>
+        <!-- Filtros (solo HTML + CSS) -->
+        <section class="max-w-7xl mx-auto px-6 pb-8">
+            <div class="bg-white border border-gray-100 rounded-2xl p-5 md:p-6 shadow-sm">
+                <h2 class="text-lg font-semibold text-gray-900 mb-4">Filtros</h2>
+                <form class="event-filters">
+                    <div class="filters-ui">
+                        <!-- Filtros en horizontal -->
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                            <div class="relative">
+                                <label for="search-input" class="block text-sm font-semibold text-gray-600 mb-2">Buscar</label>
+                                <input id="search-input" type="text" placeholder="¿Qué buscas?"
+                                    class="w-full border-2 border-primary rounded-full px-5 py-2.5 pr-11 focus:outline-none text-gray-700 placeholder-primary/60">
+                                <i class="fa-solid fa-magnifying-glass absolute right-4 top-11 text-primary"></i>
+                            </div>
 
-                    <div class="relative">
-                        <label for="category-filter"
-                            class="block text-sm font-semibold text-gray-600 mb-2">Categoría</label>
-                        <select id="category-filter"
-                            class="w-full border-2 border-primary rounded-full px-5 py-2.5 focus:outline-none focus:ring-2 focus:ring-primary/40 text-gray-700 appearance-none bg-transparent cursor-pointer">
-                            <option value="todas">Todas las categorías</option>
-                            <option value="musica">Música</option>
-                            <option value="teatro">Teatro</option>
-                            <option value="cine">Cine</option>
-                            <option value="exposiciones">Exposiciones</option>
-                            <option value="literatura">Literatura</option>
-                            <option value="otros">Otros</option>
-                        </select>
-                        <i class="fa-solid fa-list absolute right-5 top-[42px] text-primary text-base pointer-events-none"></i>
-                    </div>
+                            <div class="relative">
+                                <label for="category-filter" class="block text-sm font-semibold text-gray-600 mb-2">Categoría</label>
+                                <select id="category-filter"
+                                    class="w-full border-2 border-primary rounded-full px-5 py-2.5 pr-11 appearance-none focus:outline-none text-gray-700 bg-white">
+                                    <option value="todas">Todas</option>
+                                    <option value="teatro">Teatro</option>
+                                    <option value="musica">Música</option>
+                                    <option value="cine">Cine</option>
+                                    <option value="exposiciones">Exposiciones</option>
+                                    <option value="otros">Otros</option>
+                                </select>
+                                <i class="fa-solid fa-list absolute right-4 top-11 text-primary pointer-events-none"></i>
+                            </div>
 
-                    <div class="relative">
-                        <label for="month-filter" class="block text-sm font-semibold text-gray-600 mb-2">Mes</label>
-                        <select id="month-filter"
-                            class="w-full border-2 border-primary rounded-full px-5 py-2.5 focus:outline-none focus:ring-2 focus:ring-primary/40 text-gray-700 appearance-none bg-transparent cursor-pointer">
-                            <option value="todos">Todos los meses</option>
-                            <option value="mayo">Mayo</option>
-                            <option value="junio">Junio</option>
-                            <option value="julio">Julio</option>
-                            <option value="agosto">Agosto</option>
-                            <option value="septiembre">Septiembre</option>
-                        </select>
-                        <i
-                            class="fa-solid fa-calendar absolute right-5 top-[42px] text-primary text-base pointer-events-none"></i>
+                            <div class="relative">
+                                <label for="date-filter" class="block text-sm font-semibold text-gray-600 mb-2">Fecha</label>
+                                <select id="date-filter"
+                                    class="w-full border-2 border-primary rounded-full px-5 py-2.5 pr-11 appearance-none focus:outline-none text-gray-700 bg-white">
+                                    <option value="todas">Todas</option>
+                                    <option value="mayo">Mayo</option>
+                                    <option value="agosto">Agosto</option>
+                                </select>
+                                <i class="fa-solid fa-calendar absolute right-4 top-11 text-primary pointer-events-none"></i>
+                            </div>
+                        </div>
+
+                    <!-- Contenido principal + recomendados -->
+                    <div class="mt-8 grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+                        <!-- Columna principal -->
+                        <section class="lg:col-span-8" aria-label="Listado de próximos eventos">
+                            <h2 class="text-xl font-light text-primary tracking-wide mb-4">Listado</h2>
+
+                            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 events-scope">
+                                <!-- Principal 1 -->
+                                <article class="event-card event bg-white border border-gray-100 rounded-3xl overflow-hidden shadow-sm"
+                                    data-category="teatro" data-date="mayo"
+                                    data-search="no estoy de frente teatro alhambra mari paz sayago teatro domingo 10 mayo 20:00">
+                                    <div class="relative h-36 overflow-hidden">
+                                        <img src="./Imagenes Eventos/no-estoy-de-frente.jpg" alt="Cartel del evento No estoy de frente"
+                                            class="w-full h-full object-cover">
+                                        <span class="absolute top-3 left-3 text-xs font-semibold tracking-wide text-white px-3 py-1 rounded-md bg-brand-blue">Teatro</span>
+                                    </div>
+
+                                    <div class="p-5 space-y-3">
+                                        <p class="text-xs text-gray-500 font-semibold uppercase tracking-wide">Domingo 10 de Mayo</p>
+                                        <h3 class="text-base font-bold text-gray-900 leading-snug">No estoy de frente</h3>
+                                        <p class="text-sm text-gray-600 event-clamp-2">Un monólogo de Mari Paz Sayago.</p>
+
+                                        <ul class="text-xs text-gray-500 space-y-1">
+                                            <li class="flex items-center gap-2"><i class="fa-regular fa-clock w-4 text-primary"></i><span>20:00</span></li>
+                                            <li class="flex items-center gap-2"><i class="fa-solid fa-location-dot w-4 text-primary"></i><span>Teatro Alhambra</span></li>
+                                        </ul>
+
+                                        <!-- Detalle sin JS -->
+                                        <a href="#modal-no-estoy" class="event-summary">Ver más</a>
+                                    </div>
+                                </article>
+
+                                <!-- Principal 2 -->
+                                <article class="event-card event bg-white border border-gray-100 rounded-3xl overflow-hidden shadow-sm"
+                                    data-category="otros" data-date="mayo"
+                                    data-search="xxvi feria del salmon cornellana naturaleza pesca feria sabado 18 mayo">
+                                    <div class="relative h-36 overflow-hidden">
+                                        <img src="./Imagenes Eventos/feria-salmon.jpg" alt="Cartel del evento XXVI Feria del Salmón"
+                                            class="w-full h-full object-cover">
+                                        <span class="absolute top-3 left-3 text-xs font-semibold tracking-wide text-white px-3 py-1 rounded-md bg-brand-gray">Otros</span>
+                                    </div>
+
+                                    <div class="p-5 space-y-3">
+                                        <p class="text-xs text-gray-500 font-semibold uppercase tracking-wide">Sábado 18 Mayo</p>
+                                        <h3 class="text-base font-bold text-gray-900 leading-snug">XXVI Feria del Salmón</h3>
+                                        <p class="text-sm text-gray-600 event-clamp-2">Feria cinegética, de pesca y naturaleza.</p>
+
+                                        <ul class="text-xs text-gray-500 space-y-1">
+                                            <li class="flex items-center gap-2"><i class="fa-regular fa-clock w-4 text-primary"></i><span>Todo el día</span></li>
+                                            <li class="flex items-center gap-2"><i class="fa-solid fa-location-dot w-4 text-primary"></i><span>Cornellana</span></li>
+                                        </ul>
+
+                                        <a href="#modal-salmon" class="event-summary">Ver más</a>
+                                    </div>
+                                </article>
+
+                                <!-- Principal 3 -->
+                                <article class="event-card event bg-white border border-gray-100 rounded-3xl overflow-hidden shadow-sm"
+                                    data-category="otros" data-date="agosto"
+                                    data-search="fiesta de la sidra playa san lorenzo escanciado sidra domingo 30 agosto 15:00">
+                                    <div class="relative h-36 overflow-hidden">
+                                        <img src="./Imagenes Eventos/sidra.png" alt="Cartel del evento Fiesta de la Sidra"
+                                            class="w-full h-full object-cover">
+                                        <span class="absolute top-3 left-3 text-xs font-semibold tracking-wide text-white px-3 py-1 rounded-md bg-brand-gray">Otros</span>
+                                    </div>
+
+                                    <div class="p-5 space-y-3">
+                                        <p class="text-xs text-gray-500 font-semibold uppercase tracking-wide">Domingo 30 de Agosto</p>
+                                        <h3 class="text-base font-bold text-gray-900 leading-snug">Fiesta de la Sidra</h3>
+                                        <p class="text-sm text-gray-600 event-clamp-2">Récord mundial de escanciado simultáneo.</p>
+
+                                        <ul class="text-xs text-gray-500 space-y-1">
+                                            <li class="flex items-center gap-2"><i class="fa-regular fa-clock w-4 text-primary"></i><span>15:00</span></li>
+                                            <li class="flex items-center gap-2"><i class="fa-solid fa-location-dot w-4 text-primary"></i><span>Playa San Lorenzo</span></li>
+                                        </ul>
+
+                                        <a href="#modal-sidra" class="event-summary">Ver más</a>
+                                    </div>
+                                </article>
+                            </div>
+                        </section>
+
+                        <!-- Columna lateral -->
+                        <aside class="lg:col-span-4" aria-label="Recomendados">
+                            <section class="bg-white border border-gray-100 rounded-3xl p-6 shadow-sm">
+                                <h2 class="text-xl font-light text-primary tracking-wide mb-5">Recomendados</h2>
+
+                                <div class="space-y-4 events-scope">
+                                    <!-- Recomendado 1 -->
+                                    <article class="event-card event flex gap-4 items-start rounded-2xl border border-gray-100 bg-white p-4"
+                                        data-category="teatro" data-date="mayo"
+                                        data-search="no estoy de frente teatro alhambra mari paz sayago teatro domingo 10 mayo 20:00">
+                                        <img src="./Imagenes Eventos/no-estoy-de-frente.jpg" alt="Cartel del evento No estoy de frente"
+                                            class="w-20 h-20 rounded-xl object-cover border border-gray-100 flex-shrink-0">
+                                        <div class="min-w-0 flex-1">
+                                            <p class="text-xs text-gray-500 font-semibold uppercase tracking-wide">Domingo 10 de Mayo</p>
+                                            <h3 class="text-sm font-bold text-gray-900 leading-snug truncate">No estoy de frente</h3>
+                                            <p class="text-sm text-gray-600 event-clamp-2">Un monólogo de Mari Paz Sayago.</p>
+                                            <a href="#modal-no-estoy" class="event-summary">Ver más</a>
+                                        </div>
+                                    </article>
+
+                                    <!-- Recomendado 2 -->
+                                    <article class="event-card event flex gap-4 items-start rounded-2xl border border-gray-100 bg-white p-4"
+                                        data-category="otros" data-date="mayo"
+                                        data-search="xxvi feria del salmon cornellana naturaleza pesca feria sabado 18 mayo">
+                                        <img src="./Imagenes Eventos/feria-salmon.jpg" alt="Cartel del evento XXVI Feria del Salmón"
+                                            class="w-20 h-20 rounded-xl object-cover border border-gray-100 flex-shrink-0">
+                                        <div class="min-w-0 flex-1">
+                                            <p class="text-xs text-gray-500 font-semibold uppercase tracking-wide">Sábado 18 Mayo</p>
+                                            <h3 class="text-sm font-bold text-gray-900 leading-snug truncate">XXVI Feria del Salmón</h3>
+                                            <p class="text-sm text-gray-600 event-clamp-2">Feria cinegética, de pesca y naturaleza.</p>
+                                            <a href="#modal-salmon" class="event-summary">Ver más</a>
+                                        </div>
+                                    </article>
+
+                                    <!-- Recomendado 3 -->
+                                    <article class="event-card event flex gap-4 items-start rounded-2xl border border-gray-100 bg-white p-4"
+                                        data-category="otros" data-date="agosto"
+                                        data-search="fiesta de la sidra playa san lorenzo escanciado sidra domingo 30 agosto 15:00">
+                                        <img src="./Imagenes Eventos/sidra.png" alt="Cartel del evento Fiesta de la Sidra"
+                                            class="w-20 h-20 rounded-xl object-cover border border-gray-100 flex-shrink-0">
+                                        <div class="min-w-0 flex-1">
+                                            <p class="text-xs text-gray-500 font-semibold uppercase tracking-wide">Domingo 30 de Agosto</p>
+                                            <h3 class="text-sm font-bold text-gray-900 leading-snug truncate">Fiesta de la Sidra</h3>
+                                            <p class="text-sm text-gray-600 event-clamp-2">Récord mundial de escanciado simultáneo.</p>
+                                            <a href="#modal-sidra" class="event-summary">Ver más</a>
+                                        </div>
+                                    </article>
+                                </div>
+                            </section>
+                        </aside>
                     </div>
-                </div>
+                    </div>
+                </form>
             </div>
-        </section>
-
-        <!-- Grid de eventos -->
-        <section class="max-w-7xl mx-auto px-6 pb-16">
-            <div id="event-grid" class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-7">
-                <!-- Evento 1 -->
-                <article data-category="teatro" data-month="mayo"
-                    data-title="No estoy de frente" data-location="Teatro Alhambra"
-                    class="event-card bg-white border border-gray-100 rounded-3xl overflow-hidden event-shadow transition-all duration-300 hover:-translate-y-1">
-                    <div class="relative h-52 overflow-hidden">
-                        <img src="./Imagenes Eventos/no-estoy-de-frente.jpg" alt="Cartel del evento No estoy de frente"
-                            class="w-full h-full object-cover">
-                        <span class="absolute top-4 left-4 bg-[#009bdb] text-white text-xs px-3 py-1 rounded-md">Teatro</span>
-                    </div>
-                    <div class="p-6">
-                        <p class="text-xs text-gray-500 mb-2 font-semibold uppercase tracking-wide">10 mayo 2026</p>
-                        <h3 class="text-xl font-bold text-gray-900 mb-4">No estoy de frente</h3>
-                        <ul class="text-sm space-y-2 text-gray-600 mb-4">
-                            <li class="flex items-center gap-3"><i class="fa-regular fa-clock w-4"></i>20:00 h</li>
-                            <li class="flex items-center gap-3"><i class="fa-solid fa-location-dot w-4"></i>Teatro Alhambra
-                            </li>
-                            <li class="flex items-center gap-3"><i class="fa-solid fa-list w-4"></i>Teatro</li>
-                        </ul>
-                        <p class="text-sm text-gray-600 mb-5">Una propuesta escénica íntima sobre la identidad y la memoria
-                            desde una mirada contemporánea.</p>
-                        <button
-                            class="open-event w-full md:w-auto px-5 py-2.5 bg-primary hover:bg-primary/85 text-white font-semibold rounded-lg transition-all"
-                            data-event-id="evento-1">Ver evento</button>
-                    </div>
-                </article>
-
-                <!-- Evento 2 -->
-                <article data-category="musica" data-month="junio"
-                    data-title="Concierto Tsunami" data-location="Ayuntamiento de Gijón"
-                    class="event-card bg-white border border-gray-100 rounded-3xl overflow-hidden event-shadow transition-all duration-300 hover:-translate-y-1">
-                    <div class="relative h-52 overflow-hidden">
-                        <img src="./Imagenes Eventos/tsunami.png" alt="Cartel del evento Concierto Tsunami"
-                            class="w-full h-full object-cover">
-                        <span class="absolute top-4 left-4 bg-[#ba007c] text-white text-xs px-3 py-1 rounded-md">Música</span>
-                    </div>
-                    <div class="p-6">
-                        <p class="text-xs text-gray-500 mb-2 font-semibold uppercase tracking-wide">18 junio 2026</p>
-                        <h3 class="text-xl font-bold text-gray-900 mb-4">Concierto Tsunami</h3>
-                        <ul class="text-sm space-y-2 text-gray-600 mb-4">
-                            <li class="flex items-center gap-3"><i class="fa-regular fa-clock w-4"></i>21:30 h</li>
-                            <li class="flex items-center gap-3"><i class="fa-solid fa-location-dot w-4"></i>Ayuntamiento de
-                                Gijón</li>
-                            <li class="flex items-center gap-3"><i class="fa-solid fa-list w-4"></i>Música</li>
-                        </ul>
-                        <p class="text-sm text-gray-600 mb-5">Noche de rock alternativo con bandas emergentes y artistas
-                            invitados del panorama nacional.</p>
-                        <button
-                            class="open-event w-full md:w-auto px-5 py-2.5 bg-primary hover:bg-primary/85 text-white font-semibold rounded-lg transition-all"
-                            data-event-id="evento-2">Ver evento</button>
-                    </div>
-                </article>
-
-                <!-- Evento 3 -->
-                <article data-category="cine" data-month="julio"
-                    data-title="XI Festival de Cine LGTBI" data-location="Centro Niemeyer, Avilés"
-                    class="event-card bg-white border border-gray-100 rounded-3xl overflow-hidden event-shadow transition-all duration-300 hover:-translate-y-1">
-                    <div class="relative h-52 overflow-hidden">
-                        <img src="./Imagenes Eventos/XI_FESTIVAL_LGTBI_NIEMEYER_2026.jpg"
-                            alt="Cartel del XI Festival de Cine LGTBI" class="w-full h-full object-cover">
-                        <span class="absolute top-4 left-4 bg-[#009bdb] text-white text-xs px-3 py-1 rounded-md">Cine</span>
-                    </div>
-                    <div class="p-6">
-                        <p class="text-xs text-gray-500 mb-2 font-semibold uppercase tracking-wide">9 julio 2026</p>
-                        <h3 class="text-xl font-bold text-gray-900 mb-4">XI Festival de Cine LGTBI</h3>
-                        <ul class="text-sm space-y-2 text-gray-600 mb-4">
-                            <li class="flex items-center gap-3"><i class="fa-regular fa-clock w-4"></i>18:30 h</li>
-                            <li class="flex items-center gap-3"><i class="fa-solid fa-location-dot w-4"></i>Centro Niemeyer,
-                                Avilés</li>
-                            <li class="flex items-center gap-3"><i class="fa-solid fa-list w-4"></i>Cine</li>
-                        </ul>
-                        <p class="text-sm text-gray-600 mb-5">Selección internacional de largometrajes, cortos y coloquios
-                            con cineastas invitados.</p>
-                        <button
-                            class="open-event w-full md:w-auto px-5 py-2.5 bg-primary hover:bg-primary/85 text-white font-semibold rounded-lg transition-all"
-                            data-event-id="evento-3">Ver evento</button>
-                    </div>
-                </article>
-
-                <!-- Evento 4 -->
-                <article data-category="exposiciones" data-month="agosto"
-                    data-title="Viaje a la luna" data-location="Centro Federico García Lorca"
-                    class="event-card bg-white border border-gray-100 rounded-3xl overflow-hidden event-shadow transition-all duration-300 hover:-translate-y-1">
-                    <div class="relative h-52 overflow-hidden">
-                        <img src="./Imagenes Eventos/viaje-luna-lorca.jpg" alt="Cartel del evento Viaje a la luna"
-                            class="w-full h-full object-cover">
-                        <span class="absolute top-4 left-4 bg-[#ff7b00] text-white text-xs px-3 py-1 rounded-md">Exposición</span>
-                    </div>
-                    <div class="p-6">
-                        <p class="text-xs text-gray-500 mb-2 font-semibold uppercase tracking-wide">3 agosto 2026</p>
-                        <h3 class="text-xl font-bold text-gray-900 mb-4">Viaje a la luna</h3>
-                        <ul class="text-sm space-y-2 text-gray-600 mb-4">
-                            <li class="flex items-center gap-3"><i class="fa-regular fa-clock w-4"></i>10:00 h</li>
-                            <li class="flex items-center gap-3"><i class="fa-solid fa-location-dot w-4"></i>Centro Federico
-                                García Lorca</li>
-                            <li class="flex items-center gap-3"><i class="fa-solid fa-list w-4"></i>Exposiciones</li>
-                        </ul>
-                        <p class="text-sm text-gray-600 mb-5">Muestra colectiva sobre surrealismo, poesía visual y diálogo
-                            entre artes escénicas y plásticas.</p>
-                        <button
-                            class="open-event w-full md:w-auto px-5 py-2.5 bg-primary hover:bg-primary/85 text-white font-semibold rounded-lg transition-all"
-                            data-event-id="evento-4">Ver evento</button>
-                    </div>
-                </article>
-
-                <!-- Evento 5 -->
-                <article data-category="literatura" data-month="septiembre"
-                    data-title="Encuentro de Poesía Atlántica" data-location="Biblioteca Jovellanos"
-                    class="event-card bg-white border border-gray-100 rounded-3xl overflow-hidden event-shadow transition-all duration-300 hover:-translate-y-1">
-                    <div class="relative h-52 overflow-hidden">
-                        <img src="./Imagenes Eventos/sidra.png" alt="Imagen del Encuentro de Poesía Atlántica"
-                            class="w-full h-full object-cover">
-                        <span class="absolute top-4 left-4 bg-[#ba007c] text-white text-xs px-3 py-1 rounded-md">Literatura</span>
-                    </div>
-                    <div class="p-6">
-                        <p class="text-xs text-gray-500 mb-2 font-semibold uppercase tracking-wide">12 septiembre 2026</p>
-                        <h3 class="text-xl font-bold text-gray-900 mb-4">Encuentro de Poesía Atlántica</h3>
-                        <ul class="text-sm space-y-2 text-gray-600 mb-4">
-                            <li class="flex items-center gap-3"><i class="fa-regular fa-clock w-4"></i>19:00 h</li>
-                            <li class="flex items-center gap-3"><i class="fa-solid fa-location-dot w-4"></i>Biblioteca
-                                Jovellanos</li>
-                            <li class="flex items-center gap-3"><i class="fa-solid fa-list w-4"></i>Literatura</li>
-                        </ul>
-                        <p class="text-sm text-gray-600 mb-5">Recitales en vivo, diálogo con autores y música acústica en
-                            una velada de creación contemporánea.</p>
-                        <button
-                            class="open-event w-full md:w-auto px-5 py-2.5 bg-primary hover:bg-primary/85 text-white font-semibold rounded-lg transition-all"
-                            data-event-id="evento-5">Ver evento</button>
-                    </div>
-                </article>
-
-                <!-- Evento 6 -->
-                <article data-category="otros" data-month="mayo"
-                    data-title="XXVI Feria del Salmón" data-location="Cornellana"
-                    class="event-card bg-white border border-gray-100 rounded-3xl overflow-hidden event-shadow transition-all duration-300 hover:-translate-y-1">
-                    <div class="relative h-52 overflow-hidden">
-                        <img src="./Imagenes Eventos/feria-salmon.jpg" alt="Cartel del evento XXVI Feria del Salmón"
-                            class="w-full h-full object-cover">
-                        <span class="absolute top-4 left-4 bg-[#555555] text-white text-xs px-3 py-1 rounded-md">Otros</span>
-                    </div>
-                    <div class="p-6">
-                        <p class="text-xs text-gray-500 mb-2 font-semibold uppercase tracking-wide">25 mayo 2026</p>
-                        <h3 class="text-xl font-bold text-gray-900 mb-4">XXVI Feria del Salmón</h3>
-                        <ul class="text-sm space-y-2 text-gray-600 mb-4">
-                            <li class="flex items-center gap-3"><i class="fa-regular fa-clock w-4"></i>Todo el día</li>
-                            <li class="flex items-center gap-3"><i class="fa-solid fa-location-dot w-4"></i>Cornellana</li>
-                            <li class="flex items-center gap-3"><i class="fa-solid fa-list w-4"></i>Otros</li>
-                        </ul>
-                        <p class="text-sm text-gray-600 mb-5">Tradición, gastronomía y cultura local en una feria abierta a
-                            familias, visitantes y amantes de la naturaleza.</p>
-                        <button
-                            class="open-event w-full md:w-auto px-5 py-2.5 bg-primary hover:bg-primary/85 text-white font-semibold rounded-lg transition-all"
-                            data-event-id="evento-6">Ver evento</button>
-                    </div>
-                </article>
-            </div>
-
-            <p id="empty-state" class="hidden text-center text-gray-500 mt-10">No hay eventos con los filtros seleccionados.</p>
         </section>
     </main>
 
-    <!-- Modal detalle de evento -->
-    <div id="event-modal"
-        class="fixed inset-0 bg-black/60 backdrop-blur-[2px] z-50 hidden items-center justify-center p-4 md:p-8">
-        <div class="bg-white rounded-3xl w-full max-w-4xl overflow-hidden relative">
-            <button id="close-modal"
-                class="absolute top-4 right-4 w-10 h-10 rounded-full bg-white border border-gray-200 text-gray-600 hover:text-primary hover:border-primary transition">
-                <i class="fa-solid fa-xmark"></i>
-            </button>
+    <!-- Modales de eventos (sin JavaScript, con :target) -->
+    <div id="modal-no-estoy" class="modal-overlay">
+        <div class="modal-card">
+            <a href="#" class="modal-close" aria-label="Cerrar ventana">Cerrar ✕</a>
+            <img src="./Imagenes Eventos/no-estoy-de-frente.jpg" alt="Cartel grande de No estoy de frente" class="modal-image">
+            <h3 class="text-2xl font-bold text-gray-900 mt-5 mb-3">No estoy de frente</h3>
+            <p class="text-sm text-gray-700 mb-2"><strong>Fecha:</strong> Domingo 10 de Mayo</p>
+            <p class="text-sm text-gray-700 mb-2"><strong>Hora:</strong> 20:00</p>
+            <p class="text-sm text-gray-700 mb-4"><strong>Lugar:</strong> Teatro Alhambra</p>
+            <p class="text-sm text-gray-700 leading-relaxed">
+                Un monólogo protagonizado por Mari Paz Sayago, con una puesta en escena íntima y cercana.
+                La obra combina humor y emoción para hablar de identidad, memoria y cambios personales.
+            </p>
+        </div>
+    </div>
 
-            <div class="grid md:grid-cols-2">
-                <div class="h-64 md:h-full">
-                    <img id="modal-image" src="" alt="Imagen principal del evento" class="w-full h-full object-cover">
-                </div>
+    <div id="modal-salmon" class="modal-overlay">
+        <div class="modal-card">
+            <a href="#" class="modal-close" aria-label="Cerrar ventana">Cerrar ✕</a>
+            <img src="./Imagenes Eventos/feria-salmon.jpg" alt="Cartel grande de XXVI Feria del Salmón" class="modal-image">
+            <h3 class="text-2xl font-bold text-gray-900 mt-5 mb-3">XXVI Feria del Salmón</h3>
+            <p class="text-sm text-gray-700 mb-2"><strong>Fecha:</strong> Sábado 18 Mayo</p>
+            <p class="text-sm text-gray-700 mb-2"><strong>Hora:</strong> Todo el día</p>
+            <p class="text-sm text-gray-700 mb-4"><strong>Lugar:</strong> Cornellana</p>
+            <p class="text-sm text-gray-700 leading-relaxed">
+                Feria de referencia con actividades de pesca, naturaleza y cultura local.
+                Reúne a visitantes, familias y profesionales en una jornada completa con ambiente festivo.
+            </p>
+        </div>
+    </div>
 
-                <div class="p-7 md:p-8">
-                    <span id="modal-category" class="inline-flex text-xs text-white px-3 py-1 rounded-md mb-3 bg-primary"></span>
-                    <h2 id="modal-title" class="text-2xl font-bold text-gray-900 mb-5"></h2>
-
-                    <ul class="text-sm space-y-2 text-gray-600 mb-6">
-                        <li class="flex items-center gap-3"><i class="fa-regular fa-calendar w-4"></i><span
-                                id="modal-date"></span></li>
-                        <li class="flex items-center gap-3"><i class="fa-regular fa-clock w-4"></i><span
-                                id="modal-time"></span></li>
-                        <li class="flex items-center gap-3"><i class="fa-solid fa-location-dot w-4"></i><span
-                                id="modal-location"></span></li>
-                    </ul>
-
-                    <p id="modal-description" class="text-gray-700 text-sm leading-relaxed mb-5"></p>
-
-                    <div class="rounded-xl bg-gray-50 border border-gray-100 p-4 text-sm text-gray-600 space-y-1">
-                        <p><span class="font-semibold text-gray-800">Organiza:</span> <span id="modal-organizer"></span></p>
-                        <p><span class="font-semibold text-gray-800">Duración:</span> <span id="modal-duration"></span></p>
-                        <p><span class="font-semibold text-gray-800">Precio / acceso:</span> <span id="modal-price"></span></p>
-                    </div>
-                </div>
-            </div>
+    <div id="modal-sidra" class="modal-overlay">
+        <div class="modal-card">
+            <a href="#" class="modal-close" aria-label="Cerrar ventana">Cerrar ✕</a>
+            <img src="./Imagenes Eventos/sidra.png" alt="Cartel grande de Fiesta de la Sidra" class="modal-image">
+            <h3 class="text-2xl font-bold text-gray-900 mt-5 mb-3">Fiesta de la Sidra</h3>
+            <p class="text-sm text-gray-700 mb-2"><strong>Fecha:</strong> Domingo 30 de Agosto</p>
+            <p class="text-sm text-gray-700 mb-2"><strong>Hora:</strong> 15:00</p>
+            <p class="text-sm text-gray-700 mb-4"><strong>Lugar:</strong> Playa San Lorenzo</p>
+            <p class="text-sm text-gray-700 leading-relaxed">
+                Evento popular con récord mundial de escanciado simultáneo.
+                Incluye ambiente festivo, tradición asturiana y gran participación del público.
+            </p>
         </div>
     </div>
 
@@ -363,183 +297,33 @@
     </footer>
 
     <script>
-        // Datos para el detalle completo de cada evento
-        const eventDetails = {
-            'evento-1': {
-                image: './Imagenes Eventos/no-estoy-de-frente.jpg',
-                category: 'Teatro',
-                categoryColor: '#009bdb',
-                title: 'No estoy de frente',
-                date: 'Domingo, 10 de mayo de 2026',
-                time: '20:00 h',
-                location: 'Teatro Alhambra',
-                description: 'Una pieza teatral contemporánea que explora las identidades fragmentadas de la vida urbana. La propuesta combina interpretación, sonido inmersivo y recursos audiovisuales para construir una experiencia escénica cercana y emocional.',
-                organizer: 'Compañía Escena Norte',
-                duration: '90 minutos',
-                price: 'Entrada general 14 EUR'
-            },
-            'evento-2': {
-                image: './Imagenes Eventos/tsunami.png',
-                category: 'Música',
-                categoryColor: '#ba007c',
-                title: 'Concierto Tsunami',
-                date: 'Jueves, 18 de junio de 2026',
-                time: '21:30 h',
-                location: 'Ayuntamiento de Gijón',
-                description: 'Festival de música en directo con sonido potente y programación alternativa. El evento reúne a artistas locales y nacionales en un formato al aire libre pensado para público joven y amantes del directo.',
-                organizer: 'Tsunami Cultural Fest',
-                duration: '3 horas',
-                price: 'Desde 18 EUR'
-            },
-            'evento-3': {
-                image: './Imagenes Eventos/XI_FESTIVAL_LGTBI_NIEMEYER_2026.jpg',
-                category: 'Cine',
-                categoryColor: '#009bdb',
-                title: 'XI Festival de Cine LGTBI',
-                date: 'Jueves, 9 de julio de 2026',
-                time: '18:30 h',
-                location: 'Centro Niemeyer, Avilés',
-                description: 'Encuentro cinematográfico con proyecciones, coloquios y actividades paralelas sobre diversidad. Incluye cortometrajes internacionales, estrenos y debates con profesionales del sector audiovisual.',
-                organizer: 'Fundación Niemeyer',
-                duration: 'Jornada de tarde',
-                price: 'Acceso libre hasta completar aforo'
-            },
-            'evento-4': {
-                image: './Imagenes Eventos/viaje-luna-lorca.jpg',
-                category: 'Exposición',
-                categoryColor: '#ff7b00',
-                title: 'Viaje a la luna',
-                date: 'Lunes, 3 de agosto de 2026',
-                time: '10:00 h a 20:00 h',
-                location: 'Centro Federico García Lorca',
-                description: 'Exposición inspirada en el universo poético de García Lorca. El recorrido integra obra gráfica, instalaciones sonoras y piezas de artistas contemporáneos en torno a la imaginación, el viaje y la noche.',
-                organizer: 'Centro Federico García Lorca',
-                duration: 'Visita libre',
-                price: 'Entrada 6 EUR'
-            },
-            'evento-5': {
-                image: './Imagenes Eventos/sidra.png',
-                category: 'Literatura',
-                categoryColor: '#ba007c',
-                title: 'Encuentro de Poesía Atlántica',
-                date: 'Sábado, 12 de septiembre de 2026',
-                time: '19:00 h',
-                location: 'Biblioteca Jovellanos',
-                description: 'Una velada cultural en la que poetas invitados, músicos y mediadores literarios comparten textos inéditos y conversaciones con el público. Un espacio ideal para descubrir nuevas voces de la literatura actual.',
-                organizer: 'Red de Bibliotecas de Asturias',
-                duration: '2 horas',
-                price: 'Gratuito con inscripción previa'
-            },
-            'evento-6': {
-                image: './Imagenes Eventos/feria-salmon.jpg',
-                category: 'Otros',
-                categoryColor: '#555555',
-                title: 'XXVI Feria del Salmón',
-                date: 'Lunes, 25 de mayo de 2026',
-                time: '10:00 h a 22:00 h',
-                location: 'Cornellana',
-                description: 'Feria tradicional con mercado gastronómico, actividades familiares, música popular y talleres sobre patrimonio natural. Una cita cultural y turística consolidada en la agenda regional.',
-                organizer: 'Ayuntamiento de Cornellana',
-                duration: 'Jornada completa',
-                price: 'Acceso gratuito'
-            }
-        };
-
-        // Lógica de filtros y modal
-        document.addEventListener('DOMContentLoaded', () => {
+        document.addEventListener('DOMContentLoaded', function () {
             const searchInput = document.getElementById('search-input');
             const categoryFilter = document.getElementById('category-filter');
-            const monthFilter = document.getElementById('month-filter');
-            const cards = [...document.querySelectorAll('.event-card')];
-            const emptyState = document.getElementById('empty-state');
-
-            const modal = document.getElementById('event-modal');
-            const closeModal = document.getElementById('close-modal');
+            const dateFilter = document.getElementById('date-filter');
+            const eventCards = Array.from(document.querySelectorAll('.event'));
 
             function filterEvents() {
-                const search = searchInput.value.trim().toLowerCase();
-                const category = categoryFilter.value;
-                const month = monthFilter.value;
+                const searchText = searchInput.value.trim().toLowerCase();
+                const selectedCategory = categoryFilter.value;
+                const selectedDate = dateFilter.value;
 
-                let visibleCount = 0;
+                eventCards.forEach((card) => {
+                    const cardCategory = (card.dataset.category || '').toLowerCase();
+                    const cardDate = (card.dataset.date || '').toLowerCase();
+                    const cardSearch = (card.dataset.search || '').toLowerCase();
 
-                cards.forEach((card) => {
-                    const title = card.dataset.title.toLowerCase();
-                    const location = card.dataset.location.toLowerCase();
-                    const cardCategory = card.dataset.category;
-                    const cardMonth = card.dataset.month;
+                    const matchesCategory = selectedCategory === 'todas' || cardCategory === selectedCategory;
+                    const matchesDate = selectedDate === 'todas' || cardDate === selectedDate;
+                    const matchesSearch = searchText === '' || cardSearch.includes(searchText);
 
-                    const matchesSearch = title.includes(search) || location.includes(search);
-                    const matchesCategory = category === 'todas' || cardCategory === category;
-                    const matchesMonth = month === 'todos' || cardMonth === month;
-
-                    if (matchesSearch && matchesCategory && matchesMonth) {
-                        card.classList.remove('hidden');
-                        visibleCount++;
-                    } else {
-                        card.classList.add('hidden');
-                    }
+                    card.style.display = (matchesCategory && matchesDate && matchesSearch) ? '' : 'none';
                 });
-
-                emptyState.classList.toggle('hidden', visibleCount > 0);
-            }
-
-            function openEventModal(eventId) {
-                const eventData = eventDetails[eventId];
-                if (!eventData) return;
-
-                document.getElementById('modal-image').src = eventData.image;
-                document.getElementById('modal-title').textContent = eventData.title;
-                document.getElementById('modal-date').textContent = eventData.date;
-                document.getElementById('modal-time').textContent = eventData.time;
-                document.getElementById('modal-location').textContent = eventData.location;
-                document.getElementById('modal-description').textContent = eventData.description;
-                document.getElementById('modal-organizer').textContent = eventData.organizer;
-                document.getElementById('modal-duration').textContent = eventData.duration;
-                document.getElementById('modal-price').textContent = eventData.price;
-
-                const categoryEl = document.getElementById('modal-category');
-                categoryEl.textContent = eventData.category;
-                categoryEl.style.backgroundColor = eventData.categoryColor;
-
-                modal.classList.remove('hidden');
-                modal.classList.add('flex');
-                document.body.classList.add('overflow-hidden');
-            }
-
-            function closeEventModal() {
-                modal.classList.add('hidden');
-                modal.classList.remove('flex');
-                document.body.classList.remove('overflow-hidden');
             }
 
             searchInput.addEventListener('input', filterEvents);
             categoryFilter.addEventListener('change', filterEvents);
-            monthFilter.addEventListener('change', filterEvents);
-
-            document.querySelectorAll('.open-event').forEach((button) => {
-                button.addEventListener('click', () => openEventModal(button.dataset.eventId));
-            });
-
-            cards.forEach((card) => {
-                card.addEventListener('click', (e) => {
-                    if (e.target.closest('.open-event')) return;
-                    const button = card.querySelector('.open-event');
-                    if (button) openEventModal(button.dataset.eventId);
-                });
-            });
-
-            closeModal.addEventListener('click', closeEventModal);
-            modal.addEventListener('click', (e) => {
-                if (e.target === modal) closeEventModal();
-            });
-
-            document.addEventListener('keydown', (e) => {
-                if (e.key === 'Escape' && modal.classList.contains('flex')) {
-                    closeEventModal();
-                }
-            });
-
+            dateFilter.addEventListener('change', filterEvents);
             filterEvents();
         });
     </script>

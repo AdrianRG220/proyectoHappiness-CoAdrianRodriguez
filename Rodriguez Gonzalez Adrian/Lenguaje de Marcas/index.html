@@ -35,10 +35,46 @@
     </script>
     <style>
         body {
-            background-image: url("file:///C:/Users/ALUMNOS-FP/.cursor/projects/C-Users-ALUMNO-1-AppData-Local-Temp-ef0e6281-79de-45e1-9caf-ce00b3f134c0/assets/c__Users_ALUMNOS-FP_AppData_Roaming_Cursor_User_workspaceStorage_1775722721648_images_Gemini_Generated_Image_tvlqcitvlqcitvlq-0a54af09-d55e-4d65-a5bc-92b343084c23.png");
-            background-repeat: repeat;
-            background-size: 520px auto;
-            background-color: #f3f4f6;
+            background:
+                radial-gradient(circle at 15% 12%, rgba(186, 0, 124, 0.22), transparent 38%),
+                radial-gradient(circle at 85% 88%, rgba(0, 155, 219, 0.20), transparent 40%),
+                linear-gradient(145deg, #ffffff 0%, #f7f9fc 100%);
+        }
+
+        .hero-dynamic {
+            background:
+                radial-gradient(circle at 12% 18%, rgba(186, 0, 124, 0.96), transparent 42%),
+                radial-gradient(circle at 86% 22%, rgba(0, 155, 219, 0.94), transparent 44%),
+                radial-gradient(circle at 52% 88%, rgba(0, 155, 219, 0.70), transparent 42%),
+                linear-gradient(122deg, #ba007c 0%, #009bdb 100%);
+        }
+
+        .surface-dynamic {
+            background:
+                radial-gradient(circle at 18% 10%, rgba(186, 0, 124, 0.62), transparent 44%),
+                radial-gradient(circle at 82% 90%, rgba(0, 155, 219, 0.62), transparent 44%),
+                radial-gradient(circle at 15% 82%, rgba(186, 0, 124, 0.58), transparent 40%),
+                #ffffff;
+        }
+
+        .card-dynamic {
+            background:
+                radial-gradient(circle at 95% 0%, rgba(0, 155, 219, 0.28), transparent 36%),
+                radial-gradient(circle at 0% 100%, rgba(186, 0, 124, 0.30), transparent 38%),
+                linear-gradient(160deg, #ffffff 0%, #fff4fb 52%, #f2f9ff 100%);
+            border-color: rgba(186, 0, 124, 0.24);
+        }
+
+        .card-dynamic:hover {
+            box-shadow:
+                0 20px 34px rgba(186, 0, 124, 0.18),
+                0 10px 24px rgba(0, 155, 219, 0.16);
+        }
+
+        .section-glow {
+            box-shadow:
+                0 12px 25px rgba(186, 0, 124, 0.12),
+                0 6px 20px rgba(0, 155, 219, 0.10);
         }
     </style>
 </head>
@@ -49,7 +85,7 @@
 
 
 
-    <header class="flex items-center justify-between px-6 py-4 border-b border-gray-100">
+    <header class="flex items-center justify-between px-6 py-4 border-b border-gray-100 surface-dynamic">
 
 
 
@@ -62,27 +98,24 @@
 
         <nav class="hidden md:flex space-x-3 text-sm">
             <a href="index.html"
-                class="px-4 py-1.5 border border-primary text-primary rounded-full hover:bg-primary hover:text-white transition">Inicio</a>
+                class="px-4 py-1.5 border border-primary bg-white text-primary rounded-full hover:bg-primary hover:text-white transition">Inicio</a>
             <a href="eventos.html"
-                class="px-4 py-1.5 border border-primary text-gray-600 rounded-full hover:bg-primary hover:text-white transition">Eventos</a>
+                class="px-4 py-1.5 border border-primary bg-white text-gray-600 rounded-full hover:bg-primary hover:text-white transition">Proximos Eventos</a>
             <a href=""
-                class="px-4 py-1.5 border border-primary text-gray-600 rounded-full hover:bg-primary hover:text-white transition">Historial
+                class="px-4 py-1.5 border border-primary bg-white text-gray-600 rounded-full hover:bg-primary hover:text-white transition">Historial
                 de Eventos</a>
             <a href="sobre_nosotros.html"
-                class="px-4 py-1.5 border border-primary text-gray-600 rounded-full hover:bg-primary hover:text-white transition">Sobre
+                class="px-4 py-1.5 border border-primary bg-white text-gray-600 rounded-full hover:bg-primary hover:text-white transition">Sobre
                 Nosotros</a>
             <a href="#"
-                class="px-4 py-1.5 border border-primary text-gray-600 rounded-full hover:bg-primary hover:text-white transition">Fuentes</a>
+                class="px-4 py-1.5 border border-primary bg-white text-gray-600 rounded-full hover:bg-primary hover:text-white transition">Fuentes</a>
             <a href="contacto.html"
-                class="px-4 py-1.5 border border-primary text-gray-600 rounded-full hover:bg-primary hover:text-white transition">Contacto</a>
+                class="px-4 py-1.5 border border-primary bg-white text-gray-600 rounded-full hover:bg-primary hover:text-white transition">Contacto</a>
         </nav>
     </header>
-
-
-
     <!-- Acordeón superior -->
     <section class="w-full">
-        <div class="flex w-full h-[350px] bg-gray-200">
+        <div class="flex w-full h-[350px] hero-dynamic">
 
 
 
@@ -100,7 +133,7 @@
 
 
     <!-- Capa de gradiente oscuro de izquierda a derecha para dar profundidad visual -->
-    <div class="capa-oscura absolute inset-0 bg-gradient-to-r from-black/70 to-transparent z-20 opacity-100 transition-opacity duration-500 pointer-events-none">
+    <div class="capa-oscura absolute inset-0 bg-gradient-to-r from-black/35 to-transparent z-20 opacity-100 transition-opacity duration-500 pointer-events-none">
     </div>
 
 
@@ -130,7 +163,7 @@
 
 
                 <div
-                    class="capa-oscura absolute inset-0 bg-gradient-to-r from-black/70 to-transparent z-20 opacity-0 transition-opacity duration-500 pointer-events-none">
+                    class="capa-oscura absolute inset-0 bg-gradient-to-r from-black/35 to-transparent z-20 opacity-0 transition-opacity duration-500 pointer-events-none">
                 </div>
 
 
@@ -159,7 +192,7 @@
 
 
                 <div
-                    class="capa-oscura absolute inset-0 bg-gradient-to-r from-black/70 to-transparent z-20 opacity-0 transition-opacity duration-500 pointer-events-none">
+                    class="capa-oscura absolute inset-0 bg-gradient-to-r from-black/35 to-transparent z-20 opacity-0 transition-opacity duration-500 pointer-events-none">
                 </div>
 
 
@@ -181,7 +214,7 @@
 
 
     <!-- Buscador + calendario -->
-    <section class="max-w-7xl mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-2 gap-10">
+    <section class="max-w-7xl mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-2 gap-10 surface-dynamic rounded-3xl mt-10 section-glow">
 
 
 
@@ -208,7 +241,7 @@
         <div class="flex flex-col justify-center max-w-sm mx-auto md:mr-auto md:ml-12 w-full gap-5">
             <div class="relative w-full">
                 <input type="text" id="search-input" placeholder="¿Qué Buscas?"
-                    class="w-full border-2 border-primary rounded-full px-5 py-2.5 focus:outline-none focus:ring-2 focus:ring-primary/50 text-gray-700 placeholder-primary/60">
+                    class="w-full border-2 border-primary bg-white rounded-full px-5 py-2.5 focus:outline-none focus:ring-2 focus:ring-primary/50 text-gray-700 placeholder-primary/60">
                 <i class="fa-solid fa-magnifying-glass absolute right-5 top-3.5 text-primary text-lg"></i>
             </div>
 
@@ -216,7 +249,7 @@
 
             <div class="relative w-full">
                 <select id="category-filter"
-                    class="w-full border-2 border-primary rounded-full px-5 py-2.5 focus:outline-none focus:ring-2 focus:ring-primary/50 text-gray-700 appearance-none bg-transparent cursor-pointer">
+                    class="w-full border-2 border-primary bg-white rounded-full px-5 py-2.5 focus:outline-none focus:ring-2 focus:ring-primary/50 text-gray-700 appearance-none cursor-pointer">
                     <option value="" disabled selected hidden>Categoría</option>
                     <option value="todas">Todas las categorías</option>
                     <option value="musica">Música</option>
@@ -241,14 +274,14 @@
 
 
 
-            <div>
+            <div class="section-glow p-4 rounded-3xl bg-white/60">
                 <h2 class="text-2xl font-light text-primary mb-8 tracking-wide">Próximos Eventos</h2>
 
 
 
                 <!-- Próximo 1 -->
                 <div data-category="teatro"
-                    class="event-card bg-white border rounded-3xl shadow-lg relative pt-12 pb-5 px-5 flex flex-col mb-16 h-[400px]">
+                    class="event-card card-dynamic bg-white border rounded-3xl shadow-lg relative pt-12 pb-5 px-5 flex flex-col mb-16 h-[400px]">
 
 
 
@@ -287,7 +320,7 @@
 
                 <!-- Próximo 2 -->
                 <div data-category="otros"
-                    class="event-card bg-white border rounded-3xl shadow-lg relative pt-12 pb-5 px-5 flex flex-col mb-10 h-[400px]">
+                    class="event-card card-dynamic bg-white border rounded-3xl shadow-lg relative pt-12 pb-5 px-5 flex flex-col mb-10 h-[400px]">
                     <div
                         class="absolute -top-4 left-6 bg-black text-white text-sm px-5 py-1.5 rounded-full z-10 shadow-md shadow-gray-400/50">
                         Domingo 30 de Agosto
@@ -323,7 +356,7 @@
 
                 <!-- Próximo 3 -->
                 <div data-category="otros"
-                    class="event-card bg-white border rounded-3xl shadow-lg relative pt-12 pb-5 px-5 flex flex-col mb-10 h-[400px]">
+                    class="event-card card-dynamic bg-white border rounded-3xl shadow-lg relative pt-12 pb-5 px-5 flex flex-col mb-10 h-[400px]">
                     <div
                         class="absolute -top-4 left-6 bg-black text-white text-sm px-5 py-1.5 rounded-full z-10 shadow-md shadow-gray-400/50">
                         Sábado 18 Mayo
@@ -360,13 +393,13 @@
 
 
             <!-- Recomendados -->
-            <div class="md:pl-12 xl:pl-24">
+            <div class="md:pl-12 xl:pl-24 section-glow p-4 rounded-3xl bg-white/60">
                 <h2 class="text-2xl font-light text-primary mb-8 tracking-wide">Recomendados</h2>
 
 
 
                 <div data-category="musica"
-                    class="event-card bg-white border rounded-3xl shadow-lg relative pt-10 pb-4 px-5 flex flex-col mb-14 h-[400px] w-full max-w-[320px]">
+                    class="event-card card-dynamic bg-white border rounded-3xl shadow-lg relative pt-10 pb-4 px-5 flex flex-col mb-14 h-[400px] w-full max-w-[320px]">
                     <div
                         class="absolute -top-4 left-5 bg-black text-white text-sm px-4 py-1.5 rounded-full z-10 shadow-md shadow-gray-400/50">
                         Miércoles 22 de Abril
@@ -401,7 +434,7 @@
 
 
                 <div data-category="exposiciones"
-                    class="event-card bg-white border rounded-3xl shadow-lg relative pt-10 pb-4 px-5 flex flex-col mb-10 h-[400px] w-full max-w-[320px]">
+                    class="event-card card-dynamic bg-white border rounded-3xl shadow-lg relative pt-10 pb-4 px-5 flex flex-col mb-10 h-[400px] w-full max-w-[320px]">
                     <div
                         class="absolute -top-4 left-5 bg-black text-white text-sm px-4 py-1.5 rounded-full z-10 shadow-md shadow-gray-400/50">
                         Viernes 27 de Marzo
@@ -436,7 +469,7 @@
 
 
                 <div data-category="otros"
-                    class="event-card bg-white border rounded-3xl shadow-lg relative pt-10 pb-4 px-5 flex flex-col mb-10 h-[400px] w-full max-w-[320px]">
+                    class="event-card card-dynamic bg-white border rounded-3xl shadow-lg relative pt-10 pb-4 px-5 flex flex-col mb-10 h-[400px] w-full max-w-[320px]">
                     <div
                         class="absolute -top-4 left-5 bg-black text-white text-sm px-4 py-1.5 rounded-full z-10 shadow-md shadow-gray-400/50">
                         Del 9 hasta el 19 de Abril
