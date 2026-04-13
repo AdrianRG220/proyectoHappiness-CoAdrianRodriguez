@@ -9,6 +9,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./assets/style/contacto.css">
 
     <script>
         tailwind.config = {
@@ -25,48 +26,40 @@
             }
         }
     </script>
-    <style>
-        body {
-            background:
-                radial-gradient(circle at 15% 12%, rgba(186, 0, 124, 0.22), transparent 38%),
-                radial-gradient(circle at 85% 88%, rgba(0, 155, 219, 0.20), transparent 40%),
-                linear-gradient(145deg, #ffffff 0%, #f7f9fc 100%);
-        }
-    </style>
 </head>
 
 <body class="bg-gray-50 text-gray-800 font-sans antialiased overflow-x-hidden flex flex-col min-h-screen">
 
-    <header class="flex items-center justify-between px-6 py-4 border-b border-gray-200 bg-white shadow-sm">
-
+    <header class="flex items-center justify-between px-6 py-4 border-b border-gray-100 surface-dynamic">
         <a href="index.html" class="block flex-shrink-0 transition hover:opacity-80">
-            <img src="./happines-and-co-upper-02.png" alt="Logo del Sitio" class="h-12 md:h-14 w-auto object-contain">
+            <img src="./assets/Imagenes/Imagenes Corporativas/happines-and-co-upper-02.png
+            " alt="Logo del Sitio" class="h-12 md:h-14 w-auto object-contain">
         </a>
 
-        <nav class="hidden md:flex space-x-3 text-sm">
+        <nav class="main-nav hidden md:flex space-x-3 text-sm">
             <a href="index.html"
-                class="px-4 py-1.5 border border-primary text-gray-600 rounded-full hover:bg-primary hover:text-white transition">Inicio</a>
-            <a href="#"
-                class="px-4 py-1.5 border border-primary text-gray-600 rounded-full hover:bg-primary hover:text-white transition">Proximos Eventos</a>
-            <a href="#"
-                class="px-4 py-1.5 border border-primary text-gray-600 rounded-full hover:bg-primary hover:text-white transition">Historial
+                class="px-4 py-1.5 border border-primary bg-white text-primary rounded-full hover:bg-primary hover:text-white transition">Inicio</a>
+            <a href="eventos.html"
+                class="px-4 py-1.5 border border-primary bg-white text-gray-600 rounded-full hover:bg-primary hover:text-white transition">Proximos Eventos</a>
+            <a href="historial_eventos.html"
+                class="px-4 py-1.5 border border-primary bg-white text-gray-600 rounded-full hover:bg-primary hover:text-white transition">Historial
                 de Eventos</a>
             <a href="sobre_nosotros.html"
-                class="px-4 py-1.5 border border-primary text-gray-600 rounded-full hover:bg-primary hover:text-white transition">Sobre
+                class="px-4 py-1.5 border border-primary bg-white text-gray-600 rounded-full hover:bg-primary hover:text-white transition">Sobre
                 Nosotros</a>
-            <a href="#"
-                class="px-4 py-1.5 border border-primary text-gray-600 rounded-full hover:bg-primary hover:text-white transition">Fuentes</a>
+            <a href="fuentes.html"
+                class="px-4 py-1.5 border border-primary bg-white text-gray-600 rounded-full hover:bg-primary hover:text-white transition">Fuentes</a>
             <a href="contacto.html"
-                class="px-4 py-1.5 border border-primary text-primary rounded-full hover:bg-primary hover:text-white transition">Contacto</a>
+                class="px-4 py-1.5 border border-primary bg-white text-gray-600 rounded-full hover:bg-primary hover:text-white transition">Contacto</a>
         </nav>
     </header>
 
     <main class="flex-grow max-w-5xl mx-auto px-6 py-12 w-full">
-        <div class="bg-white rounded-2xl shadow-xl shadow-gray-200 border border-gray-100 overflow-hidden">
+        <div class="surface-dynamic rounded-2xl shadow-xl shadow-gray-200 border border-gray-100 overflow-hidden">
             <div class="grid grid-cols-1 md:grid-cols-5">
 
                 <div
-                    class="bg-primary md:col-span-2 p-10 text-white flex flex-col justify-between relative overflow-hidden">
+                    class="hero-dynamic md:col-span-2 p-10 text-white flex flex-col justify-between relative overflow-hidden">
                     <div class="z-10 relative">
                         <h2 class="text-3xl font-bold mb-4">Ponte en contacto</h2>
                         <p class="text-white/90 mb-10 leading-relaxed text-sm">¿Tienes alguna duda o quieres dejarnos

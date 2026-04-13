@@ -15,6 +15,7 @@
 
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./assets/style/index.css">
 
 
 
@@ -33,50 +34,6 @@
             }
         }
     </script>
-    <style>
-        body {
-            background:
-                radial-gradient(circle at 15% 12%, rgba(186, 0, 124, 0.22), transparent 38%),
-                radial-gradient(circle at 85% 88%, rgba(0, 155, 219, 0.20), transparent 40%),
-                linear-gradient(145deg, #ffffff 0%, #f7f9fc 100%);
-        }
-
-        .hero-dynamic {
-            background:
-                radial-gradient(circle at 12% 18%, rgba(186, 0, 124, 0.96), transparent 42%),
-                radial-gradient(circle at 86% 22%, rgba(0, 155, 219, 0.94), transparent 44%),
-                radial-gradient(circle at 52% 88%, rgba(0, 155, 219, 0.70), transparent 42%),
-                linear-gradient(122deg, #ba007c 0%, #009bdb 100%);
-        }
-
-        .surface-dynamic {
-            background:
-                radial-gradient(circle at 18% 10%, rgba(186, 0, 124, 0.62), transparent 44%),
-                radial-gradient(circle at 82% 90%, rgba(0, 155, 219, 0.62), transparent 44%),
-                radial-gradient(circle at 15% 82%, rgba(186, 0, 124, 0.58), transparent 40%),
-                #ffffff;
-        }
-
-        .card-dynamic {
-            background:
-                radial-gradient(circle at 95% 0%, rgba(0, 155, 219, 0.28), transparent 36%),
-                radial-gradient(circle at 0% 100%, rgba(186, 0, 124, 0.30), transparent 38%),
-                linear-gradient(160deg, #ffffff 0%, #fff4fb 52%, #f2f9ff 100%);
-            border-color: rgba(186, 0, 124, 0.24);
-        }
-
-        .card-dynamic:hover {
-            box-shadow:
-                0 20px 34px rgba(186, 0, 124, 0.18),
-                0 10px 24px rgba(0, 155, 219, 0.16);
-        }
-
-        .section-glow {
-            box-shadow:
-                0 12px 25px rgba(186, 0, 124, 0.12),
-                0 6px 20px rgba(0, 155, 219, 0.10);
-        }
-    </style>
 </head>
 
 
@@ -90,24 +47,24 @@
 
 
         <a href="index.html" class="block flex-shrink-0 transition hover:opacity-80">
-            <img src="./happines-and-co-upper-02.png
+            <img src="./assets/Imagenes/Imagenes Corporativas/happines-and-co-upper-02.png
             " alt="Logo del Sitio" class="h-12 md:h-14 w-auto object-contain">
         </a>
 
 
 
-        <nav class="hidden md:flex space-x-3 text-sm">
+        <nav class="main-nav hidden md:flex space-x-3 text-sm">
             <a href="index.html"
                 class="px-4 py-1.5 border border-primary bg-white text-primary rounded-full hover:bg-primary hover:text-white transition">Inicio</a>
             <a href="eventos.html"
                 class="px-4 py-1.5 border border-primary bg-white text-gray-600 rounded-full hover:bg-primary hover:text-white transition">Proximos Eventos</a>
-            <a href=""
+            <a href="historial_eventos.html"
                 class="px-4 py-1.5 border border-primary bg-white text-gray-600 rounded-full hover:bg-primary hover:text-white transition">Historial
                 de Eventos</a>
             <a href="sobre_nosotros.html"
                 class="px-4 py-1.5 border border-primary bg-white text-gray-600 rounded-full hover:bg-primary hover:text-white transition">Sobre
                 Nosotros</a>
-            <a href="#"
+            <a href="fuentes.html"
                 class="px-4 py-1.5 border border-primary bg-white text-gray-600 rounded-full hover:bg-primary hover:text-white transition">Fuentes</a>
             <a href="contacto.html"
                 class="px-4 py-1.5 border border-primary bg-white text-gray-600 rounded-full hover:bg-primary hover:text-white transition">Contacto</a>
@@ -123,7 +80,7 @@
             <!--panel principal de evento: ocupa 55% ancho-->
 <div class="panel-evento w-[55%] relative cursor-pointer overflow-hidden transition-all duration-500 ease-in-out">
     <!-- Imagen de fondo que cubre todo el contenedor-->
-    <img src="./Imagenes Eventos/no-estoy-de-frente.jpg" alt="Cartel del evento No estoy de frente"
+    <img src="./assets/Imagenes/Imagenes Eventos/Eventos proximos/no-estoy-de-frente.jpg" alt="Cartel del evento No estoy de frente"
          class="absolute inset-0 w-full h-full object-fill">
 
 
@@ -153,7 +110,7 @@
             <!-- 2. Fiesta de la Sidra -->
             <div
                 class="panel-evento w-[22.5%] relative cursor-pointer overflow-hidden transition-all duration-500 ease-in-out border-l-2 border-white">
-                <img src="./Imagenes Eventos/sidra.png" alt="Cartel del evento Fiesta de la Sidra"
+                <img src="./assets/Imagenes/Imagenes Eventos/Eventos proximos/sidra.png" alt="Cartel del evento Fiesta de la Sidra"
                     class="absolute inset-0 w-full h-full object-fill">
 
 
@@ -182,7 +139,7 @@
             <!-- 3. XXVI Feria del Salmón -->
             <div
                 class="panel-evento w-[22.5%] relative cursor-pointer overflow-hidden transition-all duration-500 ease-in-out border-l-2 border-white">
-                <img src="./Imagenes Eventos/feria-salmon.jpg" alt="Cartel del evento XXVI Feria del Salmón"
+                <img src="./assets/Imagenes/Imagenes Eventos/Eventos proximos/feria-salmon.jpg" alt="Cartel del evento XXVI Feria del Salmón"
                     class="absolute inset-0 w-full h-full object-fill">
 
 
@@ -270,11 +227,11 @@
 
     <!-- Próximos + Recomendados -->
     <section class="max-w-7xl mx-auto px-6 py-6 pb-20">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-12">
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-x-16 gap-y-12">
 
 
 
-            <div class="section-glow p-4 rounded-3xl bg-white/60">
+            <div class="md:col-span-8 section-glow p-4 rounded-3xl bg-white/60">
                 <h2 class="text-2xl font-light text-primary mb-8 tracking-wide">Próximos Eventos</h2>
 
 
@@ -311,7 +268,7 @@
 
 
                     <div class="w-full h-44 bg-gray-200 rounded-2xl overflow-hidden mt-auto relative">
-                        <img src="./Imagenes Eventos/no-estoy-de-frente.jpg" alt="Cartel del evento No estoy de frente"
+                        <img src="./assets/Imagenes/Imagenes Eventos/Eventos proximos/no-estoy-de-frente.jpg" alt="Cartel del evento No estoy de frente"
                             class="w-full h-full object-fill">
                     </div>
                 </div>
@@ -347,7 +304,7 @@
 
 
                     <div class="w-full h-44 bg-gray-200 rounded-2xl overflow-hidden mt-auto relative">
-                        <img src="./Imagenes Eventos/sidra.png" alt="Cartel del evento Fiesta de la Sidra"
+                        <img src="./assets/Imagenes/Imagenes Eventos/Eventos proximos/sidra.png" alt="Cartel del evento Fiesta de la Sidra"
                             class="w-full h-full object-fill">
                     </div>
                 </div>
@@ -384,7 +341,7 @@
 
 
                     <div class="w-full h-44 bg-gray-200 rounded-2xl overflow-hidden mt-auto relative">
-                        <img src="./Imagenes Eventos/feria-salmon.jpg" alt="Cartel del evento XXVI Feria del Salmón"
+                        <img src="./assets/Imagenes/Imagenes Eventos/Eventos proximos/feria-salmon.jpg" alt="Cartel del evento XXVI Feria del Salmón"
                             class="w-full h-full object-fill">
                     </div>
                 </div>
@@ -393,8 +350,8 @@
 
 
             <!-- Recomendados -->
-            <div class="md:pl-12 xl:pl-24 section-glow p-4 rounded-3xl bg-white/60">
-                <h2 class="text-2xl font-light text-primary mb-8 tracking-wide">Recomendados</h2>
+            <div class="md:col-span-4 section-glow p-4 rounded-3xl bg-white/60 flex flex-col items-center">
+                <h2 class="w-full text-2xl font-light text-primary mb-8 tracking-wide">Recomendados</h2>
 
 
 
@@ -426,7 +383,7 @@
 
 
                     <div class="w-full h-44 bg-gray-200 rounded-2xl overflow-hidden mt-auto relative">
-                        <img src="./Imagenes Eventos/tsunami.png" alt="Cartel del evento Concierto Tsunami"
+                        <img src="./assets/Imagenes/Imagenes Eventos/Eventos Pasados/tsunami.png" alt="Cartel del evento Concierto Tsunami"
                             class="w-full h-full object-fill">
                     </div>
                 </div>
@@ -461,7 +418,7 @@
 
 
                     <div class="w-full h-44 bg-gray-200 rounded-2xl overflow-hidden mt-auto relative">
-                        <img src="./Imagenes Eventos/viaje-luna-lorca.jpg" alt="Cartel del evento Viaje a la luna"
+                        <img src="./assets/Imagenes/Imagenes Eventos/Eventos Pasados/viaje-luna-lorca.jpg" alt="Cartel del evento Viaje a la luna"
                             class="w-full h-full object-fill">
                     </div>
                 </div>
@@ -498,7 +455,7 @@
 
 
                     <div class="w-full h-44 bg-gray-200 rounded-2xl overflow-hidden mt-auto relative">
-                        <img src="./Imagenes Eventos/XI_FESTIVAL_LGTBI_NIEMEYER_2026.jpg"
+                        <img src="./assets/Imagenes/Imagenes Eventos/Eventos Pasados/XI_FESTIVAL_LGTBI_NIEMEYER_2026.jpg"
                             alt="Cartel del evento XI Festival de Cine LGTBI" class="w-full h-full object-fill">
                     </div>
                 </div>

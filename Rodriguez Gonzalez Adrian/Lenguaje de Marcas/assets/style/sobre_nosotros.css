@@ -1,0 +1,50 @@
+body {
+  background:
+    radial-gradient(circle at 15% 12%, rgba(186, 0, 124, 0.30), transparent 40%),
+    radial-gradient(circle at 50% 88%, rgba(255, 123, 0, 0.28), transparent 42%),
+    radial-gradient(circle at 85% 88%, rgba(0, 155, 219, 0.30), transparent 40%),
+    linear-gradient(145deg, rgba(186, 0, 124, 0.12) 0%, rgba(0, 155, 219, 0.10) 52%, rgba(255, 123, 0, 0.12) 100%);
+}
+
+.hero-dynamic {
+  background:
+    radial-gradient(circle at 12% 18%, rgba(186, 0, 124, 0.96), transparent 42%),
+    radial-gradient(circle at 50% 10%, rgba(255, 123, 0, 0.84), transparent 44%),
+    radial-gradient(circle at 86% 22%, rgba(0, 155, 219, 0.94), transparent 44%),
+    radial-gradient(circle at 52% 88%, rgba(255, 123, 0, 0.72), transparent 42%),
+    linear-gradient(122deg, #ba007c 0%, #009bdb 55%, #ff7b00 100%);
+}
+
+.surface-dynamic {
+  background:
+    radial-gradient(circle at 18% 10%, rgba(186, 0, 124, 0.62), transparent 44%),
+    radial-gradient(circle at 50% 88%, rgba(255, 123, 0, 0.40), transparent 40%),
+    radial-gradient(circle at 82% 90%, rgba(0, 155, 219, 0.62), transparent 44%),
+    linear-gradient(155deg, rgba(186, 0, 124, 0.12) 0%, rgba(0, 155, 219, 0.10) 56%, rgba(255, 123, 0, 0.14) 100%);
+}
+
+.card-dynamic {
+  background:
+    radial-gradient(circle at 95% 0%, rgba(0, 155, 219, 0.28), transparent 36%),
+    radial-gradient(circle at 0% 100%, rgba(186, 0, 124, 0.30), transparent 38%),
+    radial-gradient(circle at 55% 0%, rgba(255, 123, 0, 0.32), transparent 40%),
+    linear-gradient(160deg, rgba(186, 0, 124, 0.10) 0%, rgba(0, 155, 219, 0.10) 52%, rgba(255, 123, 0, 0.14) 100%);
+  border-color: rgba(186, 0, 124, 0.24);
+}
+
+.card-dynamic:hover {
+  box-shadow:
+    0 20px 34px rgba(186, 0, 124, 0.18),
+    0 10px 24px rgba(0, 155, 219, 0.16);
+}
+
+.section-glow {
+  box-shadow:
+    0 12px 25px rgba(186, 0, 124, 0.12),
+    0 6px 20px rgba(0, 155, 219, 0.10);
+}
+
+.main-nav a:hover {
+  background-color: #ba007c !important;
+  color: #ffffff !important;
+}

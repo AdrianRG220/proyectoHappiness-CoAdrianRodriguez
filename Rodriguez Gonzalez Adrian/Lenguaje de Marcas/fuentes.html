@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fuentes | HAPPINESS&Co</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./assets/style/fuentes.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#ba007c',
+                        secondary: '#f9f9f9',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'ui-sans-serif', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-white text-gray-800 font-sans antialiased overflow-x-hidden min-h-screen flex flex-col">
+    <header class="flex items-center justify-between px-6 py-4 border-b border-gray-100 surface-dynamic">
+        <a href="index.html" class="block flex-shrink-0 transition hover:opacity-80">
+            <img src="./assets/Imagenes/Imagenes Corporativas/happines-and-co-upper-02.png
+            " alt="Logo del Sitio" class="h-12 md:h-14 w-auto object-contain">
+        </a>
+
+        <nav class="main-nav hidden md:flex space-x-3 text-sm">
+            <a href="index.html"
+                class="px-4 py-1.5 border border-primary bg-white text-primary rounded-full hover:bg-primary hover:text-white transition">Inicio</a>
+            <a href="eventos.html"
+                class="px-4 py-1.5 border border-primary bg-white text-gray-600 rounded-full hover:bg-primary hover:text-white transition">Proximos Eventos</a>
+            <a href="historial_eventos.html"
+                class="px-4 py-1.5 border border-primary bg-white text-gray-600 rounded-full hover:bg-primary hover:text-white transition">Historial
+                de Eventos</a>
+            <a href="sobre_nosotros.html"
+                class="px-4 py-1.5 border border-primary bg-white text-gray-600 rounded-full hover:bg-primary hover:text-white transition">Sobre
+                Nosotros</a>
+            <a href="fuentes.html"
+                class="px-4 py-1.5 border border-primary bg-white text-gray-600 rounded-full hover:bg-primary hover:text-white transition">Fuentes</a>
+            <a href="contacto.html"
+                class="px-4 py-1.5 border border-primary bg-white text-gray-600 rounded-full hover:bg-primary hover:text-white transition">Contacto</a>
+        </nav>
+    </header>
+
+    <main class="flex-grow max-w-7xl mx-auto px-6 py-10 w-full">
+        <section class="hero-portada rounded-3xl border border-gray-100 p-10 md:p-14 shadow-sm mb-8">
+            <div class="relative z-10 text-center">
+                <h1 class="text-4xl md:text-5xl font-extrabold text-white tracking-wide mb-3">FUENTES</h1>
+                <p class="text-white max-w-3xl mx-auto">
+                    En esta sección se recopilan las referencias utilizadas para redactar contenidos y seleccionar
+                    recursos visuales del proyecto.
+                </p>
+            </div>
+        </section>
+
+        <section class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <article class="section-glow bg-white/70 border border-gray-100 rounded-3xl p-6 md:p-8">
+                <h2 class="text-2xl font-semibold text-primary mb-5 flex items-center gap-3">
+                    <i class="fa-solid fa-book-open"></i>
+                    Fuentes de texto
+                </h2>
+
+                <ul class="space-y-4 text-sm text-gray-700 leading-relaxed">
+                    <li class="source-item">
+                        <p class="font-semibold text-gray-900">Información institucional y cultural</p>
+                        <a href="#" class="source-link">https://www.ejemplo-fuente-texto-1.com</a>
+                    </li>
+                    <li class="source-item">
+                        <p class="font-semibold text-gray-900">Descripciones de eventos y reseñas</p>
+                        <a href="#" class="source-link">https://www.ejemplo-fuente-texto-2.com</a>
+                    </li>
+                    <li class="source-item">
+                        <p class="font-semibold text-gray-900">Datos de fechas y programación</p>
+                        <a href="#" class="source-link">https://www.ejemplo-fuente-texto-3.com</a>
+                    </li>
+                </ul>
+            </article>
+
+            <article class="section-glow bg-white/70 border border-gray-100 rounded-3xl p-6 md:p-8">
+                <h2 class="text-2xl font-semibold text-primary mb-5 flex items-center gap-3">
+                    <i class="fa-solid fa-image"></i>
+                    Fuentes de imágenes
+                </h2>
+
+                <ul class="space-y-4 text-sm text-gray-700 leading-relaxed">
+                    <li class="source-item">
+                        <p class="font-semibold text-gray-900">Carteles y material promocional</p>
+                        <a href="#" class="source-link">https://www.ejemplo-fuente-imagen-1.com</a>
+                    </li>
+                    <li class="source-item">
+                        <p class="font-semibold text-gray-900">Banco de imágenes y recursos gráficos</p>
+                        <a href="#" class="source-link">https://www.ejemplo-fuente-imagen-2.com</a>
+                    </li>
+                    <li class="source-item">
+                        <p class="font-semibold text-gray-900">Fotografías de apoyo editorial</p>
+                        <a href="#" class="source-link">https://www.ejemplo-fuente-imagen-3.com</a>
+                    </li>
+                </ul>
+            </article>
+        </section>
+
+        <section class="section-glow bg-white/70 border border-gray-100 rounded-3xl p-6 md:p-8 mt-8">
+            <h2 class="text-2xl font-semibold text-primary mb-4 flex items-center gap-3">
+                <i class="fa-solid fa-circle-info"></i>
+                Nota de atribución
+            </h2>
+            <p class="text-sm text-gray-700 leading-relaxed">
+                Sustituye los enlaces de ejemplo por las URLs reales de donde has obtenido textos, fotografías y
+                recursos multimedia. Si una fuente requiere autoría específica, añade también autor, fecha de consulta
+                y licencia de uso.
+            </p>
+        </section>
+    </main>
+
+    <footer class="bg-gray-600 text-gray-300 flex items-center justify-between px-6 py-2 mt-auto text-sm w-full">
+        <div class="text-2xl font-bold italic font-serif text-white">
+            &
+        </div>
+
+        <div class="flex items-center gap-4">
+            <p>Copyright | Redes Sociales:</p>
+            <div class="flex gap-3 text-lg text-white">
+                <a href="#" class="hover:text-primary transition"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="#" class="hover:text-primary transition"><i class="fa-brands fa-youtube"></i></a>
+                <a href="#" class="hover:text-primary transition"><i class="fa-brands fa-facebook"></i></a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
