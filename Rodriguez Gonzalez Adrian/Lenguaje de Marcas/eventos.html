@@ -23,7 +23,8 @@
             <a href="index.html"
                 class="px-4 py-1.5 border border-primary bg-white text-primary rounded-full hover:bg-primary hover:text-white transition">Inicio</a>
             <a href="eventos.html"
-                class="px-4 py-1.5 border border-primary bg-white text-gray-600 rounded-full hover:bg-primary hover:text-white transition">Proximos Eventos</a>
+                class="px-4 py-1.5 border border-primary bg-white text-gray-600 rounded-full hover:bg-primary hover:text-white transition">Proximos
+                Eventos</a>
             <a href="historial_eventos.html"
                 class="px-4 py-1.5 border border-primary bg-white text-gray-600 rounded-full hover:bg-primary hover:text-white transition">Historial
                 de Eventos</a>
@@ -58,14 +59,16 @@
                         <!-- Filtros en horizontal -->
                         <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
                             <div class="relative">
-                                <label for="search-input" class="block text-sm font-semibold text-gray-600 mb-2">Buscar</label>
+                                <label for="search-input"
+                                    class="block text-sm font-semibold text-gray-600 mb-2">Buscar</label>
                                 <input id="search-input" type="text" placeholder="¿Qué buscas?"
                                     class="w-full border-2 border-primary rounded-full px-5 py-2.5 pr-11 focus:outline-none text-gray-700 placeholder-primary/60">
                                 <i class="fa-solid fa-magnifying-glass absolute right-4 top-11 text-primary"></i>
                             </div>
 
                             <div class="relative">
-                                <label for="category-filter" class="block text-sm font-semibold text-gray-600 mb-2">Categoría</label>
+                                <label for="category-filter"
+                                    class="block text-sm font-semibold text-gray-600 mb-2">Categoría</label>
                                 <select id="category-filter"
                                     class="w-full border-2 border-primary rounded-full px-5 py-2.5 pr-11 appearance-none focus:outline-none text-gray-700 bg-white">
                                     <option value="todas">Todas</option>
@@ -75,154 +78,202 @@
                                     <option value="exposiciones">Exposiciones</option>
                                     <option value="otros">Otros</option>
                                 </select>
-                                <i class="fa-solid fa-list absolute right-4 top-11 text-primary pointer-events-none"></i>
+                                <i
+                                    class="fa-solid fa-list absolute right-4 top-11 text-primary pointer-events-none"></i>
                             </div>
 
                             <div class="relative">
-                                <label for="date-filter" class="block text-sm font-semibold text-gray-600 mb-2">Fecha</label>
+                                <label for="date-filter"
+                                    class="block text-sm font-semibold text-gray-600 mb-2">Fecha</label>
                                 <select id="date-filter"
                                     class="w-full border-2 border-primary rounded-full px-5 py-2.5 pr-11 appearance-none focus:outline-none text-gray-700 bg-white">
                                     <option value="todas">Todas</option>
                                     <option value="mayo">Mayo</option>
                                     <option value="agosto">Agosto</option>
                                 </select>
-                                <i class="fa-solid fa-calendar absolute right-4 top-11 text-primary pointer-events-none"></i>
+                                <i
+                                    class="fa-solid fa-calendar absolute right-4 top-11 text-primary pointer-events-none"></i>
                             </div>
                         </div>
 
-                    <!-- Contenido principal + recomendados -->
-                    <div class="mt-8 grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
-                        <!-- Columna principal -->
-                        <section class="lg:col-span-8" aria-label="Listado de próximos eventos">
-                            <h2 class="text-xl font-light text-primary tracking-wide mb-4">Listado</h2>
+                        <!-- Contenido principal + recomendados -->
+                        <div class="mt-8 grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+                            <!-- Columna principal -->
+                            <section class="lg:col-span-8" aria-label="Listado de próximos eventos">
+                                <h2 class="text-xl font-light text-primary tracking-wide mb-4">Listado</h2>
 
-                            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 events-scope">
-                                <!-- Principal 1 -->
-                                <article class="event-card event bg-white border border-gray-100 rounded-3xl overflow-hidden shadow-sm"
-                                    data-category="teatro" data-date="mayo"
-                                    data-search="no estoy de frente teatro alhambra mari paz sayago teatro domingo 10 mayo 20:00">
-                                    <div class="relative h-36 overflow-hidden">
-                                        <img src="./assets/Imagenes/Imagenes Eventos/Eventos proximos/no-estoy-de-frente.jpg" alt="Cartel del evento No estoy de frente"
-                                            class="w-full h-full object-cover">
-                                        <span class="absolute top-3 left-3 text-xs font-semibold tracking-wide text-white px-3 py-1 rounded-md bg-brand-blue">Teatro</span>
-                                    </div>
-
-                                    <div class="p-5 space-y-3">
-                                        <p class="text-xs text-gray-500 font-semibold uppercase tracking-wide">Domingo 10 de Mayo</p>
-                                        <h3 class="text-base font-bold text-gray-900 leading-snug">No estoy de frente</h3>
-                                        <p class="text-sm text-gray-600 event-clamp-2">Un monólogo de Mari Paz Sayago.</p>
-
-                                        <ul class="text-xs text-gray-500 space-y-1">
-                                            <li class="flex items-center gap-2"><i class="fa-regular fa-clock w-4 text-primary"></i><span>20:00</span></li>
-                                            <li class="flex items-center gap-2"><i class="fa-solid fa-location-dot w-4 text-primary"></i><span>Teatro Alhambra</span></li>
-                                        </ul>
-
-                                        <!-- Detalle sin JS -->
-                                        <a href="#modal-no-estoy" class="event-summary">Ver más</a>
-                                    </div>
-                                </article>
-
-                                <!-- Principal 2 -->
-                                <article class="event-card event bg-white border border-gray-100 rounded-3xl overflow-hidden shadow-sm"
-                                    data-category="otros" data-date="mayo"
-                                    data-search="xxvi feria del salmon cornellana naturaleza pesca feria sabado 18 mayo">
-                                    <div class="relative h-36 overflow-hidden">
-                                        <img src="./assets/Imagenes/Imagenes Eventos/Eventos proximos/feria-salmon.jpg" alt="Cartel del evento XXVI Feria del Salmón"
-                                            class="w-full h-full object-cover">
-                                        <span class="absolute top-3 left-3 text-xs font-semibold tracking-wide text-white px-3 py-1 rounded-md bg-brand-gray">Otros</span>
-                                    </div>
-
-                                    <div class="p-5 space-y-3">
-                                        <p class="text-xs text-gray-500 font-semibold uppercase tracking-wide">Sábado 18 Mayo</p>
-                                        <h3 class="text-base font-bold text-gray-900 leading-snug">XXVI Feria del Salmón</h3>
-                                        <p class="text-sm text-gray-600 event-clamp-2">Feria cinegética, de pesca y naturaleza.</p>
-
-                                        <ul class="text-xs text-gray-500 space-y-1">
-                                            <li class="flex items-center gap-2"><i class="fa-regular fa-clock w-4 text-primary"></i><span>Todo el día</span></li>
-                                            <li class="flex items-center gap-2"><i class="fa-solid fa-location-dot w-4 text-primary"></i><span>Cornellana</span></li>
-                                        </ul>
-
-                                        <a href="#modal-salmon" class="event-summary">Ver más</a>
-                                    </div>
-                                </article>
-
-                                <!-- Principal 3 -->
-                                <article class="event-card event bg-white border border-gray-100 rounded-3xl overflow-hidden shadow-sm"
-                                    data-category="otros" data-date="agosto"
-                                    data-search="fiesta de la sidra playa san lorenzo escanciado sidra domingo 30 agosto 15:00">
-                                    <div class="relative h-36 overflow-hidden">
-                                        <img src="./assets/Imagenes/Imagenes Eventos/Eventos proximos/sidra.png" alt="Cartel del evento Fiesta de la Sidra"
-                                            class="w-full h-full object-cover">
-                                        <span class="absolute top-3 left-3 text-xs font-semibold tracking-wide text-white px-3 py-1 rounded-md bg-brand-gray">Otros</span>
-                                    </div>
-
-                                    <div class="p-5 space-y-3">
-                                        <p class="text-xs text-gray-500 font-semibold uppercase tracking-wide">Domingo 30 de Agosto</p>
-                                        <h3 class="text-base font-bold text-gray-900 leading-snug">Fiesta de la Sidra</h3>
-                                        <p class="text-sm text-gray-600 event-clamp-2">Récord mundial de escanciado simultáneo.</p>
-
-                                        <ul class="text-xs text-gray-500 space-y-1">
-                                            <li class="flex items-center gap-2"><i class="fa-regular fa-clock w-4 text-primary"></i><span>15:00</span></li>
-                                            <li class="flex items-center gap-2"><i class="fa-solid fa-location-dot w-4 text-primary"></i><span>Playa San Lorenzo</span></li>
-                                        </ul>
-
-                                        <a href="#modal-sidra" class="event-summary">Ver más</a>
-                                    </div>
-                                </article>
-                            </div>
-                        </section>
-
-                        <!-- Columna lateral -->
-                        <aside class="lg:col-span-4" aria-label="Recomendados">
-                            <section class="bg-white border border-gray-100 rounded-3xl p-6 shadow-sm">
-                                <h2 class="text-xl font-light text-primary tracking-wide mb-5">Recomendados</h2>
-
-                                <div class="space-y-4 events-scope">
-                                    <!-- Recomendado 1 -->
-                                    <article class="event-card event flex gap-4 items-start rounded-2xl border border-gray-100 bg-white p-4"
+                                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 events-scope">
+                                    <!-- Principal 1 -->
+                                    <article
+                                        class="event-card event bg-white border border-gray-100 rounded-3xl overflow-hidden shadow-sm"
                                         data-category="teatro" data-date="mayo"
                                         data-search="no estoy de frente teatro alhambra mari paz sayago teatro domingo 10 mayo 20:00">
-                                        <img src="./assets/Imagenes/Imagenes Eventos/Eventos proximos/no-estoy-de-frente.jpg" alt="Cartel del evento No estoy de frente"
-                                            class="w-20 h-20 rounded-xl object-cover border border-gray-100 flex-shrink-0">
-                                        <div class="min-w-0 flex-1">
-                                            <p class="text-xs text-gray-500 font-semibold uppercase tracking-wide">Domingo 10 de Mayo</p>
-                                            <h3 class="text-sm font-bold text-gray-900 leading-snug truncate">No estoy de frente</h3>
-                                            <p class="text-sm text-gray-600 event-clamp-2">Un monólogo de Mari Paz Sayago.</p>
+                                        <div class="relative h-36 overflow-hidden">
+                                            <img src="./assets/Imagenes/Imagenes Eventos/Eventos proximos/no-estoy-de-frente.jpg"
+                                                alt="Cartel del evento No estoy de frente"
+                                                class="w-full h-full object-cover">
+                                            <span
+                                                class="absolute top-3 left-3 text-xs font-semibold tracking-wide text-white px-3 py-1 rounded-md bg-brand-blue">Teatro</span>
+                                        </div>
+
+                                        <div class="p-5 space-y-3">
+                                            <p class="text-xs text-gray-500 font-semibold uppercase tracking-wide">
+                                                Domingo 10 de Mayo</p>
+                                            <h3 class="text-base font-bold text-gray-900 leading-snug">No estoy de
+                                                frente</h3>
+                                            <p class="text-sm text-gray-600 event-clamp-2">Un monólogo de Mari Paz
+                                                Sayago.</p>
+
+                                            <ul class="text-xs text-gray-500 space-y-1">
+                                                <li class="flex items-center gap-2"><i
+                                                        class="fa-regular fa-clock w-4 text-primary"></i><span>20:00</span>
+                                                </li>
+                                                <li class="flex items-center gap-2"><i
+                                                        class="fa-solid fa-location-dot w-4 text-primary"></i><span>Teatro
+                                                        Alhambra</span></li>
+                                            </ul>
+
+                                            <!-- Detalle sin JS -->
                                             <a href="#modal-no-estoy" class="event-summary">Ver más</a>
                                         </div>
                                     </article>
 
-                                    <!-- Recomendado 2 -->
-                                    <article class="event-card event flex gap-4 items-start rounded-2xl border border-gray-100 bg-white p-4"
+                                    <!-- Principal 2 -->
+                                    <article
+                                        class="event-card event bg-white border border-gray-100 rounded-3xl overflow-hidden shadow-sm"
                                         data-category="otros" data-date="mayo"
                                         data-search="xxvi feria del salmon cornellana naturaleza pesca feria sabado 18 mayo">
-                                        <img src="./assets/Imagenes/Imagenes Eventos/Eventos proximos/feria-salmon.jpg" alt="Cartel del evento XXVI Feria del Salmón"
-                                            class="w-20 h-20 rounded-xl object-cover border border-gray-100 flex-shrink-0">
-                                        <div class="min-w-0 flex-1">
-                                            <p class="text-xs text-gray-500 font-semibold uppercase tracking-wide">Sábado 18 Mayo</p>
-                                            <h3 class="text-sm font-bold text-gray-900 leading-snug truncate">XXVI Feria del Salmón</h3>
-                                            <p class="text-sm text-gray-600 event-clamp-2">Feria cinegética, de pesca y naturaleza.</p>
+                                        <div class="relative h-36 overflow-hidden">
+                                            <img src="./assets/Imagenes/Imagenes Eventos/Eventos proximos/feria-salmon.jpg"
+                                                alt="Cartel del evento XXVI Feria del Salmón"
+                                                class="w-full h-full object-cover">
+                                            <span
+                                                class="absolute top-3 left-3 text-xs font-semibold tracking-wide text-white px-3 py-1 rounded-md bg-brand-gray">Otros</span>
+                                        </div>
+
+                                        <div class="p-5 space-y-3">
+                                            <p class="text-xs text-gray-500 font-semibold uppercase tracking-wide">
+                                                Sábado 18 Mayo</p>
+                                            <h3 class="text-base font-bold text-gray-900 leading-snug">XXVI Feria del
+                                                Salmón</h3>
+                                            <p class="text-sm text-gray-600 event-clamp-2">Feria cinegética, de pesca y
+                                                naturaleza.</p>
+
+                                            <ul class="text-xs text-gray-500 space-y-1">
+                                                <li class="flex items-center gap-2"><i
+                                                        class="fa-regular fa-clock w-4 text-primary"></i><span>Todo el
+                                                        día</span></li>
+                                                <li class="flex items-center gap-2"><i
+                                                        class="fa-solid fa-location-dot w-4 text-primary"></i><span>Cornellana</span>
+                                                </li>
+                                            </ul>
+
                                             <a href="#modal-salmon" class="event-summary">Ver más</a>
                                         </div>
                                     </article>
 
-                                    <!-- Recomendado 3 -->
-                                    <article class="event-card event flex gap-4 items-start rounded-2xl border border-gray-100 bg-white p-4"
+                                    <!-- Principal 3 -->
+                                    <article
+                                        class="event-card event bg-white border border-gray-100 rounded-3xl overflow-hidden shadow-sm"
                                         data-category="otros" data-date="agosto"
                                         data-search="fiesta de la sidra playa san lorenzo escanciado sidra domingo 30 agosto 15:00">
-                                        <img src="./assets/Imagenes/Imagenes Eventos/Eventos proximos/sidra.png" alt="Cartel del evento Fiesta de la Sidra"
-                                            class="w-20 h-20 rounded-xl object-cover border border-gray-100 flex-shrink-0">
-                                        <div class="min-w-0 flex-1">
-                                            <p class="text-xs text-gray-500 font-semibold uppercase tracking-wide">Domingo 30 de Agosto</p>
-                                            <h3 class="text-sm font-bold text-gray-900 leading-snug truncate">Fiesta de la Sidra</h3>
-                                            <p class="text-sm text-gray-600 event-clamp-2">Récord mundial de escanciado simultáneo.</p>
+                                        <div class="relative h-36 overflow-hidden">
+                                            <img src="./assets/Imagenes/Imagenes Eventos/Eventos proximos/sidra.png"
+                                                alt="Cartel del evento Fiesta de la Sidra"
+                                                class="w-full h-full object-cover">
+                                            <span
+                                                class="absolute top-3 left-3 text-xs font-semibold tracking-wide text-white px-3 py-1 rounded-md bg-brand-gray">Otros</span>
+                                        </div>
+
+                                        <div class="p-5 space-y-3">
+                                            <p class="text-xs text-gray-500 font-semibold uppercase tracking-wide">
+                                                Domingo 30 de Agosto</p>
+                                            <h3 class="text-base font-bold text-gray-900 leading-snug">Fiesta de la
+                                                Sidra</h3>
+                                            <p class="text-sm text-gray-600 event-clamp-2">Récord mundial de escanciado
+                                                simultáneo.</p>
+
+                                            <ul class="text-xs text-gray-500 space-y-1">
+                                                <li class="flex items-center gap-2"><i
+                                                        class="fa-regular fa-clock w-4 text-primary"></i><span>15:00</span>
+                                                </li>
+                                                <li class="flex items-center gap-2"><i
+                                                        class="fa-solid fa-location-dot w-4 text-primary"></i><span>Playa
+                                                        San Lorenzo</span></li>
+                                            </ul>
+
                                             <a href="#modal-sidra" class="event-summary">Ver más</a>
                                         </div>
                                     </article>
                                 </div>
                             </section>
-                        </aside>
-                    </div>
+
+                            <!-- Columna lateral -->
+                            <aside class="lg:col-span-4" aria-label="Recomendados">
+                                <section class="bg-white border border-gray-100 rounded-3xl p-6 shadow-sm">
+                                    <h2 class="text-xl font-light text-primary tracking-wide mb-5">Recomendados</h2>
+
+                                    <div class="space-y-4 events-scope">
+                                        <!-- Recomendado 1 -->
+                                        <article
+                                            class="event-card event flex gap-4 items-start rounded-2xl border border-gray-100 bg-white p-4"
+                                            data-category="teatro" data-date="mayo"
+                                            data-search="no estoy de frente teatro alhambra mari paz sayago teatro domingo 10 mayo 20:00">
+                                            <img src="./assets/Imagenes/Imagenes Eventos/Eventos proximos/no-estoy-de-frente.jpg"
+                                                alt="Cartel del evento No estoy de frente"
+                                                class="w-20 h-20 rounded-xl object-cover border border-gray-100 flex-shrink-0">
+                                            <div class="min-w-0 flex-1">
+                                                <p class="text-xs text-gray-500 font-semibold uppercase tracking-wide">
+                                                    Domingo 10 de Mayo</p>
+                                                <h3 class="text-sm font-bold text-gray-900 leading-snug truncate">No
+                                                    estoy de frente</h3>
+                                                <p class="text-sm text-gray-600 event-clamp-2">Un monólogo de Mari Paz
+                                                    Sayago.</p>
+                                                <a href="#modal-no-estoy" class="event-summary">Ver más</a>
+                                            </div>
+                                        </article>
+
+                                        <!-- Recomendado 2 -->
+                                        <article
+                                            class="event-card event flex gap-4 items-start rounded-2xl border border-gray-100 bg-white p-4"
+                                            data-category="otros" data-date="mayo"
+                                            data-search="xxvi feria del salmon cornellana naturaleza pesca feria sabado 18 mayo">
+                                            <img src="./assets/Imagenes/Imagenes Eventos/Eventos proximos/feria-salmon.jpg"
+                                                alt="Cartel del evento XXVI Feria del Salmón"
+                                                class="w-20 h-20 rounded-xl object-cover border border-gray-100 flex-shrink-0">
+                                            <div class="min-w-0 flex-1">
+                                                <p class="text-xs text-gray-500 font-semibold uppercase tracking-wide">
+                                                    Sábado 18 Mayo</p>
+                                                <h3 class="text-sm font-bold text-gray-900 leading-snug truncate">XXVI
+                                                    Feria del Salmón</h3>
+                                                <p class="text-sm text-gray-600 event-clamp-2">Feria cinegética, de
+                                                    pesca y naturaleza.</p>
+                                                <a href="#modal-salmon" class="event-summary">Ver más</a>
+                                            </div>
+                                        </article>
+
+                                        <!-- Recomendado 3 -->
+                                        <article
+                                            class="event-card event flex gap-4 items-start rounded-2xl border border-gray-100 bg-white p-4"
+                                            data-category="otros" data-date="agosto"
+                                            data-search="fiesta de la sidra playa san lorenzo escanciado sidra domingo 30 agosto 15:00">
+                                            <img src="./assets/Imagenes/Imagenes Eventos/Eventos proximos/sidra.png"
+                                                alt="Cartel del evento Fiesta de la Sidra"
+                                                class="w-20 h-20 rounded-xl object-cover border border-gray-100 flex-shrink-0">
+                                            <div class="min-w-0 flex-1">
+                                                <p class="text-xs text-gray-500 font-semibold uppercase tracking-wide">
+                                                    Domingo 30 de Agosto</p>
+                                                <h3 class="text-sm font-bold text-gray-900 leading-snug truncate">Fiesta
+                                                    de la Sidra</h3>
+                                                <p class="text-sm text-gray-600 event-clamp-2">Récord mundial de
+                                                    escanciado simultáneo.</p>
+                                                <a href="#modal-sidra" class="event-summary">Ver más</a>
+                                            </div>
+                                        </article>
+                                    </div>
+                                </section>
+                            </aside>
+                        </div>
                     </div>
                 </form>
             </div>
@@ -234,7 +285,8 @@
         <div class="modal-card">
             <a href="#" class="modal-close" aria-label="Cerrar ventana">Cerrar ✕</a>
             <div class="modal-layout">
-                <img src="./assets/Imagenes/Imagenes Eventos/Eventos proximos/no-estoy-de-frente.jpg" alt="Cartel grande de No estoy de frente" class="modal-image">
+                <img src="./assets/Imagenes/Imagenes Eventos/Eventos proximos/no-estoy-de-frente.jpg"
+                    alt="Cartel grande de No estoy de frente" class="modal-image">
                 <div class="modal-info">
                     <h3 class="text-2xl font-bold text-gray-900 mb-3">No estoy de frente</h3>
                     <p class="text-sm text-gray-700 mb-2"><strong>Fecha:</strong> Domingo 10 de Mayo</p>
@@ -253,7 +305,8 @@
         <div class="modal-card">
             <a href="#" class="modal-close" aria-label="Cerrar ventana">Cerrar ✕</a>
             <div class="modal-layout">
-                <img src="./assets/Imagenes/Imagenes Eventos/Eventos proximos/feria-salmon.jpg" alt="Cartel grande de XXVI Feria del Salmón" class="modal-image">
+                <img src="./assets/Imagenes/Imagenes Eventos/Eventos proximos/feria-salmon.jpg"
+                    alt="Cartel grande de XXVI Feria del Salmón" class="modal-image">
                 <div class="modal-info">
                     <h3 class="text-2xl font-bold text-gray-900 mb-3">XXVI Feria del Salmón</h3>
                     <p class="text-sm text-gray-700 mb-2"><strong>Fecha:</strong> Sábado 18 Mayo</p>
@@ -272,7 +325,8 @@
         <div class="modal-card">
             <a href="#" class="modal-close" aria-label="Cerrar ventana">Cerrar ✕</a>
             <div class="modal-layout">
-                <img src="./assets/Imagenes/Imagenes Eventos/Eventos proximos/sidra.png" alt="Cartel grande de Fiesta de la Sidra" class="modal-image">
+                <img src="./assets/Imagenes/Imagenes Eventos/Eventos proximos/sidra.png"
+                    alt="Cartel grande de Fiesta de la Sidra" class="modal-image">
                 <div class="modal-info">
                     <h3 class="text-2xl font-bold text-gray-900 mb-3">Fiesta de la Sidra</h3>
                     <p class="text-sm text-gray-700 mb-2"><strong>Fecha:</strong> Domingo 30 de Agosto</p>
@@ -288,14 +342,16 @@
     </div>
 
     <!-- Footer -->
-    <footer class="bg-gray-600 text-gray-300 flex items-center justify-between px-6 py-2 mt-auto text-sm w-full">
-        <div class="text-2xl font-bold italic font-serif text-white">
-            &
-        </div>
-
-        <div class="flex items-center gap-4">
-            <p>Copyright | Redes Sociales:</p>
-            <div class="flex gap-3 text-lg text-white">
+    <footer class="bg-gray-900 text-gray-400 py-6 px-6 mt-auto border-t border-gray-800 w-full">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+            <a href="index.html" class="flex-shrink-0 transition hover:opacity-80">
+                <img src="./assets/Imagenes/Imagenes Corporativas/happines-and-co-upper-02.jpg" alt="Logo del Sitio"
+                    class="h-10 md:h-12 w-auto object-contain bg-white rounded-md p-1">
+            </a>
+            <div class="text-sm text-center md:text-left">
+                &copy; 2026 Happiness & Co. Todos los derechos reservados.
+            </div>
+            <div class="flex gap-4 text-xl text-white">
                 <a href="#" class="hover:text-primary transition"><i class="fa-brands fa-x-twitter"></i></a>
                 <a href="#" class="hover:text-primary transition"><i class="fa-brands fa-youtube"></i></a>
                 <a href="#" class="hover:text-primary transition"><i class="fa-brands fa-facebook"></i></a>
