@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+  <channel>
+    <title>HAPPINESS&amp;Co - Eventos</title>
+    <link>eventos.html</link>
+    <description>Feed RSS de los eventos culturales de HAPPINESS&amp;Co</description>
+    <language>es-es</language>
+    <lastBuildDate>Wed, 15 Apr 2026 08:39:00 +0100</lastBuildDate>
+
+    <item>
+      <title>No estoy de frente</title>
+      <link>eventos.html#modal-no-estoy</link>
+      <description><![CDATA[<p>Un monólogo protagonizado por Mari Paz Sayago, con una puesta en escena íntima y cercana. La obra combina humor y emoción para hablar de identidad, memoria y cambios personales.</p>
+<p><strong>Fecha:</strong> Domingo 10 de Mayo a las 20:00</p>
+<p><strong>Lugar:</strong> Teatro Alhambra</p>
+<p><strong>Categoría:</strong> Teatro</p>
+<img src="./assets/Imagenes/Imagenes Eventos/Eventos proximos/no-estoy-de-frente.jpg" alt="Cartel del evento No estoy de frente"/>]]></description>
+      <pubDate>Sun, 10 May 2026 20:00:00 +0200</pubDate>
+      <guid>eventos.html#modal-no-estoy</guid>
+    </item>
+
+    <item>
+      <title>XXVI Feria del Salmón</title>
+      <link>eventos.html#modal-salmon</link>
+      <description><![CDATA[<p>Feria de referencia con actividades de pesca, naturaleza y cultura local. Reúne a visitantes, familias y profesionales en una jornada completa con ambiente festivo.</p>
+<p><strong>Fecha:</strong> Sábado 18 Mayo, Todo el día</p>
+<p><strong>Lugar:</strong> Cornellana</p>
+<p><strong>Categoría:</strong> Otros</p>
+<img src="./assets/Imagenes/Imagenes Eventos/Eventos proximos/feria-salmon.jpg" alt="Cartel del evento XXVI Feria del Salmón"/>]]></description>
+      <pubDate>Sat, 18 May 2026 09:00:00 +0200</pubDate>
+        <guid>eventos.html#modal-salmon</guid>
+    </item>
+
+    <item>
+      <title>Fiesta de la Sidra</title>
+      <link>eventos.html#modal-sidra</link>
+      <description><![CDATA[<p>Evento popular con récord mundial de escanciado simultáneo. Incluye ambiente festivo, tradición asturiana y gran participación del público.</p>
+<p><strong>Fecha:</strong> Domingo 30 de Agosto a las 15:00</p>
+<p><strong>Lugar:</strong> Playa San Lorenzo</p>
+<p><strong>Categoría:</strong> Otros</p>
+<img src="./assets/Imagenes/Imagenes Eventos/Eventos proximos/sidra.png" alt="Cartel del evento Fiesta de la Sidra"/>]]></description>
+      <pubDate>Sun, 30 Aug 2026 15:00:00 +0200</pubDate>
+      <guid>eventos.html#modal-sidra</guid>
+    </item>
+
+  </channel>
+</rss>
