@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Historial de eventos | HAPPINESS&Co</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./assets/style/historial_eventos.css">
+</head>
+
+<body class="bg-white text-gray-800 font-sans antialiased overflow-x-hidden min-h-screen flex flex-col">
+    <header class="flex items-center justify-between px-6 py-4 border-b border-gray-100 surface-dynamic">
+        <a href="index.html" class="block flex-shrink-0 transition hover:opacity-80">
+            <img src="./assets/Imagenes/Imagenes Corporativas/happines-and-co-upper-02.png
+            " alt="Logo del Sitio" class="h-12 md:h-14 w-auto object-contain">
+        </a>
+
+        <nav class="main-nav hidden md:flex space-x-3 text-sm">
+            <a href="index.html"
+                class="px-4 py-1.5 border border-primary bg-white text-primary rounded-full hover:bg-primary hover:text-white transition">Inicio</a>
+            <a href="eventos.html"
+                class="px-4 py-1.5 border border-primary bg-white text-gray-600 rounded-full hover:bg-primary hover:text-white transition">Proximos
+                Eventos</a>
+            <a href="historial_eventos.html"
+                class="px-4 py-1.5 border border-primary bg-white text-gray-600 rounded-full hover:bg-primary hover:text-white transition">Historial
+                de Eventos</a>
+            <a href="sobre_nosotros.html"
+                class="px-4 py-1.5 border border-primary bg-white text-gray-600 rounded-full hover:bg-primary hover:text-white transition">Sobre
+                Nosotros</a>
+            <a href="fuentes.html"
+                class="px-4 py-1.5 border border-primary bg-white text-gray-600 rounded-full hover:bg-primary hover:text-white transition">Fuentes</a>
+            <a href="contacto.html"
+                class="px-4 py-1.5 border border-primary bg-white text-gray-600 rounded-full hover:bg-primary hover:text-white transition">Contacto</a>
+        </nav>
+    </header>
+
+    <main class="flex-grow">
+        <section class="max-w-7xl mx-auto px-6 pt-10 pb-6">
+            <div class="hero-portada rounded-3xl border border-gray-100 p-10 md:p-16 shadow-sm overflow-hidden">
+                <div class="relative z-10 flex items-center justify-center min-h-[220px]">
+                    <h1 class="text-4xl md:text-6xl font-extrabold text-white text-center tracking-wide">
+                        HISTORIAL DE EVENTOS
+                    </h1>
+                </div>
+            </div>
+        </section>
+
+        <section class="max-w-7xl mx-auto px-6 pb-8">
+            <div class="bg-white border border-gray-100 rounded-2xl p-5 md:p-6 shadow-sm">
+                <h2 class="text-lg font-semibold text-gray-900 mb-4">Filtros</h2>
+                <form class="event-filters">
+                    <div class="filters-ui">
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                            <div class="relative">
+                                <label for="search-input"
+                                    class="block text-sm font-semibold text-gray-600 mb-2">Buscar</label>
+                                <input id="search-input" type="text" placeholder="¿Qué buscas?"
+                                    class="w-full border-2 border-primary rounded-full px-5 py-2.5 pr-11 focus:outline-none text-gray-700 placeholder-primary/60">
+                                <i class="fa-solid fa-magnifying-glass absolute right-4 top-11 text-primary"></i>
+                            </div>
+
+                            <div class="relative">
+                                <label for="category-filter"
+                                    class="block text-sm font-semibold text-gray-600 mb-2">Categoría</label>
+                                <select id="category-filter"
+                                    class="w-full border-2 border-primary rounded-full px-5 py-2.5 pr-11 appearance-none focus:outline-none text-gray-700 bg-white">
+                                    <option value="todas">Todas</option>
+                                    <option value="teatro">Teatro</option>
+                                    <option value="musica">Música</option>
+                                    <option value="cine">Cine</option>
+                                    <option value="exposiciones">Exposiciones</option>
+                                    <option value="otros">Otros</option>
+                                </select>
+                                <i
+                                    class="fa-solid fa-list absolute right-4 top-11 text-primary pointer-events-none"></i>
+                            </div>
+
+                            <div class="relative">
+                                <label for="date-filter"
+                                    class="block text-sm font-semibold text-gray-600 mb-2">Fecha</label>
+                                <select id="date-filter"
+                                    class="w-full border-2 border-primary rounded-full px-5 py-2.5 pr-11 appearance-none focus:outline-none text-gray-700 bg-white">
+                                    <option value="todas">Todas</option>
+                                    <option value="marzo">Marzo</option>
+                                    <option value="abril">Abril</option>
+                                </select>
+                                <i
+                                    class="fa-solid fa-calendar absolute right-4 top-11 text-primary pointer-events-none"></i>
+                            </div>
+                        </div>
+
+                        <div class="mt-8 grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+                            <section class="lg:col-span-8" aria-label="Listado de eventos pasados">
+                                <h2 class="text-xl font-light text-primary tracking-wide mb-4">Eventos pasados</h2>
+
+                                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 events-scope">
+                                    <article
+                                        class="event-card event bg-white border border-gray-100 rounded-3xl overflow-hidden shadow-sm"
+                                        data-category="musica" data-date="abril"
+                                        data-search="concierto tsunami ayuntamiento gijon festival rock hardcore miercoles 22 abril 20:00">
+                                        <div class="relative h-36 overflow-hidden">
+                                            <img src="./assets/Imagenes/Imagenes Eventos/Eventos Pasados/tsunami.png"
+                                                alt="Cartel del evento Concierto Tsunami"
+                                                class="w-full h-full object-cover">
+                                            <span
+                                                class="absolute top-3 left-3 text-xs font-semibold tracking-wide text-white px-3 py-1 rounded-md bg-primary">Música</span>
+                                        </div>
+
+                                        <div class="p-5 space-y-3">
+                                            <p class="text-xs text-gray-500 font-semibold uppercase tracking-wide">
+                                                Miércoles 22 de Abril</p>
+                                            <h3 class="text-base font-bold text-gray-900 leading-snug">Concierto Tsunami
+                                            </h3>
+                                            <p class="text-sm text-gray-600 event-clamp-2">Festival de rock y hardcore.
+                                            </p>
+
+                                            <ul class="text-xs text-gray-500 space-y-1">
+                                                <li class="flex items-center gap-2"><i
+                                                        class="fa-regular fa-clock w-4 text-primary"></i><span>20:00</span>
+                                                </li>
+                                                <li class="flex items-center gap-2"><i
+                                                        class="fa-solid fa-location-dot w-4 text-primary"></i><span>Ayuntamiento
+                                                        de Gijón</span></li>
+                                            </ul>
+
+                                            <div class="flex items-center justify-between mt-2 pt-2 border-t border-gray-50">
+                                                <a href="#modal-no-estoy" class="event-summary">Ver más</a>
+                                                <div class="flex items-center gap-2 md:gap-3 bg-gray-50 px-2 py-1 md:px-3 md:py-1.5 rounded-full border border-gray-100">
+                                                    <button class="upvote-btn text-gray-400 hover:text-green-500 transition focus:outline-none" aria-label="Me gustó">
+                                                        <i class="fa-solid fa-thumbs-up"></i>
+                                                    </button>
+                                                    <span class="vote-count text-xs md:text-sm font-bold text-gray-700">0</span>
+                                                    <button class="downvote-btn text-gray-400 hover:text-red-500 transition focus:outline-none" aria-label="No me gustó">
+                                                        <i class="fa-solid fa-thumbs-down"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </article>
+
+                                    <article
+                                        class="event-card event bg-white border border-gray-100 rounded-3xl overflow-hidden shadow-sm"
+                                        data-category="exposiciones" data-date="marzo"
+                                        data-search="viaje a la luna exposicion colectiva centro federico garcia lorca viernes 27 marzo 10:00">
+                                        <div class="relative h-36 overflow-hidden">
+                                            <img src="./assets/Imagenes/Imagenes Eventos/Eventos Pasados/viaje-luna-lorca.jpg"
+                                                alt="Cartel del evento Viaje a la luna"
+                                                class="w-full h-full object-cover">
+                                            <span
+                                                class="absolute top-3 left-3 text-xs font-semibold tracking-wide text-white px-3 py-1 rounded-md bg-brand-orange">Exposición</span>
+                                        </div>
+
+                                        <div class="p-5 space-y-3">
+                                            <p class="text-xs text-gray-500 font-semibold uppercase tracking-wide">
+                                                Viernes 27 de Marzo</p>
+                                            <h3 class="text-base font-bold text-gray-900 leading-snug">Viaje a la luna
+                                            </h3>
+                                            <p class="text-sm text-gray-600 event-clamp-2">Exposición colectiva.</p>
+
+                                            <ul class="text-xs text-gray-500 space-y-1">
+                                                <li class="flex items-center gap-2"><i
+                                                        class="fa-regular fa-clock w-4 text-primary"></i><span>10:00</span>
+                                                </li>
+                                                <li class="flex items-center gap-2"><i
+                                                        class="fa-solid fa-location-dot w-4 text-primary"></i><span>Centro
+                                                        Federico García Lorca</span></li>
+                                            </ul>
+
+                                            <div class="flex items-center justify-between mt-2 pt-2 border-t border-gray-50">
+                                                <a href="#modal-salmon" class="event-summary">Ver más</a>
+                                                <div class="flex items-center gap-2 md:gap-3 bg-gray-50 px-2 py-1 md:px-3 md:py-1.5 rounded-full border border-gray-100">
+                                                    <button class="upvote-btn text-gray-400 hover:text-green-500 transition focus:outline-none" aria-label="Me gustó">
+                                                        <i class="fa-solid fa-thumbs-up"></i>
+                                                    </button>
+                                                    <span class="vote-count text-xs md:text-sm font-bold text-gray-700">0</span>
+                                                    <button class="downvote-btn text-gray-400 hover:text-red-500 transition focus:outline-none" aria-label="No me gustó">
+                                                        <i class="fa-solid fa-thumbs-down"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </article>
+
+                                    <article
+                                        class="event-card event bg-white border border-gray-100 rounded-3xl overflow-hidden shadow-sm"
+                                        data-category="otros" data-date="abril"
+                                        data-search="xi festival de cine lgtbi aviles centro niemeyer del 9 hasta el 19 de abril diferentes horarios">
+                                        <div class="relative h-36 overflow-hidden">
+                                            <img src="./assets/Imagenes/Imagenes Eventos/Eventos Pasados/XI_FESTIVAL_LGTBI_NIEMEYER_2026.jpg"
+                                                alt="Cartel del evento XI Festival de Cine LGTBI"
+                                                class="w-full h-full object-cover">
+                                            <span
+                                                class="absolute top-3 left-3 text-xs font-semibold tracking-wide text-white px-3 py-1 rounded-md bg-brand-blue">Cine</span>
+                                        </div>
+
+                                        <div class="p-5 space-y-3">
+                                            <p class="text-xs text-gray-500 font-semibold uppercase tracking-wide">Del 9
+                                                hasta el 19 de Abril</p>
+                                            <h3 class="text-base font-bold text-gray-900 leading-snug">XI Festival de
+                                                Cine LGTBI</h3>
+                                            <p class="text-sm text-gray-600 event-clamp-2">Títulos nacionales e
+                                                internacionales y actividades complementarias.</p>
+
+                                            <ul class="text-xs text-gray-500 space-y-1">
+                                                <li class="flex items-center gap-2"><i
+                                                        class="fa-regular fa-clock w-4 text-primary"></i><span>Diferentes
+                                                        horarios</span></li>
+                                                <li class="flex items-center gap-2"><i
+                                                        class="fa-solid fa-location-dot w-4 text-primary"></i><span>Avilés,
+                                                        Centro Niemeyer</span></li>
+                                            </ul>
+
+                                            <div class="flex items-center justify-between mt-2 pt-2 border-t border-gray-50">
+                                                <a href="#modal-sidra" class="event-summary">Ver más</a>
+                                                <div class="flex items-center gap-2 md:gap-3 bg-gray-50 px-2 py-1 md:px-3 md:py-1.5 rounded-full border border-gray-100">
+                                                    <button class="upvote-btn text-gray-400 hover:text-green-500 transition focus:outline-none" aria-label="Me gustó">
+                                                        <i class="fa-solid fa-thumbs-up"></i>
+                                                    </button>
+                                                    <span class="vote-count text-xs md:text-sm font-bold text-gray-700">0</span>
+                                                    <button class="downvote-btn text-gray-400 hover:text-red-500 transition focus:outline-none" aria-label="No me gustó">
+                                                        <i class="fa-solid fa-thumbs-down"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </article>
+                                </div>
+                            </section>
+
+                            <aside class="lg:col-span-4" aria-label="Recomendados">
+                                <section class="bg-white border border-gray-100 rounded-3xl p-6 shadow-sm">
+                                    <h2 class="text-xl font-light text-primary tracking-wide mb-5">Momentos destacados
+                                    </h2>
+
+                                    <div class="space-y-4 events-scope">
+                                        <article
+                                            class="event-card event flex gap-4 items-start rounded-2xl border border-gray-100 bg-white p-4"
+                                            data-category="musica" data-date="abril"
+                                            data-search="concierto tsunami ayuntamiento gijon festival rock hardcore miercoles 22 abril 20:00">
+                                            <img src="./assets/Imagenes/Imagenes Eventos/Eventos Pasados/tsunami.png"
+                                                alt="Cartel del evento Concierto Tsunami"
+                                                class="w-20 h-20 rounded-xl object-cover border border-gray-100 flex-shrink-0">
+                                            <div class="min-w-0 flex-1">
+                                                <p class="text-xs text-gray-500 font-semibold uppercase tracking-wide">
+                                                    Miércoles 22 de Abril</p>
+                                                <h3 class="text-sm font-bold text-gray-900 leading-snug truncate">
+                                                    Concierto Tsunami</h3>
+                                                <p class="text-sm text-gray-600 event-clamp-2">Festival de rock y
+                                                    hardcore.</p>
+                                                <div class="flex items-center justify-between mt-2 pt-2 border-t border-gray-50">
+                                                <a href="#modal-no-estoy" class="event-summary">Ver más</a>
+                                                <div class="flex items-center gap-2 md:gap-3 bg-gray-50 px-2 py-1 md:px-3 md:py-1.5 rounded-full border border-gray-100">
+                                                    <button class="upvote-btn text-gray-400 hover:text-green-500 transition focus:outline-none" aria-label="Me gustó">
+                                                        <i class="fa-solid fa-thumbs-up"></i>
+                                                    </button>
+                                                    <span class="vote-count text-xs md:text-sm font-bold text-gray-700">0</span>
+                                                    <button class="downvote-btn text-gray-400 hover:text-red-500 transition focus:outline-none" aria-label="No me gustó">
+                                                        <i class="fa-solid fa-thumbs-down"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            </div>
+                                        </article>
+
+                                        <article
+                                            class="event-card event flex gap-4 items-start rounded-2xl border border-gray-100 bg-white p-4"
+                                            data-category="exposiciones" data-date="marzo"
+                                            data-search="viaje a la luna exposicion colectiva centro federico garcia lorca viernes 27 marzo 10:00">
+                                            <img src="./assets/Imagenes/Imagenes Eventos/Eventos Pasados/viaje-luna-lorca.jpg"
+                                                alt="Cartel del evento Viaje a la luna"
+                                                class="w-20 h-20 rounded-xl object-cover border border-gray-100 flex-shrink-0">
+                                            <div class="min-w-0 flex-1">
+                                                <p class="text-xs text-gray-500 font-semibold uppercase tracking-wide">
+                                                    Viernes 27 de Marzo</p>
+                                                <h3 class="text-sm font-bold text-gray-900 leading-snug truncate">Viaje
+                                                    a la luna</h3>
+                                                <p class="text-sm text-gray-600 event-clamp-2">Exposición colectiva.</p>
+                                                <div class="flex items-center justify-between mt-2 pt-2 border-t border-gray-50">
+                                                <a href="#modal-salmon" class="event-summary">Ver más</a>
+                                                <div class="flex items-center gap-2 md:gap-3 bg-gray-50 px-2 py-1 md:px-3 md:py-1.5 rounded-full border border-gray-100">
+                                                    <button class="upvote-btn text-gray-400 hover:text-green-500 transition focus:outline-none" aria-label="Me gustó">
+                                                        <i class="fa-solid fa-thumbs-up"></i>
+                                                    </button>
+                                                    <span class="vote-count text-xs md:text-sm font-bold text-gray-700">0</span>
+                                                    <button class="downvote-btn text-gray-400 hover:text-red-500 transition focus:outline-none" aria-label="No me gustó">
+                                                        <i class="fa-solid fa-thumbs-down"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            </div>
+                                        </article>
+
+                                        <article
+                                            class="event-card event flex gap-4 items-start rounded-2xl border border-gray-100 bg-white p-4"
+                                            data-category="otros" data-date="abril"
+                                            data-search="xi festival de cine lgtbi aviles centro niemeyer del 9 hasta el 19 de abril diferentes horarios">
+                                            <img src="./assets/Imagenes/Imagenes Eventos/Eventos Pasados/XI_FESTIVAL_LGTBI_NIEMEYER_2026.jpg"
+                                                alt="Cartel del evento XI Festival de Cine LGTBI"
+                                                class="w-20 h-20 rounded-xl object-cover border border-gray-100 flex-shrink-0">
+                                            <div class="min-w-0 flex-1">
+                                                <p class="text-xs text-gray-500 font-semibold uppercase tracking-wide">
+                                                    Del 9 hasta el 19 de Abril</p>
+                                                <h3 class="text-sm font-bold text-gray-900 leading-snug truncate">XI
+                                                    Festival de Cine LGTBI</h3>
+                                                <p class="text-sm text-gray-600 event-clamp-2">Títulos nacionales e
+                                                    internacionales y actividades complementarias.</p>
+                                                <div class="flex items-center justify-between mt-2 pt-2 border-t border-gray-50">
+                                                <a href="#modal-sidra" class="event-summary">Ver más</a>
+                                                <div class="flex items-center gap-2 md:gap-3 bg-gray-50 px-2 py-1 md:px-3 md:py-1.5 rounded-full border border-gray-100">
+                                                    <button class="upvote-btn text-gray-400 hover:text-green-500 transition focus:outline-none" aria-label="Me gustó">
+                                                        <i class="fa-solid fa-thumbs-up"></i>
+                                                    </button>
+                                                    <span class="vote-count text-xs md:text-sm font-bold text-gray-700">0</span>
+                                                    <button class="downvote-btn text-gray-400 hover:text-red-500 transition focus:outline-none" aria-label="No me gustó">
+                                                        <i class="fa-solid fa-thumbs-down"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            </div>
+                                        </article>
+                                    </div>
+                                </section>
+                            </aside>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <div id="modal-no-estoy" class="modal-overlay">
+        <div class="modal-card">
+            <a href="#" class="modal-close" aria-label="Cerrar ventana">Cerrar ✕</a>
+            <div class="modal-layout">
+                <img src="./assets/Imagenes/Imagenes Eventos/Eventos Pasados/tsunami.png"
+                    alt="Cartel grande de Concierto Tsunami" class="modal-image">
+                <div class="modal-info">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">Concierto Tsunami</h3>
+                    <p class="text-sm text-gray-700 mb-2"><strong>Fecha:</strong> Miércoles 22 de Abril</p>
+                    <p class="text-sm text-gray-700 mb-2"><strong>Hora:</strong> 20:00</p>
+                    <p class="text-sm text-gray-700 mb-4"><strong>Lugar:</strong> Ayuntamiento de Gijón</p>
+                    <p class="text-sm text-gray-700 leading-relaxed mb-5">
+                        Evento musical del festival Tsunami con una noche dedicada al rock y hardcore.
+                        Reúne artistas y público en una jornada intensa de directo y energía.
+                    </p>
+
+                    <h4 class="text-lg font-semibold text-gray-900 mb-3">Galería</h4>
+                    <div class="modal-gallery">
+                        <img src="./assets/Imagenes/Imagenes Eventos/Eventos Pasados/Galeria Evento Tsunami/imagen1.jpg"
+                            alt="Galería del evento Concierto Tsunami">
+                        <img src="./assets/Imagenes/Imagenes Eventos/Eventos Pasados/Galeria Evento Tsunami/imagen2.jfif"
+                            alt="Galería del evento Concierto Tsunami">
+                        <img src="./assets/Imagenes/Imagenes Eventos/Eventos Pasados/Galeria Evento Tsunami/imagen3.jfif"
+                            alt="Galería del evento Concierto Tsunami">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-salmon" class="modal-overlay">
+        <div class="modal-card">
+            <a href="#" class="modal-close" aria-label="Cerrar ventana">Cerrar ✕</a>
+            <div class="modal-layout">
+                <img src="./assets/Imagenes/Imagenes Eventos/Eventos Pasados/viaje-luna-lorca.jpg"
+                    alt="Cartel grande de Viaje a la luna" class="modal-image">
+                <div class="modal-info">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">Viaje a la luna</h3>
+                    <p class="text-sm text-gray-700 mb-2"><strong>Fecha:</strong> Viernes 27 de Marzo</p>
+                    <p class="text-sm text-gray-700 mb-2"><strong>Hora:</strong> 10:00</p>
+                    <p class="text-sm text-gray-700 mb-4"><strong>Lugar:</strong> Centro Federico García Lorca</p>
+                    <p class="text-sm text-gray-700 leading-relaxed mb-5">
+                        Exposición colectiva con obras inspiradas en la imaginación, el simbolismo y la poesía visual.
+                        Una propuesta cultural para todos los públicos.
+                    </p>
+
+                    <h4 class="text-lg font-semibold text-gray-900 mb-3">Galería</h4>
+                    <div class="modal-gallery">
+                        <img src="./assets/Imagenes/Imagenes Eventos/Eventos Pasados/Galeria Evento Viaje a la Luna/imagen1.jfif"
+                            alt="Galería del evento Viaje a la luna">
+                        <img src="./assets/Imagenes/Imagenes Eventos/Eventos Pasados/Galeria Evento Viaje a la Luna/imagen2.jfif"
+                            alt="Galería del evento Viaje a la luna">
+                        <img src="./assets/Imagenes/Imagenes Eventos/Eventos Pasados/Galeria Evento Viaje a la Luna/imagen3.jfif"
+                            alt="Galería del evento Viaje a la luna">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-sidra" class="modal-overlay">
+        <div class="modal-card">
+            <a href="#" class="modal-close" aria-label="Cerrar ventana">Cerrar ✕</a>
+            <div class="modal-layout">
+                <img src="./assets/Imagenes/Imagenes Eventos/Eventos Pasados/XI_FESTIVAL_LGTBI_NIEMEYER_2026.jpg"
+                    alt="Cartel grande de XI Festival de Cine LGTBI" class="modal-image">
+                <div class="modal-info">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">XI Festival de Cine LGTBI</h3>
+                    <p class="text-sm text-gray-700 mb-2"><strong>Fecha:</strong> Del 9 hasta el 19 de Abril</p>
+                    <p class="text-sm text-gray-700 mb-2"><strong>Hora:</strong> Diferentes horarios</p>
+                    <p class="text-sm text-gray-700 mb-4"><strong>Lugar:</strong> Avilés, Centro Niemeyer</p>
+                    <p class="text-sm text-gray-700 leading-relaxed mb-5">
+                        Programación de cine con títulos nacionales e internacionales y actividades complementarias.
+                        Un evento referente en diversidad cultural y audiovisual.
+                    </p>
+
+                    <h4 class="text-lg font-semibold text-gray-900 mb-3">Galería</h4>
+                    <div class="modal-gallery">
+                        <img src="./assets/Imagenes/Imagenes Eventos/Eventos Pasados/Galeria Evento Festival Cine/imagen1.jfif"
+                            alt="Galería del XI Festival de Cine LGTBI">
+                        <img src="./assets/Imagenes/Imagenes Eventos/Eventos Pasados/Galeria Evento Festival Cine/imagen2.jfif"
+                            alt="Galería del XI Festival de Cine LGTBI">
+                        <img src="./assets/Imagenes/Imagenes Eventos/Eventos Pasados/Galeria Evento Festival Cine/imagen3.png"
+                            alt="Galería del XI Festival de Cine LGTBI">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-gray-900 text-gray-400 py-6 px-6 mt-auto border-t border-gray-800 w-full">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+            <a href="index.html" class="flex-shrink-0 transition hover:opacity-80">
+                <img src="./assets/Imagenes/Imagenes Corporativas/happines-and-co-upper-02.jpg" alt="Logo del Sitio"
+                    class="h-10 md:h-12 w-auto object-contain bg-white rounded-md p-1">
+            </a>
+            <div class="text-sm text-center md:text-left">
+                &copy; 2026 Happiness & Co. Todos los derechos reservados.
+            </div>
+            <div class="flex gap-4 text-xl text-white">
+                <a href="#" class="hover:text-primary transition"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="#" class="hover:text-primary transition"><i class="fa-brands fa-youtube"></i></a>
+                <a href="#" class="hover:text-primary transition"><i class="fa-brands fa-facebook"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const searchInput = document.getElementById('search-input');
+            const categoryFilter = document.getElementById('category-filter');
+            const dateFilter = document.getElementById('date-filter');
+            const eventCards = Array.from(document.querySelectorAll('.event'));
+
+            function filterEvents() {
+                const searchText = searchInput.value.trim().toLowerCase();
+                const selectedCategory = categoryFilter.value;
+                const selectedDate = dateFilter.value;
+
+                eventCards.forEach((card) => {
+                    const cardCategory = (card.dataset.category || '').toLowerCase();
+                    const cardDate = (card.dataset.date || '').toLowerCase();
+                    const cardSearch = (card.dataset.search || '').toLowerCase();
+
+                    const matchesCategory = selectedCategory === 'todas' || cardCategory === selectedCategory;
+                    const matchesDate = selectedDate === 'todas' || cardDate === selectedDate;
+                    const matchesSearch = searchText === '' || cardSearch.includes(searchText);
+
+                    card.style.display = (matchesCategory && matchesDate && matchesSearch) ? '' : 'none';
+                });
+            }
+
+            searchInput.addEventListener('input', filterEvents);
+            categoryFilter.addEventListener('change', filterEvents);
+            dateFilter.addEventListener('change', filterEvents);
+            filterEvents();
+
+            // Lógica de votación (historial)
+            const upvoteBtns = document.querySelectorAll('.upvote-btn');
+            const downvoteBtns = document.querySelectorAll('.downvote-btn');
+
+            upvoteBtns.forEach(btn => {
+                btn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    // Buscar el contenedor con la clase flex de los votos
+                    const container = this.parentElement;
+                    const countSpan = container.querySelector('.vote-count');
+                    let count = parseInt(countSpan.textContent);
+                    
+                    if (this.classList.contains('text-green-500')) {
+                        this.classList.remove('text-green-500');
+                        countSpan.textContent = count - 1;
+                    } else {
+                        this.classList.add('text-green-500');
+                        const downvoteBtn = container.querySelector('.downvote-btn');
+                        if (downvoteBtn.classList.contains('text-red-500')) {
+                            downvoteBtn.classList.remove('text-red-500');
+                            count += 1;
+                        }
+                        countSpan.textContent = count + 1;
+                    }
+                });
+            });
+
+            downvoteBtns.forEach(btn => {
+                btn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const container = this.parentElement;
+                    const countSpan = container.querySelector('.vote-count');
+                    let count = parseInt(countSpan.textContent);
+                    
+                    if (this.classList.contains('text-red-500')) {
+                        this.classList.remove('text-red-500');
+                        countSpan.textContent = count + 1;
+                    } else {
+                        this.classList.add('text-red-500');
+                        const upvoteBtn = container.querySelector('.upvote-btn');
+                        if (upvoteBtn.classList.contains('text-green-500')) {
+                            upvoteBtn.classList.remove('text-green-500');
+                            count -= 1;
+                        }
+                        countSpan.textContent = count - 1;
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
